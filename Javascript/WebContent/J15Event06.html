@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>J16Event06.html</title>
+    <script>
+        function focusNBlur(num){
+            if(num==1){
+                document.getElementById("span").innerText = "focus이벤트 발생됨";
+            }
+            else if(num==2){
+                document.getElementById("span").innerText = "blur이벤트 발생됨";
+            }
+        }
+        
+        function idFocus(flag, obj){
+            if(flag==1){
+                if(obj.value=="아이디를 입력해주세요"){
+                    obj.value = "";
+                }
+            }
+            else if(flag==2){
+                if(obj.value==""){
+                    obj.value="아이디를 입력해주세요";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>focus 및 blur 이벤트</h3>
+    <input type="text" onfocus="focusNBlur(1);" onblur="focusNBlur(2);">
+    <span id="span"></span>
+    
+    <h3>JS이용한 focus/blur 이벤트 예제</h3>
+    아이디1: <input type="text" value="아이디를 입력해주세요." onfocus="idFocus(1,this);" onblur="idFocus(2,this);"
+            style="color: gray;">
+    <br/>
+    아이디2: <input type="text" placeholder="아이디를 입력해주세요.">
+    
+    table>tr
+</body>
+</html>

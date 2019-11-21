@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>C02OrderByCSS.html</title>
+<style>
+/*
+	CSS의 우선순위
+		:HTML 문서의 해석방법은 인터프리터 방식이기 때문에 태그와 가장 가까운 효과가 우선순위가 높다.
+	선택자 사이의 우선순위
+		!important > Inline style > id > class > tag > *
+		
+	CSS를 적용시키는 방법
+		방법1 : Embedding Style
+			<style>태그를 사용하여 문서에 직접 정의하는 방식
+		방법2 : Inline Style
+			적용하고자 하는 태그에 style속성을 이용하여 직접 정의하는 방식
+		방법3 : External Style
+			별도의 파일을 만들어서 해당문서에 링크시켜 사용하는 방식
+*/
+
+	h2{ color:blue;}
+	h2{ color:red;}
+	#mnt{color:gray !important;}
+	
+	dd{color:green;}
+</style>
+<!-- 외부에 선언된 파일을 링크시켜서 사용할떄는 link태그를 사용.
+실무애ㅔ서 가장 많이 사용하는 방식이다. -->
+<link rel="stylesheet" href="./style/style.css" />
+</head>
+<body>
+	<h2>선택자 종류에 따른 CSS적용순서</h2>
+	<ul>
+		<li class="mountain">관악산</li>
+		<li class="mountain" style="color:violet;" id="mnt">설악산</li>
+		<li class="mountain">지리산</li>
+		<li class="mountain">한라산</li>
+	</ul>
+	
+	<h2>Css적용 스타일에 따른 적용순서</h2>
+	<dl>
+		<dd>종로구</dd>
+		<dd>강동구</dd>
+		<dd>금천구</dd>
+		<dd style="color:red;">강남구</dd>
+	</dl>
+</body>
+</html>

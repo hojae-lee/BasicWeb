@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //1.abs() 절대값
+        document.write("-10의 절대값 : "+Math.abs(-10)+"<br/>");
+        //2.pow() 지수
+        document.write("2의 3승: "+Math.pow(2,3)+"<br/>");
+        //3.round() 반올림
+        document.write("3.159의 반올림: "+Math.round(3.159)+"<br/>");
+        //4.ceil() 올림
+        document.write("3.159의 올림: "+Math.ceil(3.159)+"<br/>");
+        //5.floor() 내림
+        document.write("3.159의 내림: "+Math.floor(3.159)+"<br/>");
+        //6.random() 난수생성
+        /*
+        0.0~1.0 사이의 실수를 랜덤하게 발생시킴
+            예) 1~5사이의 난수를 생성하시오
+                5를 미포함 할 경우
+                    pareInt((Math.random()*4)+1);
+                5를 포함 할 경우
+                    pareInt((Math.random()*5)+1);
+        */
+        document.write("난수발생1:"+Math.random()+"<br/>");
+        document.write("난수발생2(1~10):"+(parseInt(Math.random()*10)+1)+"<br/>");
+        
+        //J08Function02.html에서 발췌함.
+        function setOrdering(arrParam){
+
+        for(var i=0; i<arrParam.length-1; i++){
+         for(var j=0; j<arrParam.length-i-1; j++){
+             if(arrParam[j]>arrParam[j+1]){
+                 var temp = arrParam[j];
+                 arrParam[j] = arrParam[j+1];
+                 arrParam[j+1] = temp;
+                }
+            }
+        }
+    }
+        //로또번호 생성하기
+        function getLotto(){
+            var lottoStr ="";
+            var lottoNum = [0,0,0,0,0,0];
+            var index =0;
+            var flag = false;
+            
+            while(index<6){
+                var randomNum = parseInt(Math.random()*45)+1;
+                
+                for(var i=0; i<lottoNum.length; i++){
+                    if(lottoNum[i] == randomNum){
+                        flag = true;
+                        //break;
+                    }
+                }
+                
+                if(flag==true){
+                    flag=false;
+                    continue;
+                }
+                else{
+                    lottoNum[index++] = randomNum;
+                }
+            }
+           setOrdering(lottoNum);
+            
+            for(var i=0; i<lottoNum.length; i++){
+                lottoStr += lottoNum[i] + "&nbsp;";
+            }
+            document.getElementById("lottoNumber").innerHTML = lottoStr;
+        }
+        
+    </script>
+</head>
+<body>
+   <h2>Lotto(1~45)번호 생성하기</h2>
+   <button type="button" onclick="getLotto();">
+       로또번호생성하기
+   </button>
+   <span id="lottoNumber" style="font-size:2em; color: red;">
+       생성된 로또번호는 여기에 출력됩니다.
+   </span>
+    
+</body>
+</html>

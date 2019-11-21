@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>J17FormObject05.html</title>
+</head>
+<body>
+    <h2>this, this.form, this.value 사용하기</h2>
+    <h3>Casel</h3>
+    <script>
+        function formValidate1(frm){
+            if(frm.id.value == ""){
+                alert("아이디를 입려갛세요");
+                frm.id.focus();
+                return false;
+            }
+        }
+    </script>
+    <form action="" name="frm1" onsubmit="return formValidate1(this)">
+        아이디 : <input type="text" name = "id">
+        <br/>
+        <input type="submit" value="로그인하기">
+    </form>
+    
+    <h3>Csse2</h3>
+    <script>
+        var formValidate2 = function(frm, eVar, tVal){
+            
+            alert("input태그의  value값:" +tVal);
+            
+            alert("input태그의 type속성:"+ eVar.type);
+            
+            if(!frm.id.value){
+                alert("아이디를 입력하삼");
+                return false;
+            }
+        }
+    </script>
+    <form action="" name="frm2">
+        아이디: <input type="text" name="id">
+        <br/>
+        <input type="button" value="로그인하기" onclick="formValidate2(this.form, this, this.value);">
+    </form>
+</body>
+</html>

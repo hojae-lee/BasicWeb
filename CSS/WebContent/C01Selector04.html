@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>C01Selector04.html</title>
+<style>
+	ul > li {
+		font-size:30px; font-weight:bold;
+		color:green; width:200px;
+	}
+	
+	/*
+	13.반응선택자 : 마우스의 반응에 따라 태그를 선택한다.
+		hover : 해당 영역에 마우스를 올렸을 때 선택됨
+		active : 해당 영역에 마우스를 클릭했을때 선택됨.
+	*/
+	
+	li:hover{
+		color:red;
+	}
+	li:active {
+		color:yellow; background-color:black;
+	}
+	
+	/*
+	14.상태선택자 : 요소의 현재상태에 따라 태그를 선택한다.
+	*/
+	
+	input:focus{
+		border:2px red dotted; background-color:yellow;
+	}
+	input:enabled{
+		color:red; font-weight:bold;
+	}
+	input:disabled{
+		color:blue; background-color:aqua;
+		border:1px gray solid;
+	}
+	
+
+</style>
+</head>
+<body>
+
+	<h2>반응선택자</h2>
+	<div>
+		<ul>
+			<li>메뉴1</li>
+			<li>메뉴2</li>
+			<li>메뉴3</li>
+			<li>메뉴4</li>
+			<li>메뉴5</li>
+		</ul>
+	</div>
+	
+	<h2>상태선택자</h2>
+	<div>
+		<form action="">
+			이름 : <input type="text" name = "name"></input>
+			<br />
+			아이디 : <input type="text" name = "id"></input>
+			<br />
+			비밀번호 : <input type="text" name = "pwd" value = "1234" disabled></input>
+		</form>
+	</div>
+</body>
+</html>

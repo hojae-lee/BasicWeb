@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>C04Paragraph.html</title>
+</head>
+<body>
+	<h2>문단관련 CSS 속성들</h2>
+	
+	<div style="border:1px blue dotted; width:400px;">
+	<!-- 
+		각 요소간 정렬시 블럭엘리먼트와 다르게 인라인엘리먼트는 컨텐츠 영역 이외에 여유공간이 없기때문에
+		정렬은 의미가 없다
+		만약 정렬해야 한다면 부모엘리먼ㄴ트에서 정렬해줘야ㅏ 한다.
+	 -->
+		<h2>컨텐츠 수평방향 정렬</h2>
+		<div style="border:1px solid red; text-align:right;">
+			블럭엘리먼트
+		</div>
+		<!--  정렬을 위해서는 부모엘리먼트인 div에서 text-align을 사용해야한다. -->
+		<span style="border:1px solid blue; text-align:right;">
+			인라인엘리먼트
+		</span>
+	</div>
+	
+	<h2>배분정렬</h2>
+	<p style="border:1px solid blue; text-align:justify;" >
+	권아솔(33·팀 코리아MMA)이 은퇴 의사를 밝혔다. 이전부터 세워뒀던 인생 계획을 완수하기 위해서다. 아내와 함께 브라질로 선교 활동을 떠나는 일이다. 갑작스런 작별 인사는 아니다. 이미 지난달 18일 로드FC 100만불 터너먼트 만수르 바르나위(27)와의 최종전에 앞서 정문홍 전 대표에게 뜻을 전했고 정 전 대표도 받아들였다. 경기 승패와 상관없이 권아솔의 은퇴는 정해진 상태였다는 의미다.
+
+권아솔은 그간 악역을 도맡았다. 공식 매치업 성사 직전부터 상위 랭커들의 신경을 긁어 대회에 관련한 이슈를 만들었다. 가벼운 시비 정도가 아니었다. “가볍게 가지고 놀아주겠다”라며 날을 세웠다. 플로이드 메이웨더 주니어나 코너 맥그리거처럼 맞붙을 일이 없는 파이터여도 괜한 말로 싸움을 걸었다. 상대가 정해진 순간부터는 ‘트래시토커’라는 별명답게 도발을 마다하지 않았다. 체중 감량을 하거나 훈련에 열중하면서도 멈추지 않았다. 일부러 상대를 무시하거나 깎아내려서라도 긁어 부스럼을 만들었다.
+	
+	</p>
+	
+	<!-- 
+	블럭엘리먼트는 들여쓰기가 적용되지만 인라인엘리먼트는 공간이 없으므로 적용되지 않는다.
+	이 때는 부모엘리먼트 쪽에서 padding으로 밀어주거나 &nbsp로 공백을 줘야함
+	 -->
+	<h2>들여쓰기</h2>
+	<div style="border:1px solid red; text-indent:1em;">
+		블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;
+		블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;블럭엘리먼트&nbsp;
+	</div>
+	<div style="border:1px solid blue; padding-left:10px;">
+		<span style="text-indent:1em;"><!--span에서 text-indent는 안먹힘. -->인라인엘리먼트</span>
+	</div>
+</body>
+</html>

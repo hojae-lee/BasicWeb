@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>J03Array.html</title>
+<script>
+/*
+ 배열 : 자바와는 다르게 JS에서의 배열은 여러타입의 자료를 저장할 수 있는 자료구조 이다.
+ 
+ 		선언방법 : var 배열명 = new Array(배열크기);
+ */
+ 	//배열선언방법1
+	var array = new Array(5);
+ 
+	document.write("배열의크기:"+ array.length);
+	document.write("<h2>배열 초기화 전 출력</h2>");
+	for(var i=0; i<array.length; i++){
+		document.write("array[]"+i+"]= "+array[i] + "<br/>");
+	}
+	//배열의 초기화 : 자료형이 정해지지않은 상태이므로 어떤자료든 저장가능.
+	array[0] =100;
+	array[1] ='자바스크립트';
+	array[2] =new Date();
+	array[3] =3.14;
+	array[4] =false;
+	
+	document.write("<h2>배열 초기화 후 출력</h2>");
+	for(var i=0; i<array.length; i++){
+		document.write(i+"변방의 자료형"+typeof(array[i])+ ", array["+i+"]="+array[i]+"<br/>")
+	}
+	
+	var init = new Array("홍길동",20,"가산디지털","010-1234-5678");
+	document.write("<h2>선언과 동시에 초기화 후 출력</h2>");
+	for(var i = 0; i<init.length; i++){
+		document.write(i+"변방의 자료형:"+typeof(init[i])+", init["+i+"]="+init[i]+"<br/>")
+	} 
+	
+	var initNoNew = ["KOSMO",1,"Javascript","메르디앙"];
+	document.write("<h2>[] 이용하여 배열선언 후 출력</h2>");
+	for(var i = 0; i<initNoNew.length; i++){
+		document.write(i+"변방의 자료형:"+typeof(initNoNew[i])+", initNoNew["+i+"]="+initNoNew[i]+"<br/>")
+	} 
+	
+	document.write("<h2>배열의 크기 미지정</h2>");
+	
+	//배열선언방법4
+	/*
+	웹프로그래밍시 가장 많이 사용되는 방법
+	배열의 크기는 가장 마지막 자료에 의해 결정
+	크기를 지정하지 않은 경우 크기가0 인배열이 생성.
+	*/
+	var nosize = new Array();
+	document.write("배열의 크기:"+ nosize.length + "<br/>");
+	
+	nosize[0] = 100;
+	nosize[3] = 'Javascript';
+	
+	document.write("배열의 크기:"+ nosize.length + "<br/>");
+	
+	for(var i = 0; i<nosize.length; i++){
+		document.write(i+"변방의 자료형:"+typeof(nosize[i])+", nosize["+i+"]="+nosize[i]+"<br/>")
+	} 
+	
+</script>
+</head>
+<body>
+<script>
+/*
+ 크기가 없는 배열을 선언함.(방법4)
+ 해당 문서 전체에서 사용할 수 있는 전역변수로 선언함.
+ */
+	var studentArray = new Array();
+	
+	/*
+	함수의 두가지 정의형태중 "무명함수"로 선언함.
+	무명함수의 경우 참조변수를 통해 함수를 호출하게 된다.
+	*/
+	var getAverage = function(){
+		
+		/*
+		DOM HTML문서내에 정의된 태그 혹은 input과 같은 Element요소를 칭하는 명칭
+		
+			getElementById("아이디") => html 문서내에 정의된 태그중에 지정된 아이디로 선언된 요소 하나를 js로 가져온다.
+		*/
+		
+		//ocument.getElementById("numOfStudent").value = "1234";
+		
+		
+		var countOfStudent = 
+			document.getElementById("numOfStudent").value;
+		//alert("countOfStudent="+countOfStudent);
+		//return;
+		
+		var total =0;
+		//DOM객체를 통해 가져온 값만큼 반복한다.
+		for(var i=0; i<countOfStudent; i++){
+			/*
+			JS에서 DOM을 통해 가져온 모든값은 문자형이기 떄문에 사칙연산을 위해서는 반드시 parseInt()로 숫자형태로
+			변경한 후 연산해야 한다.
+			*/
+			studentArray[i] =
+				parseInt(prompt(i+1+"번째 학생점수","50"));
+			total += studentArray[i];
+		}
+		/*
+		JS의 window 객체에 정의 되어 있는 함수
+		alert() : 경고창을 띄워준다.
+		confirm() : 사용자에게 Yes or No를 선택하게 하는 경고창을 띄워준다,
+		prompt : 사용자로부터 입력을 받을수 있는 창을 띄워준다.
+		*/
+		
+		var average = total / countOfStudent;
+		
+		var stringResult = "";
+		for(var i=0; i<countOfStudent; i++){
+			stringResult += (i+1)+ "번째학생의점수"+
+				studentArray[i] + "\r\n";
+		}
+		stringResult += "총점:" +total+", 평균:" +average;
+		//위에서 반복문을 통해 연결된 문자열을 alert창으로 띄워준다.
+		alert(stringResult);
+	}
+</script>
+	<h2>배열을 이용한 평균구하기</h2>
+	<table border="1">
+		<tr>
+			<td>학생수입력:</td>
+			<td><input type="text" id="numOfStudent" size="5" value=""/></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<button type="button" onclick="getAverage();">평균구하기</button>
+			</td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+</html>

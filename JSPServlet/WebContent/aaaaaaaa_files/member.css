@@ -1,0 +1,2157 @@
+.meminput_area [class*='_box'] {
+	vertical-align: middle;
+}
+.meminput_area .m_block ~ .m_block {
+	margin-top: 10px;
+}
+.meminput_area .select_box {
+	border-color: rgb(10, 25, 35); height: 40px;
+}
+.meminput_area .input_box {
+	border-color: rgb(10, 25, 35); height: 40px;
+}
+.meminput_area .select_box select {
+	padding-right: 40px; padding-left: 10px;
+}
+.meminput_area .select_box::after {
+	background: url("../images/common/icon_select.png") no-repeat center; top: 50%; right: 0px; display: block; position: absolute; z-index: 0; min-height: 40px; min-width: 40px; content: ""; transform: translateY(-50%);
+}
+.meminput_area .input_box .input_wrap {
+	margin-right: 45px;
+}
+.meminput_area .input_box .input_wrap input {
+	height: 40px; line-height: 40px;
+}
+.meminput_area .input_box.in_button > button {
+	top: 0px; width: 40px; height: 40px; right: 0px; display: block; position: absolute;
+}
+.meminput_area .input_box.type_red {
+	border: 3px solid rgb(233, 64, 64); border-image: none; height: 40px; box-sizing: border-box;
+}
+.meminput_area .input_box.type_red .input_wrap input {
+	height: 34px; line-height: 34px;
+}
+.meminput_area .input_box.type_red > button {
+	width: 40px; height: 34px;
+}
+.meminput_area + .txt_sch_result {
+	background: url("../images/common/arr_sch_result.png") no-repeat bottom; text-align: center; color: rgb(111, 112, 114); padding-bottom: 30px; font-size: 0.81em; margin-top: 25px;
+}
+.meminput_area + .txt_sch_result b {
+	color: rgb(10, 25, 35); font-weight: 500;
+}
+.sect_login .meminput_area {
+	text-align: left;
+}
+.sect_login .meminput_area .input_box .input_wrap {
+	padding: 0px 10px; margin-right: 0px;
+}
+.description {
+	display: none;
+}
+.finding {
+	margin: 0px auto; font-size: 0.81em; max-width: 160px;
+}
+.finding li {
+	margin-bottom: 10px;
+}
+.finding li:last-child {
+	margin-bottom: 0px;
+}
+.finding li a {
+	width: 160px; display: block;
+}
+.finding li .arr_right_red::after {
+	margin-top: 8px; float: right;
+}
+.sect_finding .description {
+	text-align: center; padding-bottom: 40px; font-size: 0.87em; display: block;
+}
+.sect_finding .isi_finding {
+	margin: 0px auto 10px; display: block;
+}
+.sect_finding .inline_block {
+	overflow: hidden;
+}
+.sect_finding .inline_block .select_box {
+	width: 30%; float: left;
+}
+.sect_finding .inline_block .input_box {
+	width: 30%; float: left;
+}
+.sect_finding .inline_block .dash {
+	width: 5%; text-align: center; line-height: 40px; float: left;
+}
+.finded {
+	text-align: center; padding-top: 35px; font-size: 0.87em;
+}
+.notice {
+	text-align: left; color: rgb(233, 64, 64); padding-top: 10px; font-size: 0.75em;
+}
+.sect_outinfo {
+	padding: 30px 15px; position: relative; background-color: rgb(245, 245, 245);
+}
+.sect_outinfo p {
+	padding: 0px 25px 20px; text-align: center; font-size: 0.87em;
+}
+.sect_outinfo li {
+	font-size: 0.75em; margin-bottom: 5px;
+}
+.sect_outinfo::before {
+	background: rgb(233, 64, 64); left: 50%; top: 0px; width: 20px; height: 2px; margin-left: -10px; position: absolute; content: "";
+}
+.self_check {
+	text-align: center; font-size: 0.75em;
+}
+.self_check p {
+	padding-top: 20px;
+}
+.btn_boxgroup button {
+	padding: 9px 0px; width: 49%; float: left;
+}
+.btn_boxgroup button + button {
+	margin-left: 2%;
+}
+.timline li {
+	padding: 10px 0px; width: 16%; border-top-color: rgb(225, 225, 225); border-top-width: 1px; border-top-style: solid; float: left; position: relative;
+}
+.timline li a:hover {
+	text-decoration: none;
+}
+.timline li a:focus {
+	text-decoration: none;
+}
+.timline li div span {
+	font-size: 0.75em; font-weight: 500; vertical-align: top;
+}
+.timline li::before {
+	background: rgb(10, 25, 35); left: 0px; top: -3px; width: 6px; height: 6px; position: absolute; content: "";
+}
+.timline li.selected::before {
+	background: rgb(233, 64, 64); top: -4px;
+}
+.timline li.selected {
+	width: 36%; border-top-color: rgb(233, 64, 64); border-top-width: 2px; border-top-style: solid;
+}
+.timline li.selected div span {
+	color: rgb(233, 64, 64); font-size: 1em;
+}
+.timline li.selected div span + span {
+	font-size: 0.75em;
+}
+.timline li span + span {
+	display: none;
+}
+.timline li.selected span + span {
+	display: block;
+}
+.timline {
+	min-height: 65px;
+}
+.sect_step {
+	background: rgb(245, 245, 245); clear: both; margin-top: 10px;
+}
+.join_titlearea {
+	text-align: center;
+}
+.join_titlearea h4 {
+	color: rgb(10, 25, 35); font-size: 1em;
+}
+.join_titlearea h4 span:first-child {
+	color: rgb(142, 142, 142); margin-bottom: 20px; display: block;
+}
+.join_titlearea h4 span + span {
+	
+}
+.join_titlearea p {
+	padding-top: 10px; font-size: 0.75em;
+}
+.join_choose {
+	padding: 30px 25px 0px; text-align: center;
+}
+.join_choose li a {
+	background: rgb(255, 255, 255); padding: 35px 0px; border-radius: 100%; height: 125px; text-decoration: none; display: block; box-sizing: border-box;
+}
+.join_choose li {
+	width: 125px; text-align: center; font-size: 1.12em; display: inline-block;
+}
+.join_choose li + li {
+	margin-left: 10px;
+}
+.join_choose li .arr_right_red {
+	font-size: 0.75em; font-weight: 500;
+}
+.join_choose li .arr_right_red::after {
+	margin-bottom: 3px;
+}
+.join_choose li a div span {
+	color: rgb(233, 64, 64);
+}
+.join_choose li a:hover {
+	background: rgb(233, 64, 64);
+}
+.join_choose li a:focus {
+	background: rgb(233, 64, 64);
+}
+.join_choose li a:hover {
+	color: rgb(255, 255, 255);
+}
+.join_choose li a:focus {
+	color: rgb(255, 255, 255);
+}
+.join_choose li a:hover span {
+	color: rgb(255, 255, 255);
+}
+.join_choose li a:focus span {
+	color: rgb(255, 255, 255);
+}
+.join_choose li a:focus .arr_right_red::after {
+	background: url("../images/common/view_next_on.png") no-repeat 0px 0px / 100%;
+}
+.join_choose li a:hover .arr_right_red::after {
+	background: url("../images/common/view_next_on.png") no-repeat 0px 0px / 100%;
+}
+.asterisk {
+	text-align: left; padding-top: 20px; padding-left: 10px; font-size: 0.75em; position: relative;
+}
+.billiard {
+	text-align: left; padding-top: 20px; padding-left: 10px; font-size: 0.75em; position: relative;
+}
+.billiard {
+	padding-left: 15px;
+}
+.billiard::before {
+	left: 0px; position: absolute; content: "¡Ø";
+}
+.asterisk::before {
+	left: 0px; position: absolute; content: "*";
+}
+.step01_info span:first-child {
+	font-size: 1em; font-weight: 500; margin-bottom: 15px; display: block;
+}
+.step01_info span:nth-child(2) {
+	font-size: 0.81em; margin-bottom: 15px; display: block;
+}
+.step01_info a {
+	font-size: 0.81em; display: inline-block;
+}
+.step01_info li:first-child {
+	margin-bottom: 40px;
+}
+.step01_info li {
+	padding: 0px 6px; border-left-color: rgb(225, 225, 225); border-left-width: 1px; border-left-style: solid;
+}
+.step02 .sect_finding {
+	padding-top: 30px;
+}
+.join_cancel {
+	text-align: left; padding-top: 20px;
+}
+.join_cancel a {
+	font-size: 0.75em; font-weight: 500;
+}
+.step03 .join_titlearea {
+	padding-bottom: 15px;
+}
+.mCSB_draggerContainer {
+	display: none;
+}
+.step03 .choice_wrap {
+	margin: 15px 0px 50px; color: rgb(111, 112, 114);
+}
+.step03 .total_agree {
+	margin: 0px 0px 20px; left: 50%; transform: translate(-50%);
+}
+.sect_step.step05 .btn_wrap .btn_red {
+	background-position: calc(100% - 20px); margin: 0px 15px; display: block; max-width: 480px; background-image: url("../images/common/view_next_on.png"); background-repeat: no-repeat;
+}
+.agree_area {
+	background: rgb(255, 255, 255); padding: 15px; border: 1px solid rgb(225, 225, 225); border-image: none; height: 350px; -ms-overflow-y: auto;
+}
+.agree_area h5 {
+	padding-top: 20px; font-size: 0.87em;
+}
+.agree_area h5:first-child {
+	padding-top: 0px;
+}
+.agree_area h6 {
+	padding-top: 20px; font-size: 0.87em;
+}
+.agree_area .agree_p {
+	color: rgb(111, 112, 114); font-size: 0.75em;
+}
+.agree_area .agree_p a {
+	color: rgb(111, 112, 114);
+}
+.step05 .join_titlearea p {
+	padding: 10px 15px 0px; text-align: left;
+}
+.step05 .join_titlearea p.success {
+	margin: 15px 0px; text-align: center;
+}
+.step04 .join_titlearea {
+	text-align: inherit; position: relative;
+}
+.step04 .join_titlearea h4 span {
+	text-align: center;
+}
+.step04 .join_titlearea p {
+	left: 60px; bottom: 3px; padding-top: 0px; font-weight: 500; display: inline-block; position: absolute;
+}
+.table_area {
+	padding: 15px 0px 50px;
+}
+.table_area table {
+	font-size: 0.75em; border-top-color: rgb(10, 25, 35); border-bottom-color: rgb(10, 25, 35); border-top-width: 2px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+.table_area table tr td {
+	padding: 10px 15px; text-align: left; background-color: rgb(255, 255, 255);
+}
+.table_area table tr th {
+	padding: 12px 14px 10px; text-align: right; font-weight: 500; vertical-align: top; border-right-color: rgb(225, 225, 225); border-right-width: 1px; border-right-style: solid; background-color: rgb(235, 235, 235);
+}
+.table_area .bdnone {
+	border: currentColor; border-image: none;
+}
+.table_area .bdnone .input_wrap {
+	padding-left: 0px;
+}
+.table_area .billiard {
+	padding-top: 10px; font-size: 1em;
+}
+.table_area .asterisk {
+	padding-top: 10px; font-size: 1em;
+}
+.table_area .input_box .input_wrap input[type=text] {
+	font-size: 1em; vertical-align: baseline;
+}
+.table_area .input_box .input_wrap input[type=password] {
+	font-size: 1em; vertical-align: baseline;
+}
+.table_area .input_width {
+	border: 1px solid rgb(10, 25, 35); border-image: none; width: 100%;
+}
+.table_area .input_width2 {
+	border: 1px solid rgb(10, 25, 35); border-image: none; width: 50%;
+}
+.table_area .select_box {
+	height: 30px; line-height: 30px; font-size: 1em;
+}
+.table_area .input_box {
+	height: 30px; line-height: 30px; font-size: 1em;
+}
+.table_area .meminput_area .input_box .input_wrap input {
+	height: 30px; line-height: 30px; font-size: 1em;
+}
+.table_area .meminput_area .select_box::after {
+	min-height: 30px; min-width: 30px;
+}
+.table_area .meminput_area .select_box select {
+	padding-right: 25px; padding-left: 7px;
+}
+.table_area .gender .choice_wrap + .choice_wrap {
+	margin-left: 20px;
+}
+.table_area .addr {
+	position: relative;
+}
+.table_area .addr .arr_right_red {
+	margin: 10px; left: 50%; top: 0px; padding-top: 3px; position: absolute;
+}
+.table_area .addr .input_box {
+	margin-top: 10px;
+}
+.table_area .addr .input_box.input_width2 {
+	margin-top: 0px;
+}
+.table_area .phone .meminput_area .input_box .input_wrap {
+	padding: 0px 10px; margin-right: 0px;
+}
+.table_area .phone2 .meminput_area .input_box .input_wrap {
+	padding: 0px 10px; margin-right: 0px;
+}
+.table_area .phone .inline_block .select_box {
+	width: 30%; float: left;
+}
+.table_area .phone .inline_block .input_box {
+	width: 30%; float: left;
+}
+.table_area .phone .inline_block .dash {
+	width: 5%; text-align: center; line-height: 30px; float: left;
+}
+.table_area .birth .inline_block span {
+	text-align: center;
+}
+.table_area .recieve label {
+	color: rgb(111, 112, 114); font-size: 1em !important; margin-bottom: 10px;
+}
+.table_area table tr td.recieve {
+	padding: 16px 15px;
+}
+.table_area .select_width {
+	width: 100%;
+}
+.table_area .add_info .choice_wrap {
+	display: block;
+}
+.table_addinfo {
+	display: block;
+}
+.table_addinfo_pc {
+	display: none;
+}
+.table_area .add_info .choice_wrap {
+	overflow: inherit; margin-bottom: 10px;
+}
+.btn_area {
+	padding: 0px 15px; position: relative;
+}
+.table_area.additional_modify table {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.table_area.additional_modify table tr th {
+	text-align: center; vertical-align: middle; border-bottom-color: rgb(225, 225, 225); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.table_area.additional_modify table tr th:last-child {
+	padding: 10px 14px 10px 15px; border-right-color: currentColor; border-right-width: medium; border-right-style: none;
+}
+.table_area.additional_modify table tr td:last-child {
+	padding: 10px 14px 10px 15px; border-right-color: currentColor; border-right-width: medium; border-right-style: none;
+}
+.table_area.additional_modify table tr td {
+	padding: 10px 14px 10px 15px; text-align: center; color: rgb(111, 112, 114); border-right-color: rgb(225, 225, 225); border-bottom-color: rgb(225, 225, 225); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid;
+}
+.extend_area {
+	padding: 15px; font-size: 0.75em;
+}
+.extend_area .billiard {
+	padding-top: 0px; margin-bottom: 10px; display: block;
+}
+.extend_area .billiard::before {
+	top: 0px;
+}
+.extend_area a {
+	font-weight: 500;
+}
+.family_info {
+	-ms-overflow-x: auto;
+}
+.family_info table {
+	table-layout: auto; max-width: 100%;
+}
+.family_info table th {
+	white-space: nowrap;
+}
+.family_info table td {
+	white-space: nowrap;
+}
+.btn_group button {
+	display: block;
+}
+.btn_group button + button {
+	margin-top: 5px;
+}
+.family_info .phone2 .input_box {
+	margin-top: 5px;
+}
+.family_info .phone2 .select_box {
+	width: 100%; display: block;
+}
+.family_info .phone2 .input_box {
+	width: 100%; display: block;
+}
+.family_info .phone2 .dash {
+	display: none;
+}
+.family_info .relation .choice_wrap {
+	text-align: left; padding-bottom: 5px; display: block;
+}
+.family_info .birth2 :nth-child(2).select_box {
+	width: 90%; clear: both; float: left;
+}
+.family_info .birth2 .select_box {
+	width: 85%; margin-bottom: 5px; float: left;
+}
+.family_info .birth2 span {
+	width: 15%; text-align: center; line-height: 28px; float: left;
+}
+.family_info .modi_name .input_box .input_wrap {
+	padding: 0px 3px;
+}
+.family_info .extend_area {
+	padding: 15px 15px 0px;
+}
+.backto_area span {
+	font-size: 0.75em; display: block;
+}
+.backto_area a {
+	font-size: 0.75em; margin-top: 30px; display: inline-block;
+}
+.table_area_booking {
+	padding: 15px 0px 0px;
+}
+.table_area_booking table.table_type1 thead th:first-child {
+	border-left-color: currentColor; border-left-width: medium; border-left-style: none;
+}
+.table_type1.inter_booklist thead th:nth-child(4) {
+	display: none;
+}
+.table_type1.inter_booklist tbody td:nth-child(4) {
+	display: none;
+}
+.table_type1.inter_booklist colgroup col:nth-child(4) {
+	display: none;
+}
+.reading_info {
+	padding-bottom: 20px; font-size: 0.75em;
+}
+.table_area_booking h4 {
+	padding: 35px 0px 15px;
+}
+.table_type1.basketitem_list thead tr th:nth-child(4) {
+	display: none;
+}
+.table_type1.basketitem_list thead tr th:nth-child(5) {
+	display: none;
+}
+.table_type1.basketitem_list thead tr th:nth-child(7) {
+	display: none;
+}
+.table_type1.basketitem_list tbody tr td:nth-child(4) {
+	display: none;
+}
+.table_type1.basketitem_list tbody tr td:nth-child(5) {
+	display: none;
+}
+.table_type1.basketitem_list tbody tr td:nth-child(7) {
+	display: none;
+}
+.table_type1.basketitem_list colgroup col:nth-child(4) {
+	display: none;
+}
+.table_type1.basketitem_list colgroup col:nth-child(5) {
+	display: none;
+}
+.table_type1.basketitem_list colgroup col:nth-child(7) {
+	display: none;
+}
+.table_type1.basketitem_list_apply thead tr th:nth-child(3) {
+	display: none;
+}
+.table_type1.basketitem_list_apply thead tr th:nth-child(4) {
+	display: none;
+}
+.table_type1.basketitem_list_apply tbody tr td:nth-child(3) {
+	display: none;
+}
+.table_type1.basketitem_list_apply tbody tr td:nth-child(4) {
+	display: none;
+}
+.table_type1.basketitem_list_apply colgroup col:nth-child(3) {
+	display: none;
+}
+.table_type1.basketitem_list_apply colgroup col:nth-child(4) {
+	display: none;
+}
+.table_type1.basketitem_list thead tr th:nth-child(1) .table_type1.basketitem_list tbody tr td:nth-child(1) {
+	width: 35px;
+}
+.table_type1.basketitem_list colgroup col:nth-child(1) {
+	width: 35px;
+}
+.btn_group_mfull {
+	padding: 20px 0px 0px; overflow: hidden;
+}
+.btn_group_mfull button {
+	padding: 5px; width: 49%; font-size: 0.75em; float: left;
+}
+.btn_group_mfull button + button {
+	margin-left: 2%;
+}
+.ico_delete {
+	margin-right: 5px;
+}
+.table_area_booking .ftc_gc {
+	text-decoration: none;
+}
+.member_btn button {
+	padding: 10px 0px; width: 100%;
+}
+.apply_info .reading_info {
+	padding-bottom: 0px;
+}
+.table_area .table_bookinfo {
+	border: currentColor; border-image: none;
+}
+.table_area .table_bookinfo tr th {
+	background: none; padding: 10px 0px 5px; border: currentColor; border-image: none; text-align: left;
+}
+.table_area .table_bookinfo tr td {
+	padding: 5px 0px;
+}
+.table_area .table_bookinfo .input_box {
+	border: 1px solid rgb(10, 25, 35); border-image: none; width: 100%;
+}
+.table_area .table_bookinfo textarea {
+	border: 1px solid rgb(10, 25, 35); border-image: none; width: 100%; height: 125px;
+}
+.apply_info p.ftclr_red1 {
+	padding-top: 5px; clear: both;
+}
+.table_area .table_bookinfo .choose_year .select_box {
+	width: 28%; float: left;
+}
+.table_area .table_bookinfo .choose_year .inline_block span {
+	width: 5.3%; text-align: center; line-height: 30px; float: left;
+}
+.table_area .table_bookinfo .choose_time .select_box {
+	width: 45%; float: left;
+}
+.table_area .table_bookinfo .choose_time .inline_block span {
+	width: 5%; text-align: center; line-height: 30px; float: left;
+}
+.apply_info .btn_area {
+	padding: 25px 15px 50px; text-align: center; margin-top: 50px;
+}
+.apply_info .btn_area a {
+	font-size: 0.75em; margin-top: 15px; display: inline-block;
+}
+.next_div {
+	position: relative;
+}
+.ico_next {
+	background: url("../images/common/ico_next.png") no-repeat 0px 0px / 100% 100%; top: 16px; width: 5px; height: 9px; right: 15px; display: inline-block; position: absolute;
+}
+.checkbox_list li {
+	margin-bottom: 10px;
+}
+.searching {
+	margin: 15px 0px 40px; position: relative;
+}
+.searching .ico_searching {
+	background: url("../images/common/ico_searching.png") no-repeat 0px 0px / 100% 100%; top: 12px; width: 18px; height: 19px; right: 15px; display: inline-block; position: absolute;
+}
+.select_date {
+	padding-top: 10px;
+}
+.select_date li .input_box {
+	width: 66.5%;
+}
+.select_date li span {
+	width: 15%; font-size: 0.81em; margin-left: 1%; vertical-align: middle; display: inline-block;
+}
+.select_date li {
+	margin-bottom: 10px;
+}
+.booking_list th:nth-child(1) {
+	display: none;
+}
+.booking_list th:nth-child(3) {
+	display: none;
+}
+.booking_list th:nth-child(5) {
+	display: none;
+}
+.booking_list td:nth-child(1) {
+	display: none;
+}
+.booking_list td:nth-child(3) {
+	display: none;
+}
+.booking_list td:nth-child(5) {
+	display: none;
+}
+.booking_list col:nth-child(1) {
+	display: none;
+}
+.booking_list col:nth-child(3) {
+	display: none;
+}
+.booking_list col:nth-child(5) {
+	display: none;
+}
+.groupbooking_list th:nth-child(1) {
+	display: none;
+}
+.groupbooking_list th:nth-child(2) {
+	display: none;
+}
+.groupbooking_list th:nth-child(5) {
+	display: none;
+}
+.groupbooking_list td:nth-child(1) {
+	display: none;
+}
+.groupbooking_list td:nth-child(2) {
+	display: none;
+}
+.groupbooking_list td:nth-child(5) {
+	display: none;
+}
+.groupbooking_list col:nth-child(1) {
+	display: none;
+}
+.groupbooking_list col:nth-child(2) {
+	display: none;
+}
+.groupbooking_list col:nth-child(5) {
+	display: none;
+}
+table.table_type1.booking_list thead th:nth-child(2) {
+	border-left-color: currentColor; border-left-width: medium; border-left-style: none;
+}
+table.table_type1.booking_list tbody td:nth-child(2) {
+	border-left-color: currentColor; border-left-width: medium; border-left-style: none;
+}
+table.table_type1.groupbooking_list thead th:nth-child(3) {
+	border-left-color: currentColor; border-left-width: medium; border-left-style: none;
+}
+table.table_type1.groupbooking_list tbody td:nth-child(3) {
+	border-left-color: currentColor; border-left-width: medium; border-left-style: none;
+}
+.booking_list th:nth-child(4) {
+	width: 40%;
+}
+.reservegroup_list li {
+	display: inline-block;
+}
+.reservegroup_list li:first-child {
+	padding-right: 20px;
+}
+.reservegroup_list li.choicegallery {
+	margin: 10px 0px; display: block;
+}
+.choicegallery .select_box {
+	width: 66.5%;
+}
+.choicegallery .select_box select {
+	padding-left: 10px;
+}
+.top_bar span {
+	padding-top: 5px; font-size: 0.75em; border-top-color: rgb(233, 64, 64); border-top-width: 1px; border-top-style: solid;
+}
+.reserve_info .table_wrap {
+	padding: 20px 0px 30px;
+}
+.reserve_info {
+	padding: 30px 15px 0px;
+}
+.btn_group_reserve {
+	padding: 60px 0px 30px; overflow: hidden;
+}
+.btn_group_reserve button {
+	padding: 10px 0px; width: 49%; float: left;
+}
+.btn_group_reserve button + button {
+	margin-left: 2%;
+}
+.table_applyinfo_h4 {
+	padding: 10px 0px;
+}
+.billiard.billiard_inline {
+	padding: 0px 0px 10px 15px; font-size: 0.75em;
+}
+.table_area .table_applyinfo_m table tr th {
+	border-bottom-color: rgb(225, 225, 225); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.table_area .table_applyinfo_m table tr td {
+	border-bottom-color: rgb(225, 225, 225); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.table_area .table_applyinfo_m table {
+	border-top-color: rgb(10, 25, 35); border-bottom-color: currentColor; border-top-width: 1px; border-bottom-width: medium; border-top-style: solid; border-bottom-style: none;
+}
+.table_area .table_applyinfo_pc table {
+	border-top-color: rgb(10, 25, 35); border-bottom-color: currentColor; border-top-width: 1px; border-bottom-width: medium; border-top-style: solid; border-bottom-style: none;
+}
+.table_area .open_list {
+	border-top-color: rgb(10, 25, 35); border-bottom-color: currentColor; border-top-width: 1px; border-bottom-width: medium; border-top-style: solid; border-bottom-style: none;
+}
+.table_applyinfo_m {
+	display: block;
+}
+.table_applyinfo_pc {
+	display: none;
+}
+.searching.searching2 {
+	margin: 15px 0px 25px;
+}
+.table_area.table_area2 {
+	padding: 15px 0px;
+}
+.open_list tr th:nth-child(3) {
+	display: none;
+}
+.open_list tr th:nth-child(4) {
+	display: none;
+}
+.open_list tr td:nth-child(3) {
+	display: none;
+}
+.open_list tr td:nth-child(4) {
+	display: none;
+}
+.open_list col:nth-child(3) {
+	display: none;
+}
+.open_list col:nth-child(4) {
+	display: none;
+}
+.table_area .open_list tr td {
+	text-align: center;
+}
+.table_area .open_list tr th {
+	text-align: center; border-right-color: currentColor; border-right-width: medium; border-right-style: none;
+}
+.cell_box {
+	margin: 15px 0px; border: 1px solid rgb(225, 225, 225); border-image: none; text-align: center; font-size: 0.65em;
+}
+.cell_box .grey_box {
+	background: rgb(245, 245, 245); padding: 15px; font-weight: 500; border-bottom-color: rgb(225, 225, 225); border-bottom-width: 1px; border-bottom-style: solid; display: block;
+}
+.cell_box .grey_contbox {
+	padding: 15px; overflow: hidden; display: block;
+}
+.cell_box .grey_contbox li {
+	width: 33.3%; float: left;
+}
+.membership_ttbox .brd_cont {
+	padding-top: 20px;
+}
+.membership_ttbox .brd_cont p {
+	font-size: 0.75em; margin-bottom: 10px;
+}
+.membership_ttbox .brd_cont p span.ftclr_red1 {
+	font-size: 1.25em;
+}
+.red_divided {
+	padding-right: 10px; position: relative;
+}
+.red_divided::after {
+	top: 5px; width: 1px; height: 10px; right: 3px; position: absolute; content: ""; background-color: rgb(233, 64, 64);
+}
+.bg_member {
+	background: url("../images/sub/bg_member.jpg") no-repeat center / cover; height: 80px; margin-top: 40px;
+}
+.bg_member .btn_group {
+	padding: 35px 0px; text-align: center;
+}
+.bg_member .btn_group div {
+	width: 32%; margin-left: 2%; float: left;
+}
+.bg_member .btn_group.dex2 div {
+	width: 49%; margin-left: 1%;
+}
+.bg_member .btn_group.dex2 div:first-child {
+	margin-right: 1%;
+}
+.bg_member .btn_group div:first-child {
+	margin-left: 0px;
+}
+.bg_member .btn_group a {
+	padding: 5px 0px; width: 100%; float: left; position: relative; box-sizing: border-box; -webkit-box-sizing: border-box;
+}
+.bg_member .btn_group a i {
+	top: 50%; right: 10px; position: absolute;
+}
+.bg_member .btn_group a i.isi_gift {
+	top: 40%;
+}
+.bg_member .btn_group a i.isi_benefit {
+	top: 40%;
+}
+.bg_member .btn_group .arr_right_white {
+	background: url("../images/common/view_next_on.png") no-repeat 0px 0px / 100% 100%; width: 23px; height: 9px; margin-left: 5px; display: inline-block;
+}
+.left_title {
+	border-bottom-color: rgb(225, 225, 225); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.left_title h4 {
+	border-bottom-color: rgb(233, 64, 64); border-bottom-width: 1px; border-bottom-style: solid; display: inline-block;
+}
+.card_img li {
+	width: 33.33%; float: left;
+}
+.card_img li div {
+	width: 96%;
+}
+.card_img li:first-child div {
+	margin-right: 4%;
+}
+.card_img li:nth-child(2) div {
+	margin-right: 2%; margin-left: 2%;
+}
+.card_img li:nth-child(3) div {
+	margin-left: 4%;
+}
+.card_img li img {
+	margin-top: 5px; max-width: 100%;
+}
+.card_img li span {
+	font-size: 0.75em; font-weight: 500;
+}
+.infolist_box {
+	font-size: 0.75em; margin-bottom: 20px;
+}
+.infolist_box span {
+	font-weight: 500;
+}
+.infolist_box ul {
+	margin-top: 10px;
+}
+:last-child.infolist_box {
+	margin-bottom: 0px;
+}
+.memprogram .sect_pd1 {
+	padding-bottom: 0px;
+}
+.memprogram_notice {
+	padding-top: 5px; font-size: 0.75em; border-top-color: rgb(225, 225, 225); border-top-width: 1px; border-top-style: solid;
+}
+.intro_text {
+	font-size: 0.9em; font-weight: 500;
+}
+.intro_text_row {
+	padding-left: 10px; position: relative;
+}
+.intro_text span::before {
+	left: -10px; top: 4px; width: 2px; height: 16px; display: block; position: absolute; content: ""; background-color: rgb(233, 64, 64);
+}
+.intro_text_row::before {
+	left: 0px; top: 4px; width: 1px; height: calc(100% - 4px); display: block; position: absolute; content: ""; background-color: rgb(225, 225, 225);
+}
+.intro_text span {
+	position: relative;
+}
+.intro_extra_text {
+	font-size: 0.75em; margin-top: 30px;
+}
+table.table_type4 td.phonenum {
+	font-size: 1.25em;
+}
+.bg_memlounge {
+	background: url("../images/sub/bg_memlounge.jpg") no-repeat center / cover; height: 80px;
+}
+.memdiscount .left_sect2 span {
+	font-size: 0.75em; margin-top: -3px; display: block;
+}
+.memdiscount .area_block h5 {
+	font-size: 1em; margin-bottom: 12px;
+}
+.memdiscount .area_block h5 span + span {
+	vertical-align: middle;
+}
+.memfriend .right_cont {
+	font-size: 0.75em;
+}
+.memfriend .right_cont span {
+	margin-bottom: 10px; display: block;
+}
+.memfriend .right_cont a {
+	font-weight: 500;
+}
+.join_notice span {
+	font-size: 0.75em;
+}
+.join_process li::before {
+	left: 0px; top: -3px; width: 6px; height: 6px; position: absolute; content: ""; background-color: rgb(10, 25, 35);
+}
+.join_process li {
+	padding: 10px 0px 30px; width: 50%; border-top-color: rgb(204, 204, 204); border-top-width: 1px; border-top-style: solid; float: left; position: relative;
+}
+.join_process li div:first-child {
+	color: rgb(233, 64, 64); font-size: 0.95em; display: block;
+}
+.join_process li div:nth-child(2) {
+	font-size: 0.75em;
+}
+.join_price table.table_type1 th {
+	padding: 10px 0px;
+}
+.join_price table.table_type1 td {
+	padding: 10px 0px;
+}
+.join_price table.table_type1 td span {
+	vertical-align: top;
+}
+.join_price table.table_type1 td .choice_wrap {
+	line-height: 15px;
+}
+.join_price .btn_group_full button {
+	width: 100%; margin-top: 30px; position: relative;
+}
+.join_price .btn_group_full button i {
+	top: 11px; right: 10px; position: absolute;
+}
+.notice_block {
+	font-size: 0.75em; margin-top: 40px;
+}
+.notice_block span {
+	display: block;
+}
+.notice_block span a {
+	margin-left: 5px;
+}
+.notice_block span.bullet_billiard {
+	margin-top: 10px;
+}
+.join_pay div {
+	font-size: 0.75em;
+}
+.memgift .left_title {
+	border: currentColor; border-image: none; font-size: 0.9em; font-weight: 400;
+}
+.memgift .left_title h4 {
+	border: currentColor; border-image: none; font-size: 0.9em; font-weight: 400;
+}
+.memgift .left_title h4 span {
+	font-size: 1.38em; display: block;
+}
+.memgift .left_sect2 {
+	width: 60%;
+}
+.memgift .left_sect2 img {
+	margin-top: 10%; max-width: 100%;
+}
+.giftcard_info {
+	font-size: 0.75em; margin-bottom: 20px;
+}
+.giftcard_info span {
+	font-weight: 500; display: block;
+}
+.buy_card li span.ftclr_red1 {
+	font-size: 1.25em;
+}
+.gift_price li {
+	width: 31.33%; float: left;
+}
+.gift_price li:nth-child(2) {
+	margin-left: 2%;
+}
+.gift_price li:nth-child(3) {
+	margin-left: 2%;
+}
+.square-box {
+	background: rgb(245, 245, 245); border-radius: 50%; width: 100%; overflow: hidden; position: relative;
+}
+.square-box::before {
+	padding-top: 100%; display: block; content: "";
+}
+.square-content {
+	left: 0px; top: 0px; right: 0px; bottom: 0px; position: absolute;
+}
+.square-content div {
+	width: 100%; height: 100%; display: table;
+}
+.square-content div div {
+	text-align: center; vertical-align: middle; display: table-cell;
+}
+.square-content div div span {
+	display: block;
+}
+.square-content div div span:nth-child(2) {
+	font-size: 0.75em;
+}
+.square-content div div span:nth-child(3) {
+	font-size: 0.94em; font-weight: 500;
+}
+.memdiscount .obj_thumb:hover .info .subject {
+	text-decoration: none;
+}
+.memdiscount .obj_thumb:focus .info .subject {
+	text-decoration: none;
+}
+.popzip .page_numb {
+	margin-top: 15px;
+}
+.agree_area.privacychk {
+	height: auto;
+}
+.join_cancel.mode1 a + a {
+	margin-left: 15px;
+}
+@media all and (min-width:480px)
+{
+.sect_step.step05 .btn_wrap .btn_red {
+	margin: 0px auto;
+}
+}
+@media all and (min-width:640px)
+{
+.btn_group button {
+	display: inline-block;
+}
+.btn_group button + button {
+	margin-top: 0px; margin-left: 5px;
+}
+}
+@media all and (min-width:768px)
+{
+.meminput_area .select_box {
+	width: 245px;
+}
+.meminput_area .m_block ~ .m_block {
+	margin-top: 0px; margin-left: 5px;
+}
+.meminput_area {
+	text-align: left;
+}
+.meminput_area + .txt_sch_result {
+	padding-bottom: 40px; font-size: 1em; margin-top: 50px;
+}
+.meminput_area + .txt_sch_result b {
+	color: rgb(10, 25, 35); font-weight: 500;
+}
+.sect_login {
+	margin: 0px auto; max-width: 480px;
+}
+.sect_finding {
+	margin: 0px auto; max-width: 480px;
+}
+.sect_out {
+	margin: 0px auto; max-width: 480px;
+}
+.sect_login .input_box.m_block {
+	display: block;
+}
+.sect_finding .input_box.m_block {
+	display: block;
+}
+.sect_out .input_box.m_block {
+	display: block;
+}
+.sect_login .meminput_area .m_block ~ .m_block {
+	margin-top: 20px; margin-left: 0px;
+}
+.sect_finding .meminput_area .m_block ~ .m_block {
+	margin-top: 20px; margin-left: 0px;
+}
+.sect_out .meminput_area .m_block ~ .m_block {
+	margin-top: 20px; margin-left: 0px;
+}
+.sect_finding .input_box .input_wrap {
+	width: 100%;
+}
+.sect_out .select_box {
+	width: 100%;
+}
+.notice {
+	padding-top: 20px;
+}
+.agree_next {
+	margin: 0px auto; width: 320px; position: relative;
+}
+.step05 .join_titlearea p {
+	margin: 0px auto; max-width: 413px;
+}
+.step05 .join_titlearea p.success {
+	margin: 30px 0px 60px;
+}
+.table_area .birth .meminput_area .select_box {
+	width: 28%; float: left;
+}
+.table_area .birth .meminput_area .inline_block span {
+	width: 5.3%; line-height: 30px; float: left;
+}
+.table_area .recieve label {
+	padding-right: 20px; margin-bottom: 0px;
+}
+.table_area .select_box {
+	height: 38px; line-height: 38px;
+}
+.table_area .input_box {
+	height: 38px; line-height: 38px;
+}
+.table_area .phone .inline_block .dash {
+	height: 38px; line-height: 38px;
+}
+.family_info .birth2 span {
+	height: 38px; line-height: 38px;
+}
+.btn_area {
+	margin: 0px auto; max-width: 320px;
+}
+.table_area.additional_modify table tr td {
+	text-align: center;
+}
+.table_type1.basketitem_list thead tr th:nth-child(1) .table_type1.basketitem_list tbody tr td:nth-child(1) {
+	width: 70px;
+}
+.table_type1.basketitem_list colgroup col:nth-child(1) {
+	width: 70px;
+}
+.table_type1.basketitem_list .choice_wrap input[type=checkbox].design + label {
+	padding-left: 30px;
+}
+.btn_group_mfull {
+	max-width: 370px;
+}
+.btn_group_mfull button:first-child {
+	width: 200px;
+}
+.btn_group_mfull button + button {
+	width: 160px; margin-left: 10px;
+}
+.apply_info .btn_area {
+	max-width: 1400px;
+}
+.table_area table tr th {
+	padding: 18px 14px 10px;
+}
+.sect_step.step05 .btn_wrap .btn_red {
+	margin: 0px auto;
+}
+}
+@media all and (min-width:1024px)
+{
+.meminput_area .m_block ~ .m_block {
+	margin-left: 40px;
+}
+.meminput_area .select_box {
+	height: 70px;
+}
+.meminput_area .input_box {
+	height: 70px;
+}
+.step04 .meminput_area .select_box {
+	width: 35%;
+}
+.meminput_area .select_box::after {
+	width: 60px; height: 70px;
+}
+.meminput_area .select_box select {
+	padding-right: 60px; font-size: 1rem;
+}
+.meminput_area .input_box .input_wrap {
+	margin-right: 65px;
+}
+.meminput_area .input_box .input_wrap input {
+	height: 70px; line-height: 70px; font-size: 1rem;
+}
+.meminput_area .input_box.in_button > button {
+	top: 0px; width: 60px; height: 70px; right: 0px; display: block; position: absolute;
+}
+.meminput_area .input_box.type_red {
+	border-width: 5px; height: 70px;
+}
+.meminput_area .input_box.type_red {
+	width: 680px;
+}
+.meminput_area .input_box.type_red .input_wrap input {
+	height: 64px; line-height: 64px;
+}
+.meminput_area .input_box.type_red.in_button > button {
+	top: 0px; width: 60px; height: 64px; right: 0px; display: block; position: absolute;
+}
+.meminput_area .w100 {
+	width: 100%;
+}
+.description {
+	text-align: center; line-height: 30px; padding-bottom: 70px; display: block;
+}
+.sect_login .meminput_area .input_box {
+	width: 100%;
+}
+.sect_finding > .meminput_area > .input_box {
+	width: 100%;
+}
+.sect_out .meminput_area .input_box {
+	width: 100%;
+}
+.finding {
+	font-size: 1em; max-width: 100%;
+}
+.finding li {
+	width: 30%; float: left;
+}
+.finding li:nth-child(2) {
+	margin-left: 5%;
+}
+.finding li:nth-child(3) {
+	margin-left: 5%;
+}
+.finding li a {
+	width: 100%;
+}
+.sect_finding .description {
+	font-size: 1em;
+}
+.sect_finding .isi_finding {
+	margin: 0px auto 20px;
+}
+.sect_finding .inline_block .dash {
+	line-height: 70px;
+}
+.finded {
+	padding-top: 50px; font-size: 1.12em;
+}
+.notice {
+	font-size: 0.87em;
+}
+.sect_outinfo p {
+	font-size: 1.25em;
+}
+.sect_outinfo {
+	padding: 50px 0px 40px;
+}
+.sect_outinfo ul {
+	margin: 0px auto; max-width: 750px;
+}
+.sect_outinfo li {
+	font-size: 1em;
+}
+.self_check {
+	font-size: 1em;
+}
+.timline {
+	min-height: 85px;
+}
+.step01 {
+	margin-top: 50px;
+}
+.step02 {
+	margin-top: 50px;
+}
+.step03 {
+	margin-top: 50px;
+}
+.step04 {
+	margin-top: 50px;
+}
+.step05 {
+	margin-top: 50px;
+}
+.timline li {
+	width: 20%;
+}
+.timline li div span {
+	font-size: 1.5em;
+}
+.timline li.selected div span {
+	font-size: 1.5em;
+}
+.timline li div span + span {
+	font-size: 1em; display: block;
+}
+.timline li.selected div span + span {
+	font-size: 1em; display: block;
+}
+.timline li.selected {
+	width: 20%;
+}
+.timline li::before {
+	width: 7px; height: 7px;
+}
+.timline li.selected {
+	border-top-color: rgb(233, 64, 64); border-top-width: 3px; border-top-style: solid;
+}
+.timline li.selected::before {
+	top: -5px;
+}
+.join_titlearea h4 {
+	font-size: 1.5em;
+}
+.join_titlearea p {
+	font-size: 1em;
+}
+.join_choose {
+	padding-top: 50px;
+}
+.join_titlearea {
+	margin: 0px auto; max-width: 465px;
+}
+.join_choose {
+	margin: 0px auto; max-width: 465px;
+}
+.join_choose li a {
+	height: 220px;
+}
+.join_choose li {
+	width: 220px; font-size: 1.87em;
+}
+.join_choose li + li {
+	margin-left: 20px;
+}
+.asterisk {
+	text-align: center; padding-top: 35px; font-size: 0.87em;
+}
+.billiard {
+	text-align: center; padding-top: 35px; font-size: 0.87em;
+}
+.asterisk::before {
+	left: 10px;
+}
+.join_choose li .arr_right_red {
+	font-size: 0.53em;
+}
+.join_choose li :hover .arr_right_red {
+	
+}
+.join_choose li a {
+	padding: 65px 0px;
+}
+.step01_info li {
+	padding: 0px 10px; width: 47%; vertical-align: top; display: inline-block;
+}
+.step01_info span:first-child {
+	font-size: 1.5em;
+}
+.step01_info span:nth-child(2) {
+	font-size: 1em;
+}
+.step01_info a {
+	font-size: 1em; font-weight: 500;
+}
+.step02 .sect_finding {
+	padding-top: 50px; position: relative;
+}
+.join_cancel {
+	right: -120px; bottom: 16px; position: absolute;
+}
+.join_cancel a {
+	font-size: 1em;
+}
+.agree_area {
+	padding: 0px 0px 0px 30px; height: 320px;
+}
+.step03 .join_titlearea {
+	padding-bottom: 30px;
+}
+.mCSB_draggerContainer {
+	display: block;
+}
+.agree_area h5:first-child {
+	padding-top: 30px;
+}
+.agree_area h5 {
+	padding-top: 30px; font-size: 1.25em;
+}
+.agree_area h6 {
+	padding-top: 30px; font-size: 1.25em;
+}
+.agree_area .agree_p {
+	padding-left: 20px; font-size: 1em;
+}
+.step03 .choice_wrap {
+	margin: 20px 0px 70px; font-size: 1em;
+}
+.step03 .total_agree {
+	margin: 0px 0px 30px;
+}
+.step05 .join_titlearea {
+	margin: 0px auto; max-width: 660px;
+}
+.step05 .join_choose {
+	margin: 0px auto; max-width: 660px;
+}
+.step05 .join_titlearea p {
+	text-align: center; max-width: inherit;
+}
+.step04 .join_titlearea {
+	max-width: 300px;
+}
+.step04 .join_titlearea p {
+	left: inherit; right: 33px; bottom: 5px; font-weight: 500;
+}
+.step04 .join_titlearea h4 span + span {
+	padding-left: 20px;
+}
+.memmodify .step04 .join_titlearea h4 {
+	display: inline-block;
+}
+.memmodify .step04 .join_titlearea {
+	text-align: left; max-width: inherit;
+}
+.memmodify .step04 .join_titlearea p {
+	right: inherit; bottom: inherit; display: inline-block; position: inherit;
+}
+.memmodify .step04 .table_area {
+	padding: 15px 0px 50px;
+}
+.step04 .table_area {
+	padding: 30px 2% 100px;
+}
+.table_addinfo {
+	display: none;
+}
+.step04 .table_addinfo {
+	display: block;
+}
+.addinfo_title h4 {
+	text-align: center;
+}
+.table_area table {
+	font-size: 1em;
+}
+.table_area table tr th {
+	padding: 26px 40px;
+}
+.table_area table tr td {
+	padding: 16px 40px;
+}
+.table_area table tr td.gender {
+	padding: 30px 40px 15px;
+}
+.table_area table tr td.recieve {
+	padding: 32px 40px 16px;
+}
+.table_area .input_box .input_wrap input[type=text] {
+	height: 48px; line-height: 48px;
+}
+.table_area .input_box .input_wrap input[type=password] {
+	height: 48px; line-height: 48px;
+}
+.table_area .birth .meminput_area .inline_block span {
+	height: 48px; line-height: 48px;
+}
+.table_area .select_box {
+	height: 48px; line-height: 48px;
+}
+.table_area .input_box {
+	height: 48px; line-height: 48px;
+}
+.table_area .phone .inline_block .dash {
+	height: 48px; line-height: 48px;
+}
+.table_area .input_width {
+	width: 35%; float: left;
+}
+.table_area .billiard {
+	text-align: left;
+}
+.table_area .asterisk {
+	text-align: left;
+}
+.table_area .billiard {
+	width: 60%; padding-left: 20px; margin-left: 10px; float: left;
+}
+.table_area table tr td.birth .meminput_area {
+	width: 65%;
+}
+.table_area table tr td.phone .meminput_area {
+	width: 65%;
+}
+.table_area table tr td.birth .meminput_area span {
+	padding-right: 2%;
+}
+.table_area table tr td.birth .meminput_area span:last-child {
+	padding-right: 0px;
+}
+.table_area .birth .meminput_area .select_box {
+	width: 26%;
+}
+.table_area .phone .inline_block .select_box {
+	width: 26%;
+}
+.table_area .phone .inline_block .input_box {
+	width: 26%;
+}
+.table_area .addr .input_width2 {
+	width: 18%; float: left;
+}
+.table_area .addr .input_width {
+	width: 80%; clear: both; margin-top: 20px;
+}
+.table_area .addr .arr_right_red {
+	left: 22%; top: 6%;
+}
+.table_area .phone .inline_block .dash {
+	padding: 0px 6px;
+}
+.table_area .billiard.billiard2 {
+	width: 100%; margin-left: 0px;
+}
+.table_addinfo_pc {
+	display: block;
+}
+.step04 .table_addinfo_pc {
+	display: none;
+}
+.table_area.table_area2 {
+	padding: 30px 0px 70px;
+}
+.table_area.table_addinfo_pc table tr th {
+	padding: 30px 40px;
+}
+.table_area.table_addinfo_pc table tr td {
+	vertical-align: top;
+}
+.family_info .phone2 .select_box {
+	width: 34%; float: left;
+}
+.family_info .phone2 .input_box {
+	width: 28%; float: left;
+}
+.family_info .phone2 .dash {
+	width: 5%; line-height: 48px; float: left; display: block;
+}
+.family_info .phone2 .input_box {
+	margin-top: 0px;
+}
+.family_info .phone2 .meminput_area .select_box select {
+	padding-right: 20px;
+}
+.family_info .birth2 .meminput_area .select_box select {
+	padding-right: 20px;
+}
+.family_info .phone2 .meminput_area .select_box::after {
+	right: -15px;
+}
+.family_info .birth2 .meminput_area .select_box::after {
+	right: -15px;
+}
+.family_info .birth2 .select_box {
+	width: 27%; margin-bottom: 0px; float: left;
+}
+.family_info .birth2 span {
+	width: 6.3%; line-height: 48px; float: left;
+}
+.family_info .modi_name .input_box .input_wrap {
+	padding: 0px 10px;
+}
+.family_info .relation .choice_wrap {
+	padding-bottom: 0px; display: inline-block;
+}
+.family_info .relation .choice_wrap + .choice_wrap {
+	margin-left: 10px;
+}
+.table_area.additional_modify table tr td.relation {
+	vertical-align: bottom;
+}
+.table_area.additional_modify table tr td {
+	padding: 30px 15px;
+}
+.btn_group button + button {
+	margin-left: 10px;
+}
+.extend_area {
+	padding: 20px 0px 0px; font-size: 0.87em;
+}
+.family_info .extend_area {
+	padding: 20px 0px 0px; font-size: 0.87em;
+}
+.extend_area .billiard {
+	margin: 0px;
+}
+.extend_area a {
+	float: right;
+}
+.modi_name .input_box {
+	width: 80%;
+}
+.newsletter {
+	margin-top: 40px;
+}
+.table_type1.inter_booklist thead th:nth-child(4) {
+	width: 120px; display: table-cell;
+}
+.table_type1.inter_booklist tbody td:nth-child(4) {
+	width: 120px; display: table-cell;
+}
+.table_type1.inter_booklist colgroup col:nth-child(4) {
+	width: 120px; display: table-cell;
+}
+.backto_area span {
+	text-align: left; padding-top: 0px; font-size: 0.87em; display: inline-block;
+}
+.backto_area a {
+	font-size: 0.87em; margin-top: 0px; float: right;
+}
+.table_type1.basketitem_list thead tr th:nth-child(4) {
+	display: table-cell;
+}
+.table_type1.basketitem_list thead tr th:nth-child(5) {
+	display: table-cell;
+}
+.table_type1.basketitem_list thead tr th:nth-child(7) {
+	display: table-cell;
+}
+.table_type1.basketitem_list tbody tr td:nth-child(4) {
+	display: table-cell;
+}
+.table_type1.basketitem_list tbody tr td:nth-child(5) {
+	display: table-cell;
+}
+.table_type1.basketitem_list tbody tr td:nth-child(7) {
+	display: table-cell;
+}
+.table_type1.basketitem_list colgroup col:nth-child(4) {
+	display: table-cell;
+}
+.table_type1.basketitem_list colgroup col:nth-child(5) {
+	display: table-cell;
+}
+.table_type1.basketitem_list colgroup col:nth-child(7) {
+	display: table-cell;
+}
+.table_type1.basketitem_list_apply thead tr th:nth-child(3) {
+	display: table-cell;
+}
+.table_type1.basketitem_list_apply thead tr th:nth-child(4) {
+	display: table-cell;
+}
+.table_type1.basketitem_list_apply tbody tr td:nth-child(3) {
+	display: table-cell;
+}
+.table_type1.basketitem_list_apply tbody tr td:nth-child(4) {
+	display: table-cell;
+}
+.table_type1.basketitem_list_apply colgroup col:nth-child(3) {
+	display: table-cell;
+}
+.table_type1.basketitem_list_apply colgroup col:nth-child(4) {
+	display: table-cell;
+}
+.btn_group_mfull {
+	padding: 30px 0px 0px;
+}
+.btn_group_mfull button {
+	padding: 10px; font-size: 1em;
+}
+.reading_info {
+	font-size: 1em;
+}
+.reading_info .bullet_squaredot::before {
+	top: 11px;
+}
+.reading_info li {
+	margin-bottom: 5px;
+}
+.table_area_booking h4 {
+	padding: 50px 0px 30px; font-size: 1.5em;
+}
+.member_btn button {
+	padding: 17px 0px;
+}
+.btn_boxgroup button {
+	padding: 22px 0px;
+}
+.apply_info .btn_area a {
+	font-size: 0.87em;
+}
+.apply_info .table_area {
+	padding: 50px 0px 100px; width: 47%; float: left;
+}
+.apply_info .table_area + .table_area {
+	margin-left: 6%;
+}
+.apply_info section + section {
+	clear: both;
+}
+.table_area .table_bookinfo .choose_year .inline_block span {
+	line-height: 48px;
+}
+.table_area .table_bookinfo .choose_time .inline_block span {
+	line-height: 48px;
+}
+.table_area .table_bookinfo .choose_year .select_box {
+	width: 26%;
+}
+.table_area .table_bookinfo .choose_year .inline_block span {
+	width: 7.3%;
+}
+.table_area .table_bookinfo .choose_time .select_box {
+	width: 43%;
+}
+.table_area .table_bookinfo .choose_time .inline_block span {
+	width: 7%;
+}
+.table_area .table_bookinfo tr td {
+	padding: 10px 0px;
+}
+.table_area .table_bookinfo tr th {
+	padding: 20px 0px 10px;
+}
+.apply_info .table_area table tr td.phone .meminput_area {
+	width: 100%;
+}
+.apply_info .btn_area button {
+	width: 320px;
+}
+.apply_info .btn_area a {
+	right: 0px; position: absolute;
+}
+.apply_info .btn_area {
+	padding: 35px 0px 100px; margin-top: inherit;
+}
+.ico_next {
+	top: 26px; right: 20px;
+}
+.select_date p.ftclr_red1 {
+	padding-top: 10px;
+}
+.checkbox_list li {
+	margin-bottom: 0px; margin-left: 30px; display: inline-block;
+}
+.checkbox_list li:first-child {
+	margin-left: 0px;
+}
+.select_date li .input_box {
+	width: 170px;
+}
+.select_date li {
+	margin-bottom: 0px; display: inline-block;
+}
+.select_date li .input_wrap {
+	display: inline-block;
+}
+.select_date li span {
+	padding: 0px 20px; width: inherit; font-size: 1em; margin-left: inherit;
+}
+.select_date {
+	padding-top: 30px;
+}
+.select_date .billiard {
+	text-align: left;
+}
+.searching {
+	margin: 40px 0px 75px; width: 260px;
+}
+.searching .ico_searching {
+	top: 22px; right: 20px;
+}
+.booking_list th:nth-child(1) {
+	display: table-cell;
+}
+.booking_list th:nth-child(3) {
+	display: table-cell;
+}
+.booking_list th:nth-child(5) {
+	display: table-cell;
+}
+.booking_list td:nth-child(1) {
+	display: table-cell;
+}
+.booking_list td:nth-child(3) {
+	display: table-cell;
+}
+.booking_list td:nth-child(5) {
+	display: table-cell;
+}
+.booking_list col:nth-child(1) {
+	display: table-cell;
+}
+.booking_list col:nth-child(3) {
+	display: table-cell;
+}
+.booking_list col:nth-child(5) {
+	display: table-cell;
+}
+.groupbooking_list col:nth-child(1) {
+	display: table-cell;
+}
+.groupbooking_list col:nth-child(2) {
+	display: table-cell;
+}
+.groupbooking_list col:nth-child(5) {
+	display: table-cell;
+}
+.groupbooking_list th:nth-child(1) {
+	display: table-cell;
+}
+.groupbooking_list th:nth-child(2) {
+	display: table-cell;
+}
+.groupbooking_list th:nth-child(5) {
+	display: table-cell;
+}
+.groupbooking_list td:nth-child(1) {
+	display: table-cell;
+}
+.groupbooking_list td:nth-child(2) {
+	display: table-cell;
+}
+.groupbooking_list td:nth-child(5) {
+	display: table-cell;
+}
+table.table_type1.booking_list thead th:nth-child(2) {
+	border-left-color: rgb(225, 225, 225); border-left-width: 1px; border-left-style: solid;
+}
+table.table_type1.booking_list tbody td:nth-child(2) {
+	border-left-color: rgb(225, 225, 225); border-left-width: 1px; border-left-style: solid;
+}
+table.table_type1.groupbooking_list thead th:nth-child(3) {
+	border-left-color: rgb(225, 225, 225); border-left-width: 1px; border-left-style: solid;
+}
+table.table_type1.groupbooking_list tbody td:nth-child(3) {
+	border-left-color: rgb(225, 225, 225); border-left-width: 1px; border-left-style: solid;
+}
+.booking_list th:nth-child(4) {
+	width: 25%;
+}
+.booking_list th:nth-child(5) {
+	width: 20%;
+}
+.booking_list th:nth-child(6) {
+	width: 20%;
+}
+.choicegallery .select_box {
+	width: 150px;
+}
+.reservegroup_list li.choicegallery {
+	margin: 0px; display: inline-block;
+}
+.reservegroup_list li:first-child {
+	padding-right: inherit;
+}
+.reservegroup_list li {
+	margin-right: 40px; vertical-align: top;
+}
+.btn_group_reserve {
+	margin: 0px auto; padding: 100px 0px 60px; max-width: 540px;
+}
+.btn_group_reserve button {
+	padding: 17px 0px;
+}
+.reserve_info .top_bar {
+	width: 18%; vertical-align: top; display: inline-block;
+}
+.reserve_info .top_bar span {
+	font-size: 1em;
+}
+.reserve_info .table_wrap table {
+	width: 60%;
+}
+.reserve_info .table_wrap {
+	padding: 0px 0px 50px; width: 80%; display: inline-block;
+}
+.reserve_info .table_wrap table.table_type2 td {
+	padding: 0px 0px 20px 40px;
+}
+.reserve_info .table_wrap table.table_type2 th {
+	padding: 0px 0px 20px;
+}
+.reserve_info {
+	padding: 40px 30px 0px;
+}
+.table_applyinfo_m {
+	display: none;
+}
+.table_applyinfo_pc {
+	display: block;
+}
+.apply_info_detail .table_area {
+	padding: 30px 0px 100px;
+}
+.table_area .table_applyinfo_pc tr th {
+	padding: 20px 30px; border-bottom-color: rgb(225, 225, 225); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.table_area .table_applyinfo_pc tr td {
+	padding: 20px 30px; border-bottom-color: rgb(225, 225, 225); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.table_applyinfo_h4 {
+	padding: 0px 0px 20px; font-size: 1.5em; float: left;
+}
+.billiard.billiard_inline {
+	padding-top: 10px; font-size: 0.87em; font-weight: 500; margin-left: 30px;
+}
+.open_list tr th:nth-child(3) {
+	display: table-cell;
+}
+.open_list tr th:nth-child(4) {
+	display: table-cell;
+}
+.open_list tr td:nth-child(3) {
+	display: table-cell;
+}
+.open_list tr td:nth-child(4) {
+	display: table-cell;
+}
+.open_list col:nth-child(3) {
+	display: table-cell;
+}
+.open_list col:nth-child(4) {
+	display: table-cell;
+}
+.open_list tr td:nth-child(2) {
+	text-align: left;
+}
+.cell_box {
+	margin: 15px 0px; width: 100%; font-size: 1em; display: table;
+}
+.cell_box .grey_box {
+	padding: 0px; width: 17.5%; vertical-align: middle; border-right-color: rgb(225, 225, 225); border-bottom-color: currentColor; border-right-width: 1px; border-bottom-width: medium; border-right-style: solid; border-bottom-style: none; display: table-cell;
+}
+.cell_box .grey_contbox {
+	padding: 20px; text-align: left; display: table-cell;
+}
+.cell_box .grey_contbox li {
+	padding: 5px 7px; width: auto; letter-spacing: -0.5px; float: left;
+}
+.searching.searching2 {
+	margin: 40px 0px 70px;
+}
+.w14_pc {
+	width: 13%;
+}
+.membership .sect_array .right_sect2 {
+	min-height: inherit;
+}
+.membership_ttbox .brd_cont p {
+	font-size: 1em;
+}
+.membership_ttbox .brd_cont p:first-child {
+	padding-top: 10px; float: left;
+}
+.membership_ttbox .brd_cont p:nth-child(2) {
+	float: right;
+}
+.red_divided::after {
+	height: 16px;
+}
+.membership_ttbox .brd_cont p span.ftclr_red1 {
+	font-size: 1.5em;
+}
+.membership_ttbox .brd_cont {
+	overflow: hidden; padding-top: 30px;
+}
+.bg_member {
+	height: 160px;
+}
+.bg_member .btn_group a {
+	padding: 17px 0px;
+}
+.bg_member .btn_group {
+	padding: 50px 0px; width: 50%; float: right;
+}
+.bg_member .btn_group.dex2 {
+	width: 33%;
+}
+.bg_member .btn_group a i {
+	right: 20px;
+}
+.left_title h4 {
+	font-size: 1.5em;
+}
+.card_img li span {
+	font-size: 1em;
+}
+.infolist_box {
+	font-size: 1em; margin-bottom: 30px;
+}
+.infolist_box ul {
+	margin-top: 15px;
+}
+.infolist_box ul li {
+	margin-bottom: 10px;
+}
+.bg_member .btn_group a i.isi_gift {
+	top: 37%;
+}
+.bg_member .btn_group a i.isi_benefit {
+	top: 37%;
+}
+.memprogram_notice {
+	font-size: 0.87em;
+}
+.intro_text {
+	font-size: 1.5em;
+}
+.intro_text span::before {
+	left: -20px; top: 10px; width: 2px; height: 20px;
+}
+.intro_text_row {
+	padding-left: 20px;
+}
+.intro_extra_text {
+	font-size: 1em;
+}
+.bg_memlounge {
+	height: 360px; margin-top: 100px;
+}
+.memdiscount .left_sect2 span {
+	font-size: 0.87em;
+}
+.memdiscount .area_block h5 {
+	font-size: 1.5em; margin-bottom: 20px;
+}
+.memfriend .left_title span {
+	display: block;
+}
+.memfriend .right_cont {
+	font-size: 1em;
+}
+.memfriend .right_cont a {
+	font-size: 0.87em;
+}
+.join_notice span {
+	font-size: 1em;
+}
+.join_process li div:nth-child(2) {
+	font-size: 1em;
+}
+.join_process li {
+	width: 16.66%;
+}
+.join_process li::before {
+	width: 7px; height: 7px;
+}
+.join_process li div:first-child {
+	font-size: 1.5em;
+}
+.join_process li div span {
+	display: block;
+}
+.join_price table.table_type1 th {
+	padding: 20px 0px;
+}
+.join_price table.table_type1 td {
+	padding: 20px 0px 5px;
+}
+.join_price table.table_type1 td .choice_wrap {
+	line-height: 30px;
+}
+.join_price .btn_group_full button {
+	padding: 17px 0px; width: 320px; margin-top: 40px;
+}
+.join_price .btn_group_full button i {
+	top: 23px; right: 20px;
+}
+.notice_block {
+	font-size: 1em;
+}
+.join_pay div {
+	font-size: 1em;
+}
+.giftcard_info {
+	font-size: 1em; margin-bottom: 30px;
+}
+.square-content div div span:nth-child(2) {
+	font-size: 1.12em;
+}
+.square-content div div span:nth-child(3) {
+	font-size: 2.25em;
+}
+.gift_price .left_title h4 span {
+	font-size: 0.66em;
+}
+.memgift .left_title {
+	font-size: 1.12em;
+}
+.memgift .left_title h4 {
+	font-size: 1.12em;
+}
+.memgift .left_title h4 span {
+	font-size: 1.5em;
+}
+.popzip .page_numb {
+	margin-top: 30px;
+}
+.agree_area.privacychk {
+	padding-bottom: 30px;
+}
+.join_cancel.mode1 {
+	right: -170px;
+}
+.join_cancel.mode1 a + a {
+	margin-left: 20px;
+}
+}
+@media all and (min-width:1400px)
+{
+.step03 .join_agree {
+	margin-right: 2%; margin-left: 2%; max-width: 1400px;
+}
+.gift_price ul {
+	width: 70%;
+}
+}

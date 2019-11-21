@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>J16CssControl.html</title>
+    <script>
+        /*
+        자바스크립트로 css속성 제어하기
+        dom객체.style.Css속성 ="속성값";
+            단 css속성을 표현할때는 하이옾ㄴ은 빠지고 두번쨰 첫글자를 대문자로 변경한다.
+            하이폰이 없는 속성은 그대로 사용한다.
+        Ex)
+            font-size => fontSize='10px';
+            background-image:url() => backgroundImage="url('이미지경로')";
+        */
+        
+        var pTag, pSize;
+        window.onload = function(){
+            pTag = document.getElementById("article");
+            pSize = parseInt(pTag.style.fontSize);
+        }
+        function fnArticle(flag){
+            switch(flag){
+                case "+":
+                    pSize += 10;
+                    pTag.style.fontSize = pSize + "px";
+                    break;
+                case "-":
+                    pSize -= 10;
+                    pTag.style.fontSize = pSize + "px";
+                    break;
+                case "R":
+                    pTag.style.color = "red";
+                    break;
+                case "G":
+                    pTag.style.color = "green";
+                    break;
+                case "B":
+                    pTag.style.color = "blue";
+                    break;
+                case "Bo":
+                    pTag.style.fontWeight = "bold";
+                    break;
+                case "No":
+                    pTag.style.fontWeight = "normal";
+                    break;
+                case "Ce":
+                    pTag.style.textAlign = "center";
+                    break;
+                case "Le":
+                    pTag.style.textAlign = "left";
+                    break;
+                default:
+                    pTag.style.color = "black";
+            }
+        }
+        
+        /*
+        문제] 글꼴바꾸기 버튼을 계속 누를때마다 아래 5가지 폰트가 토글되어 적용될수 있도록
+        함수를 정의하시오
+        글꼴 : Verdana, Stencil, 휴먼옛체, 궁서, impack
+        */
+        
+        var fontNum =0;
+        function setFont(){
+            
+            var fontArray = ["Verdana","Stencil","휴먼옛체","궁서","impact"];
+            if(fontNum>4){
+                fontNum=0;
+            }
+            else{
+                pTag.style.fontFamily = fontArray[fontNum++];
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <h2>자바스크립트로 css제어하기</h2>
+    <input type="button" value="글꼴바꾸기" onclick="setFont();">
+    <fieldset>
+        <legend>신문기사</legend>
+            <button onclick="fnArticle('+')">+</button>
+            <button onclick="fnArticle('-')">-</button>
+            <button onclick="fnArticle('R')">Red</button>
+            <button onclick="fnArticle('G')">Greed</button>
+            <button onclick="fnArticle('B')">Blue</button>
+            <button onclick="fnArticle('')">Black</button>
+            <button onclick="fnArticle('Bo')">볼드체</button>
+            <button onclick="fnArticle('No')">보통체</button>
+            <button onclick="fnArticle('Ce')">가운데정렬</button>
+            <button onclick="fnArticle('Le')">좌측정렬</button>
+    </fieldset>
+    
+    <p style="font-size: 12px;" id="article">
+    20일 서울시 부동산정보광장에 따르면 전일 기준 이번달 서울 지역 아파트 거래량은 368건을 기록하고 있다. 
+    <br>
+    일평균 거래량으로 환산하면 19.4건으로 작년 같은 기간(총 5238건, 일평균 174.6건)에 비해 10분 1 수준에 불과하다. 
+    바로 전 달과 비교해봐도 50% 가깝게 줄어든 수치다.
+    <br/>
+    이 같은 변화는 실제로 매매가 줄어든 게 아니라 
+    <br/>
+    통계 집계 방식이 달라졌기 때문이라는 게 관계자들의 설명이다. 
+
+    지난 11일 국토교통부와 서울, 인천, 경기도 등은 각 부동산
+     실거래 정보 공개 기준을 ‘계약일’로 통일해 제공한다고 발표했다.
+     <br/>
+    국토부와 각지자체의 실거래 공개 기준이 각각 달라 혼선이 있다는 지적을 반영한 것이다.
+    <br/>
+
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>C01Selector05.html</title>
+<style>
+	/*
+		text-decoration : 텍스트에 밑줄과 같은 효과를 줄 때 사용하는 속성이다.
+		none : 텍스트에 아무런 효과도 주지않음
+		underline : 텍스트에 밑줄이 나타나게 함
+		line-through : skrike와 같이 중간에 라인을 표시함
+		overline : 텍스ㅌ 윗부분에 라인을 표시함.
+	*/
+	
+	a{
+		text-decoration:none; color:black;
+	}
+	a:hover{/*링크에 마우스를 올렷을떄*/
+		text-decoration:underline; color:green;
+		font-size:30px; font-weight:bold;
+	}
+	a:active{/*링크에 마우스를 클릭했을때*/
+		text-decoration:overline; color:red;
+	}
+	a:visited{/*방문한 이력이 있을떄 선택됨*/
+		text-decoration:line-through; color:blue;
+	}
+	
+	/*
+	다른효과주기
+	*/
+	a.other{
+		text-decoration:none; color:brown;
+	}
+	a.other:hover{/*링크에 마우스를 올렷을떄*/
+		text-decoration:underline; color:#EEEEEE;
+		font-size:20px; font-weight:bold;
+	}
+	
+	/*
+	15.after선택자 : 선택된 태그가 감싸고 있는 컨텐츠의 뒷보분에 특정 내용을 추가하고자 할떄 사용
+	*/
+	ul.link a::after{
+		content: '-(URL)' attr(href);
+	}
+	
+	/*
+	16.부정선택자 : not함수사용 즉 선택된것 이외의 요소를 찾아서 적용할떄 사용
+	*/
+	ul.notClass li:not(.odd){
+		/*
+		naver와 daum이 아닌 요소를 선택
+		*/
+		background-color:yellow;
+	}
+	
+</style>
+</head>
+<body>
+	<!-- div>ul.link>(li>a)*5 -->
+	<div>
+		<ul class="link">
+			<li><a href="http://naver.com">나이바</a></li>
+			<li><a href="http://nate.com">너이트</a></li>
+			<li><a href="http://daum.net">다엄</a></li>
+			<li><a href="http://google.com">규귤</a></li>
+			<li><a href="http://ikosmo.co.kr">쿠수무</a></li>
+			<li><a href="http://yahoo.com">야후</a></li>
+		</ul>
+	</div>
+	
+	<div>
+		<a href="http://www.tmon.co.kr" class="other">다른효과주기</a>
+	</div>
+	
+	<h2>부정선택자</h2>
+	<div>
+		<ul class="notClass">
+			<li class="odd"><a href="#">Naver</a></li>
+			<li><a href="#">Nate</a></li>
+			<li class="odd"><a href="#">Daum</a></li>
+			<li><a href="#">Google</a></li>
+		</ul>
+	</div>
+</body>
+</html>

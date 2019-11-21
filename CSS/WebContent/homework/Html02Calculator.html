@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계산기</title>
+<style>
+    div{
+        text-align: center;
+        width: auto;
+    }
+	table{
+		width: 500px;
+		height: 600px;
+		background-color: #ff00b6;
+		border-radius: 10px;
+        margin: auto;
+	}
+	td{
+		width: 20%;
+		border:1px solid #ff00b6;
+		text-align: center;
+		padding: 3px;
+		border-radius: 10px;
+	}
+	
+	input{
+		width: 98%;
+		height: 100%;
+		border: none;
+	}
+	.button1{
+		background-color: #8c00ff; color:white; font-size: 18pt; border-radius: 10px;
+	}
+	.button2{
+		background-color: #ff00ee; color:white; font-size: 18pt; border-radius: 10px;
+	}
+	.button3{
+		background-color: #8c00ff; color:white; font-size: 18pt; border-radius: 10px;
+	}
+	
+</style>
+    <script>
+        function val(input){
+
+           	var view = document.getElementById('result');
+           	var calresult = document.getElementById("calresult");
+        	var cals = document.getElementById("cals");	
+        	
+           	if(view.value==0){
+           		view.value="";
+           	}
+           	
+           	if(input=="="){
+        		calculate();
+        	}
+        	else if(input=="+"||input=="-"||input=="*"||input=="/"){
+
+        		if(cals.value==""){
+
+        			calresult.value = calresult.value + input;
+        		}
+        		else{
+        			calresult.value = calresult.value.substring(0,calresult.value.length-1);
+        			calresult.value = calresult.value + input;
+        		}
+        		cals.value = input;		
+        	}
+        	else{
+        		if(cals.value==""){
+        			view.value += input;	
+        		}
+        		else{
+        			view.value = input;
+        		}
+        		calresult.value += input;	
+        		cals.value = "";
+        	}
+        }
+
+        /*
+        eval 함수는 javascript에 내장된 함수로, 식을 입력 받으면 그 식을 계산해서 결과를 알려줍니다.
+        */
+
+        function calculate() {
+            view = document.getElementById('result');
+            calresult = document.getElementById("calresult");
+        	cals = document.getElementById("cals");
+        	
+        	if(cals.value!=""){
+        		var result = eval(calresult.value.substring(0,calresult.value.length-1));
+        	}
+        	else{
+        		var result = eval(calresult.value);
+        	}
+        	
+        	view.value = result;
+        	cals.value = "";
+         
+        }
+
+        function reset(){
+            view = document.getElementById('result');
+            calresult = document.getElementById("calresult");
+        	cals = document.getElementById("cals");
+            view.value = 0;
+            calresult.value = "";
+            cals.value = "";
+            
+        }
+
+        function backspace(){
+            view = document.getElementById('result');
+            calresult = document.getElementById("calresult");
+        	cals = document.getElementById("cals");
+        	
+            view.value = view.value.substring(0, view.value.length-1);
+            calresult.value = calresult.value.substring(0, calresult.value.length-1);
+            cals = "";
+            
+            if(view.value==""){
+            	view.value = 0;
+        	}
+        }
+
+    </script>
+</head>
+<body style="background-color: yellow;">
+	<h2>계산기</h2>
+	
+	<input type="hidden" id="cals" style="color:red;" />	
+
+<div>
+	<h3>파일명:calculator.html</h3>
+</div>
+
+<div>
+   <table>
+   <tr>
+	   <td colspan="4">
+	   <input type="text" id="calresult" style="background-color: #fc99ef; color:red; text-align: left; border-radius: 10px; text-align: right; font-size: 10pt;"  />
+	   </td>
+   </tr>
+	<tr>
+	
+		<td colspan="4" rowspan="2">
+		
+		<input type="text" id="result" style="background-color: #fcfff4; border-radius: 10px;  font-size: 36pt; text-align:right;"></td>	
+	</tr>
+	
+	<tr></tr>
+	
+	<tr>
+		<td colspan="2"><input type="button" value="BackSpace" class ="button1" onclick="backspace()" ></td>
+		<td colspan="2"><input type="button" value="C" class="button1" onclick="reset()"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="1" class = "button2" onclick="val(this.value)"></td>
+		<td><input type="button" value="2" class = "button2" onclick="val(this.value)"></td>
+		<td><input type="button" value="3" class = "button2" onclick="val(this.value)"></td>
+		<td><input type="button" value="/" class = "button3" onclick="val(this.value)"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="4" class = "button2" onclick="val(this.value)"></td>
+		<td><input type="button" value="5" class = "button2" onclick="val(this.value)"></td>
+		<td><input type="button" value="6" class = "button2" onclick="val(this.value)"></td>
+		<td><input type="button" value="*" class = "button3" onclick="val(this.value)"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="7" class = "button2" onclick="val(this.value)"></td>
+		<td><input type="button" value="8" class = "button2" onclick="val(this.value)"></td>
+		<td><input type="button" value="9" class = "button2" onclick="val(this.value)"></td>
+		<td><input type="button" value="+" class = "button3" onclick="val(this.value)"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="=" class = "button2" onclick="val(this.value)"></td>
+		<td><input type="button" value="0" class = "button2" onclick="val(this.value)"></td>
+		<td><input type="button" value="." class = "button2" onclick="val(this.value)"></td>
+		<td><input type="button" value="-" class = "button3" onclick="val(this.value)"></td>
+	</tr>
+</table> 
+</div>
+</body>
+</html>

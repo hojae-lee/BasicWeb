@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>J17FormObject.html</title>
+    <script>
+        
+        function formValidate(){
+            /*
+            form의 배열형태로 DOM을 가져오는 방법. 디자인이 변경되는
+            경우에는 동작을 보장할수 없으므로 많이 사용되는 방법은
+            아니다.
+            */
+
+            var frm = document.forms[0];
+            
+            /*
+            submit 리스너가 false값을 반환받는 경우 폼값 전송이 제한된다.
+            true를 반환받을때 폼값이 전송되나 true는 생략이 가능하다.
+            */
+
+            if(frm.id.value==""){
+                
+                alert("아이디를 입력해주세요");
+                frm.id.focus();
+                return false;
+            }
+            if(!frm.pw.value){
+                alert("패스워드를 입력해주세요");
+                frm.pw.focus();
+                return false;
+            }
+            //return true;->생략가능
+
+        }
+        
+        function jsSubmit(){
+            /*
+            <form>태그의 DOM을 name속성을 통해 가져온다. 디자인이
+            변경되어도 동작이 보장되므로 실무에서 많이 사용되는 방법이다.
+            */
+
+            var f = document.loginFrm2;
+            
+            /* 
+            JS의 submit()함수를 통해 폼값을 전송하므로 폼값의 유효성에
+            문제가 있는경우에는 return으로 함수의 실행만 종료된다.
+            */
+            if(f.id.value==""){
+                alert("아이디를 입력해주세요");
+                f.id.focus();
+                return;
+            }
+            
+            if(f.pw.value==""){
+                alert("패스워드를 입력하세요");
+                f.pw.focus();
+                return;
+            }
+            
+            f.action = "";
+            f.method = "get";
+            //JS에서 submit()함수를 홏룰해야지만 서버로 폼값이 전송된다.
+            f.submit();
+        }
+        
+    </script>
+</head>
+<body>
+    <h2>form전송방식 - html을 사용하는 방법</h2>
+    <form action="" name="loginFrm1" method="get" onsubmit="return formValidate();">
+        아이디 : <input type="text" name="id">
+        <br/>
+        패스워드 : <input type="password" name="pw">
+        <br/>
+        <input type="submit" value="로그인">
+    </form>
+    
+    <h2>form전송방식 - 자바스크립트를 사용하는 방법</h2>
+    <form name="loginFrm2" method="get">
+        아이디 : <input type="text" name="id">
+        <br/>
+        패스워드 : <input type="password" name="pw">
+        <br/>
+        <input type="button" value="로그인" onclick="jsSubmit();">
+    </form>
+</body>
+</html>

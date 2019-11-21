@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>C16Layout.html</title>
+<style>
+	div {border:0px solid red;}
+	
+	/* 
+	레이아웃의 기본개념을 위한 css코드작성
+	.left_menu{
+		width:30%;
+		float:left;
+		
+	}
+	.contents{
+		width:65%;
+		float:right;
+	}
+	.copyright{
+		clear:both;
+	}
+	*/
+	
+</style>
+<link rel="stylesheet" href="./style/div_layout.css" />
+</head>
+<body>
+
+<div class="AllWrap">
+   <div class="header">
+   <!-- GNB 영역 시작 -->
+      <div class="logo">
+         <!-- 로고
+         (CI : Corporate Identity : 기업이미지) 
+         -->
+         <img 
+            src="http://www.ikosmo.co.kr/img/client/com/top_logo.gif" 
+            alt="한국소프트웨어인재개발원" />
+      </div>
+      <div class="top_menu">
+         <!-- 탑메뉴 -->
+         <!-- 탑메뉴 삽입하기 -->
+         <!-- ul>(li>a)*5 -->
+         <ul>
+            <li><a href="http://ikosmo.co.kr" class="top_link">HOME</a></li>
+            <li><a href="#login" class="top_link">로그인</a></li>
+            <li><a href="#regist" class="top_link">회원가입</a></li>
+            <li><a href="#notice" class="top_link">공지사항</a></li>
+            <li><a href="#board" class="top_link">게시판</a></li>
+         </ul>   
+      </div>
+   <!-- GNB 영역 끝 -->
+   </div>
+   <div class="body">
+      <div class="left_menu">
+      <!-- LNB영역(Local Navigation Bar) -->
+      <!-- ul>(li>a)*4 -->
+      <ul>
+         <li><a href="#Login" class="left_link">로긴</a></li>
+         <li><a href="#Regist" class="left_link">회원갑</a></li>
+         <li><a href="#Notice" class="left_link">공지글</a></li>
+         <li><a href="#Board" class="left_link">자유게시판</a></li>
+      </ul>
+      </div>
+      <div class="contents">
+      <!-- Contents 영역-->
+         <h2>백악관 "6·12 회담 개최 준비…회담 미뤄져도 준비돼있어"(종합)</h2>
+         (워싱턴=연합뉴스) 강영두 특파원 = 세라 샌더스 백악관 대변인은 29일(현지시간) 북미정상회담이 다음달 12일 예정대로 개최될 것을 전제로 준비를 하고 있다고 밝혔다. 
+         <br /><br />
+         만약 회담이 뒤로 미뤄지더라도 준비에 차질이 없을 것이라고 샌더스 대변인은 강조했다.
+         <br /><br />
+         샌더스 대변인은 이날 오후 도널드 트럼프 대통령을 수행해 테네시주(州) 내슈빌로 향하는 전용기 안에서 기자간담회를 열어 "대통령은 현재 진행 중인 북미 간의 논의가 아주 잘 진행되고 있다고 생각하고 있다"면서 이같이 밝혔다.
+         <br /><br />
+         그러면서 "이번 주 열리는 여러 회담들은 틀림없이 진전을 보이고 있다는 신호"라고 말했다. 미국과 북한은 회담 의제와 의전 등의 문제를 놓고 판문점과 싱가포르에서 각각 실무회담을 하고 있으며, 뉴욕에서는 마이크 폼페이오 국무장관과 김영철 노동당 부위원장 겸 통일전선부장의 고위급 회담도 열릴 예정이다.
+         <br /><br />
+         샌더스 대변인은 이어 "북미정상회담이 다음 달 12일 열릴 경우에 대비해 확실히 준비하고 있다. 어떤 이유로 인해 그 이후에 열릴 경우에도 마찬가지로 우리는 준비가 돼 있을 것"이라며 "북미정상회담은 열릴 것으로 예상한다"고 말했다. 
+         <br /><br />
+         북미정상회담이 6월12일보다 늦게 열릴 수 있다는 가능성도 있음을 내비친 것은 샌더스 대변인만이 아니다.
+         <br /><br />
+         이와 관련해 로이터 통신에 따르면 켈리앤 콘웨이 백악관 선임고문도 폭스뉴스 인터뷰에서 정상회담이 원래 계획한 날짜에 열리지 않을 가능성이 있다고 말했다. 다만 그는 "아마도 약간 뒤에 시작될 것"이라며 아주 늦어지지는 않을 것이라고 내다봤다.
+         <br /><br />ㅇㄹㅇㄹ
+         샌더스 대변인은 또 '북한이 북미정상회담을 할지 안할지에 대한 결정을 언제 내리느냐. 결정에 시한이 있느냐'는 기자의 질문에 "우리는 어느 쪽으로도 준비돼 있지만, 개최를 전제로 준비하고 있다"며 "우리는 전진하고 있다"고 강조했다. 
+         <br /><br />
+         샌더스 대변인은 싱가포르 북미정상회담 개최 여부를 결정할 요인이 뭔지를 묻는 기자에게 "많은 요인이 있지만, 비핵화가 협상 테이블 위에 올라가 있고 회담의 초점이 돼야 한다"고 답변했다.
+         <br /><br />
+         그는 이어 "트럼프 대통령은 우리가 그 방향에서 진전을 이루고 있다고 느끼고 있다"며 "(회담 개최에 대한) 결정을 내릴 유일한 사람은 대통령일 것"이라고 말했다.
+         <br /><br />
+         그러나 미국이 그동안 비판해온 북한의 인권 문제가 이번 '세기의 핵 담판'에서 함께 논의될지는 불투명하다.
+         <br /><br />
+         헤더 나워트 국무부 대변인은 이날 북한의 인권 남용이 정상회담 의제에 오를 것이냐는 물음에 "그렇게 될 것이라고도, 그렇지 않을 것이라고도 말하지 않겠다"면서 "이번 주 열리는 (폼페이오) 장관의 (김영철 노동당 부위원장과의) 만남에 앞서가지 않겠다"며 답변을 피했다고 로이터가 전했다.
+         <br /><br />
+      </div>
+   </div>
+   <div class="copyright">
+   <!-- Copyright -->
+      <div class="copy_logo">
+         <img 
+            src="http://www.ikosmo.co.kr/img/client/com/logo.gif" 
+            alt="KOSMO Copyright" />
+      </div>
+      <div class="copy_info">
+         (주)한국소프트웨어아이앤씨(153-759) 
+         &nbsp;&nbsp;
+         서울시 금천구 가산동 426-5 월드메르디앙 2차 410호
+         &nbsp;&nbsp;
+         대표이사 : 정철영&nbsp;&nbsp; 
+         사업자등록번호 : 119-86-20319&nbsp;&nbsp;  
+         TEL : 02-2025-8523&nbsp;&nbsp; 
+         FAX : 02-2025-4113&nbsp;&nbsp;
+         &nbsp;&nbsp;
+         E-mail : ikosmo@naver.com&nbsp;&nbsp;
+         <br />
+         Copyright (C) 2010 KOSMO. All rights reserved.   
+      </div>   
+   </div>
+</div>
+
+
+</body>
+</html>

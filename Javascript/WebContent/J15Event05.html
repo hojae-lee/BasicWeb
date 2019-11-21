@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>J15Event05.html</title>
+<script>
+/*
+키보드 이벤트
+    keydown : 키보드를 누를때 발생하는 이벤트로 이벤트가
+        발생한 후 텍스트가 입력된다. shift, alt, ctrl
+        등도 모두 인식한다.    
+    keyup : 키보드를 눌렀다가 뗄때 발생하는 이벤트.
+        키보드를 누를때 텍스트가 입력되고 뗄때 이벤트가 
+        발생한다.(keydown에서 인식하는 모든키를 동일하게 
+        인식한다.)
+    keypress : 키보드를 눌렀다가 뗄때 발생하는 이벤트로
+        keydown과 동일하다. 단, shift, ctrl등과 같은
+        키들은 인식하지 못하고 문자키만 인식한다.
+*/
+var count = 0;
+
+function fnKeyHandler(flag){
+
+    count++;
+
+    var spanTag = document.getElementById("span");
+    switch(flag){
+        case 1:
+            spanTag.innerHTML = "keydown이벤트 발생"+ count;
+            break;
+        case 2:
+            spanTag.innerHTML = "keypress이벤트 발생"+ count;
+            break;
+        case 3:
+            spanTag.innerHTML = "keyup이벤트 발생"+ count;
+            break;
+    }
+}
+    
+function FnKeyEvent(){
+    var span = document.getElementById("keySpan");
+    //키보드이벤트 발생시 눌러진 키보드의 코드값을 반환한다.
+    var keycode = event.keyCode;
+    span.innerHTML = keycode;
+    
+    if(keycode==116 || keycode==8){
+        alert("해당 문서에서는 F5, Backspace는 "+ "사용할 수 없습니다.");
+        return false;
+    }
+}
+</script>
+</head>
+<body>
+    <h2>키보드 이벤트</h2>
+    
+    <h3>Key 이벤트 테스트</h3>
+    keydown : <input type="text" onkeydown="fnKeyHandler(1);">
+    <br/>
+    <!--
+    이벤트리스너에서 이벤트를 감지후 해당액션을 차단할때는 리스너 안에서 return false해주면 된다. 
+    즉 해당 이벤트가 실행되지 않는다.
+    -->
+    keypress : <input type="text" onkeypress="fnKeyHandler(2);">
+    <br/>
+    keyup : <input type="text" onkeyup="fnKeyHandler(3);">
+    <br/>
+    <span id="span" style="font-size: 1.5em; color: red;"></span>
+    
+    <h3>keyCode를 이용하여 현재키 알아내기</h3>
+    F5와 Backspace키는 사용불가입니다.
+    <br/>
+    <input type="text" onkeydown="return FnKeyEvent();">
+    <br/>
+    <span id="keySpan" style="color:mediumblue; font-size: 1.5em;"></span>
+    
+    <h3>특정조건에서 포커스 이동하기</h3>
+    <script>
+        /*
+        연습문제] 주민등록번호 앞자리 6자리를 입력하면 뒷자리로 포커스가 자동으로 이동하게 하는 함수를 정의하시오
+        함수명: fnJuminFocus()
+        */
+        function fnJuminFocus(obj){
+            var frontNum = document.getElementById("ju1").value;
+            
+            if(frontNum.length>=6){
+               return document.getElementById("ju2").focus();
+            }
+        }
+        
+        function commonFocusMove(obj,nums,id){
+            var objNum = obj.value.length;
+            
+            if(objNum>=nums){
+                return document.getElementById(id).focus();
+            }
+        }
+        
+    </script>
+    <h4>주민등록번호 입력하기</h4>
+    <input type="text" id="ju1" size="6" maxlength="6" onkeyup="fnJuminFocus(this);">
+    <input type="text" id="ju2" size="6" maxlength="7" onkeyup="commonFocusMove(this,7,'tel1');">
+    
+    <h4>휴대전화 입력하기</h4>
+    <input type="text" id="tel1" size="3" onkeyup="commonFocusMove(this,3,'tel2');">
+    -
+    <input type="text" id="tel2" size="4" onkeyup="commonFocusMove(this,4,'tel3');">
+    -
+    <input type="text" id="tel3" size="4">
+</body>
+</html>

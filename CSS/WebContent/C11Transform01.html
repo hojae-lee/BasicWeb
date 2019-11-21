@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>C11Transform01.html</title>
+<style>
+/*
+	변형 관련한 속성들
+	transition-duration : 변형이 일어나는데 걸리는 시간을 설정한다.
+	transition-property : 변형을 가할 CSS속성을 설정한다.
+	transform : 2d/3d 변형을 적용한다. 속성값을 이용하여 회전 이동 크기조절 기울기이기 등의 작업을 할수 있따
+	translate(x,y) : x,y축 방향으로 이동한다.
+	translateX(x) : x축 방향으로 디오한다.
+	scale(x,y) ,x,y축기준으로 크기를 변형한다.
+	scaleX(x) x축 기준으로 크기를 변형한다.(Y,Z있음)
+	rotate(angle) : angle에 지정한 값만큼 회전한다.
+*/
+#rect{
+	width:150px; height:150px;
+	line-height:150px; background-color:red;
+	text-align:center;
+	/*변형이 3초동안 진행된다. 변형되는 시간이 설정되면서 마치 애니메이션과 같은 효과가 나타난다.*/
+	transition-duration:1s;
+}
+#rect:hover{/*오버했을때*/
+	width:300px; height:300px;
+	line-height:300px; background-color:green;
+	font-size:2em;
+}
+#rect:active{/*클릭했을때*/
+	width:250px; height:250px;
+	line-height:250px; background-color:blue;
+	border-radius:100px;
+}
+
+</style>
+</head>
+<body>
+	<h2>Transform(변형1)</h2>
+	
+	<div id="rect">나는사각형</div>
+</body>
+</html>

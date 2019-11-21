@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>J02Operator.html</title>
+<script type="text/javascript">
+
+	/*
+	산술연산자
+		우선순위 : * / % > + -
+	*/
+	document.write("<h2>산술연산자</h2>");
+	document.write("(3 % 5 * 2 + 10 / 5)="+(3 % 5 * 2 + 10 /5));
+	document.write("<br/>3 / 5="+ (3/5));
+	/*
+	자바는 0 js는 소수점
+	*/
+	
+	/*
+	2. 비교연산자 : > >= < <= == !=
+		JS에서는 조건식에 0 null false이면 false로 처리하고 나머지는 true로 처리한다.
+	*/
+	document.write("<h2>산술연산자</h2>");
+	document.write("a".charCodeAt(0)); //97
+	document.write("<br/>");
+	
+	document.write("가나다1">'가나다'); //true
+	/*자바는 X 자바스크립트는 O*/
+	document.write("<br/> 3>9==0의 결과:"+(3>9==0)); //false == 0
+	//false==0 => true
+	//자바는 X 자바스크립트는 O
+	
+	if(-1){
+		document.write("<br/>-1은 true이다");
+	}
+	else{
+		document.write("<br/>-1은 false이다.");
+	}
+	
+	if(null){
+		document.write("<br/>null은 true이다");
+	}
+	else{
+		document.write("<br/>null은 false이다.");
+	}
+	
+	if(10-10){
+		document.write("<br/>10-10은 true이다");
+	}
+	else{
+		document.write("<br/>10-10은 false이다.");
+	}
+	
+	if(false==null){
+		document.write("<br/>true이다");
+	}
+	else{
+		document.write("<br/>false이다.");
+	}
+	/*
+	false값과 null값의 자체 비교 이므로 false가 반환됨
+	*/
+	
+	if("자바스크립트"){
+		document.write("<br/>문자열은 true이다");
+	}
+	else{
+		document.write("<br/>문자열은 false이다.");
+	}
+	/*
+	문자열 자체는 true
+	*/
+	
+	/*
+	3.논리 연산자
+		우선순위 : ! > && > ||
+	*/
+	
+	document.write("<h2>논리연산자</h2>");
+	document.write("3>2 || 5<=10 && !(3-4)의 결과:"+(3>2) || 5<=10 && !(3-4));
+	
+	//1번 : !(3-4) -> !(-1) -> !(true) => false
+	//2번 : 5<=10 => true
+	//3번 : true && false => false
+	//4번 : 3>2 => true
+	//5번 : true || false => true
+	
+	document.write("<h2>증감 연산자</h2>");
+	var num = 10;
+	num++;
+	document.write("num="+ ++num);
+	document.write("<br/>num="+ num++);
+	document.write("<br/>num="+ num);
+	
+	document.write("<h2>복합대입션산자</h2>")
+	document.write("num%=5="+ (num%=5));
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

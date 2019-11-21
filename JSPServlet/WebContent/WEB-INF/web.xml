@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <!-- 
+  	xml설정파일에는 반드시 HTML주석을 사용해야함. 
+  	// 라인단위주석 , /* */ 블럭단위 주석은 허용되지 않는다.
+  -->
+  <display-name>K06JSPServlet</display-name>
+  
+  
+  <!-- JDBC사용을 위한 컨텍스트 초기화 파라미터 설정 해당 설정값은 웹어플리케이션의 모든 JSP페이지에서 접근이 가능하다.
+  즉 설정값을 주로 저장한다.
+   -->
+  <context-param>
+  	<param-name>JDBCDriver</param-name>
+  	<param-value>oracle.jdbc.OracleDriver</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>ConnectionURL</param-name>
+  	<param-value>jdbc:oracle:thin:@localhost:1521:orcl</param-value>
+  </context-param>
+  
+  <!-- 
+  게시판 페이징 구현을 위한 환경설정값
+  PAGE_SIZE : 게시판 리스트 한 페이지에 출력할 게시물의 갯수
+  BLOCK_PAGE : 리스트 하단 페이지 바로가기 링크 부분에 출력한 페이지의 갯수
+   -->
+  <context-param>
+  	<param-name>PAGE_SIZE</param-name>
+  	<param-value>15</param-value>
+  </context-param>
+  <context-param>
+  
+  	<param-name>BLOCK_PAGE</param-name>
+  	<param-value>3</param-value>
+  </context-param>
+  <context-param>
+  
+  	<param-name>INIT_PARAM</param-name>
+  	<param-value>컨텍스트초기화파라미터</param-value>
+  </context-param>
+  
+  <!-- 내가 만든 태그라이브러리를 사용하기 위한 설정 -->
+  <!-- 
+  	taglib-uri : JSP의 taglib 지시어의 uri속성에 넣어줄 값
+  	taglib-location : 실제 tld파일의 위치
+   -->
+  <jsp-config>
+  	<taglib>
+  		<taglib-uri>myTagLibTld</taglib-uri>
+  		<taglib-location>/WEB-INF/tlds/MyTagLib.tld</taglib-location>
+  	</taglib>
+  </jsp-config>
+  
+  <!-- ############################################################################ -->
+  <!-- 서블릿등록하기 -->
+  <servlet>
+  	<servlet-name>NoJspServlet</servlet-name>
+  	<!-- 요청명과 매핑되는 서블릿클래스명 기술(패키지를 포함함)-->
+  	<servlet-class>servlet.NoJSPServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<!-- 요청명이 들어왔을때 호출할 서블릿의 이름을 지정 -->
+  	<servlet-name>NoJspServlet</servlet-name>
+  	<!-- 요청명을 기술함 -->
+  	<url-pattern>/13Servlet/NoJSPServlet.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>HelloServlet</servlet-name>
+  	<servlet-class>servlet.HelloServlet</servlet-class>
+  	<init-param>
+  		<param-name>HELLO</param-name>
+  		<param-value>Hi~Hello~Good luck to you</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>HelloServlet</servlet-name>
+  	<url-pattern>/13Servlet/HelloServlet.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>CalculatorServlet</servlet-name>
+  	<servlet-class>servlet.CalculatorServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CalculatorServlet</servlet-name>
+  	<url-pattern>/13Servlet/Calculate.kosmo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>SimpleMVC</servlet-name>
+  	<servlet-class>servlet.SimpleMVC</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SimpleMVC</servlet-name>
+  	<url-pattern>/13Servlet/SimpleMVC</url-pattern>
+  </servlet-mapping>
+
+
+<!-- 서블릿으로 게시판 만들기 -->
+<!-- 자료실 리스트 매핑 -->
+  <servlet>
+  	<servlet-name>DataRoomList</servlet-name>
+  	<servlet-class>controller.ListCtrl</servlet-class>
+  	<init-param>
+  		<param-name>PAGE_SIZE</param-name>
+  		<param-value>15</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DataRoomList</servlet-name>
+  	<url-pattern>/DataRoom/DataList</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 자료실 상세보기 -->
+  <servlet>
+  	<servlet-name>DataRoomView</servlet-name>
+  	<servlet-class>controller.ViewCtrl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DataRoomView</servlet-name>
+  	<url-pattern>/DataRoom/DataView</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DataRoomWrite</servlet-name>
+  	<servlet-class>controller.WriteCtrl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DataRoomWrite</servlet-name>
+  	<url-pattern>/DataRoom/DataWrite</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 자료실 수정 삭제를 위한 패스워드 검증 -->
+  <servlet>
+  	<servlet-name>DataRoomPassword</servlet-name>
+  	<servlet-class>controller.PasswordCtrl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DataRoomPassword</servlet-name>
+  	<url-pattern>/DataRoom/DataPassword</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 수정폼 -->
+  <servlet>
+  	<servlet-name>DataRoomEdit</servlet-name>
+  	<servlet-class>controller.EditCtrl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DataRoomEdit</servlet-name>
+  	<url-pattern>/DataRoom/DataEdit</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 자료실 삭제처리 -->
+  <servlet>
+  	<servlet-name>DataRoomDelete</servlet-name>
+  	<servlet-class>controller.DeleteCtrl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DataRoomDelete</servlet-name>
+  	<url-pattern>/DataRoom/DataDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DataRoomReply</servlet-name>
+  	<servlet-class>controller.ReplyCtrl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DataRoomReply</servlet-name>
+  	<url-pattern>/DataRoom/DataReply</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>DataRoomDownload</servlet-name>
+  	<servlet-class>controller.DownloadCtrl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DataRoomDownload</servlet-name>
+  	<url-pattern>/DataRoom/Download</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>homeworkMemberRegist</servlet-name>
+  	<servlet-class>controller.MemberRegist</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>homeworkMemberRegist</servlet-name>
+  	<url-pattern>/homework/MemberRegist.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- ############################################################################ -->
+  
+  <!-- 세션 유지시간을 web.xml에 설정할떄는 아래와같이 한다 단 여기에 설정된 시간은 분단위이다. -->
+  
+  <session-config>
+  	<session-timeout>60</session-timeout>
+  </session-config>
+  
+  <!-- 해당 웹어플리케이션을 실행했을떄 파일명을 명시하지 않으면 아래 파일리스트에 기술된 파일을 찾아서 실행한다.
+  만약 해당파일이 없다면 404(페이지없음) 에러가 발생한다. -->
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

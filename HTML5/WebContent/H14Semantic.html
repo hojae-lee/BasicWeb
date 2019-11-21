@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- 
+시맨틱태그 : 컴퓨터가 정보를 이해하고 추론할수 있는 구조를 만들기 위해 html5에서 추가ㅓ된 태그
+	기존에 div태그로 레이아웃을 구현하겟지만 현재는 시멘틱태그로 레이아웃을 그릴 수 있음.
+	<header> : 문서의 헤더 부분을 나타내고 사이트로고, 글로벌메뉴(링크)를 주로 삽입한다.
+	<nav> : 문서의 네비케이션 메뉴를 주로 넣는다.
+	<section> : 문서에서 주로 표현할 내용 등을 넣는다.
+	<article> : 섹션의 하위 개념으로 뉴스 기사나 블로그 등 독립적인 내용들이 들어간다.
+	<aside> : 본문의 내용과 연관이 없는 분리되 내용을 담는다. 주로 배너광고 위젯들ㅇ이 들어간다.
+	footer : 업체의 주소나 연락처등의 카피라이터 정보가 들어간다.
+ -->
+<style type="text/css">
+    body{width:440px;}
+    header, nav, section, article, aside, footer{
+		display:block; width:400px; margin:4px; padding:4px; 
+		background-color:#ddd; text-align:center;
+	}
+    section{float:left; width:280px; height:60px;}
+    article{width:264px; background-color:#efefef;}
+    aside{float:left; width:104px; height:60px;}
+    footer{overflow:hidden;}
+</style>
+
+<title>H14Semantic.html</title>
+</head>
+<body>
+	<h2>시맨틱(Semantic) 태그</h2>
+	
+	<header>header영역</header>
+	<nav>nav영역</nav>
+	<section>
+		section영역
+		<article>article영역</article>
+	</section>
+	<aside>aside영역</aside>
+	<footer>footer영역</footer>
+	
+	
+</body>
+</html>

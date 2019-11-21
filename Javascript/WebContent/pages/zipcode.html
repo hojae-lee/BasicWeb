@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        function setZipcode(zip, addr){
+            opener.document.getElementById("zipcode").value = zip;
+            opener.document.getElementById("addr1").value = addr;
+            opener.document.getElementById("addr2").focus();
+            self.close();
+        }
+        
+        function zipClose(){
+            alert("창을 닫습니다.");
+            self.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>우편번호 검색하기</h2>
+    <table border="1" width="100%">
+    <colgroup>
+        <col width="20%"/>
+        <col width="*"/>
+    </colgroup>
+        <tr>
+            <th>우편번호</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td>11111</td>
+            <td>
+                <a href="javascript:setZipcode('11111','서울시 종로구')">
+                    서울시종로구
+                </a>
+            </td>
+        </tr>
+         <tr>
+            <td>11111</td>
+            <td>
+                <a href="javascript:setZipcode('22222','광명특별시')">
+                   광명특별시
+                </a>
+            </td>
+        </tr>
+         <tr>
+            <td>11111</td>
+            <td>
+                <a href="javascript:setZipcode('33333','경기도 화성시')">
+                    경기도화성시
+                </a>
+            </td>
+        </tr>
+    </table>
+    <p style="text-align:center;">
+        <button onclick="zipClose();">우편번호검색창닫기</button>
+    </p>
+</body>
+</html>

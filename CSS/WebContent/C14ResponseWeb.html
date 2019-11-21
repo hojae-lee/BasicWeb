@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>C16ResponseWeb.html</title>
+<style>
+*{margin:0; padding:0; font-family:verdana;}
+	#AllWrap{
+		margin:0 auto; text-align:center;
+	}
+	#PartWrap{
+		width:100%; text-align:left;
+		border:1px solid blue;
+	}
+	#header{
+		border:1px solid blue; text-align:center;
+		height:100%; line-height:100px;
+	}
+	#nav ul{
+		list-style:none;
+		/* 정해진 영역을 벗어날경우 숨김처리 함. */
+		overflow:hidden;
+	}
+	#nav ul li{
+		font-size:1.5em; font-weight:bold; height:50px;
+		width:20%; float:left; border:1px solid blue;
+		text-align:center; line-height:50px;
+		/* 전체넓이에 패딩과 보더를 포함함 */
+		box-sizing:border-box;
+	}
+	#ContentWrap #content > h2{
+		border-bottom:1px #808080 solid;
+		font-size:2em;
+	}
+	#content{
+		padding:20px;
+	}
+	#footer{
+		font-size:2em; font-weight:bold; height:100px;
+		line-height:100px; text-align:center;
+		border:1px solid blue;
+	}
+	@media screen and (max-width:640px){
+		#AllWrap{width:100%;}
+		#content p{
+			font-size:2em; color:black;
+		}
+	}
+	
+	@media screen and (min-width:1000px){
+		#AllWrap{ width:80%;}
+		#content p{
+			font-size:1em; color:green;
+		}
+	}
+	
+	@media screen and (min-width:641px) and (max-width:999px){
+		#AllWrap{ width:100%;}
+		#content p{
+			font-size:1.5em; color:red;
+			background-color:black;
+		}
+	}
+</style>
+</head>
+<body>
+<div id="AllWrap">
+	<div id="PartWrap">
+		<div id="header">
+			<h1>HEADER</h1>
+		</div>
+		<div id="nav">
+			<ul>
+				<li>메뉴1입니다</li>
+				<li>메뉴2</li>
+				<li>메뉴3</li>
+				<li>메뉴4</li>
+				<li>메뉴5</li>
+			</ul>
+		</div>
+	</div>
+	<div id="ContentWrap">
+		<div id="content">
+			<h2>기사제목</h2>
+			<p>
+				기사내용
+			</p>
+		</div>
+	</div>
+	<div id = "footer">
+		<h1>FOOTER</h1>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+.owl-carousel {
+	width: 100%; display: none; position: relative; z-index: 1; -webkit-tap-highlight-color: transparent;
+}
+.owl-carousel .owl-stage {
+	position: relative; -ms-touch-action: pan-y;
+}
+.owl-carousel .owl-stage::after {
+	height: 0px; line-height: 0; clear: both; display: block; visibility: hidden; content: ".";
+}
+.owl-carousel .owl-stage-outer {
+	overflow: hidden; position: relative; -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-item {
+	float: left; position: relative; min-height: 1px; -webkit-tap-highlight-color: transparent; -webkit-backface-visibility: hidden; -webkit-touch-callout: none;
+}
+.owl-carousel .owl-item img {
+	width: 100%; display: block; -webkit-transform-style: preserve-3d;
+}
+.owl-carousel .owl-nav.disabled {
+	display: none;
+}
+.owl-carousel .owl-dots.disabled {
+	display: none;
+}
+.owl-carousel .owl-nav .owl-prev {
+	cursor: pointer; -ms-user-select: none; user-select: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none;
+}
+.owl-carousel .owl-nav .owl-next {
+	cursor: pointer; -ms-user-select: none; user-select: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none;
+}
+.owl-carousel .owl-dot {
+	cursor: pointer; -ms-user-select: none; user-select: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none;
+}
+.owl-carousel.owl-loaded {
+	display: block;
+}
+.owl-carousel.owl-loading {
+	display: block; opacity: 0;
+}
+.owl-carousel.owl-hidden {
+	opacity: 0;
+}
+.owl-carousel.owl-refresh .owl-item {
+	display: none;
+}
+.owl-carousel.owl-drag .owl-item {
+	-ms-user-select: none; user-select: none; -webkit-user-select: none; -moz-user-select: none;
+}
+.owl-carousel.owl-grab {
+	cursor: move;
+}
+.owl-carousel.owl-rtl {
+	direction: rtl;
+}
+.owl-carousel.owl-rtl .owl-item {
+	float: right;
+}
+.owl-carousel .owl-item .item a {
+	display: block; box-sizing: border-box;
+}
+.owl-carousel .owl-item .item a:hover {
+	box-sizing: border-box;
+}
+.owl-carousel .owl-item .item a:focus {
+	box-sizing: border-box;
+}
+.no-js .owl-carousel {
+	display: block;
+}
+.owl-carousel .animated {
+	animation-duration: 1000ms; animation-fill-mode: both;
+}
+.owl-carousel .owl-animated-in {
+	z-index: 0;
+}
+.owl-carousel .owl-animated-out {
+	z-index: 1;
+}
+.owl-carousel .fadeOut {
+	animation-name: fadeOut;
+}
+.owl-height {
+	transition:height 500ms ease-in-out;
+}
+.owl-carousel .owl-item .owl-lazy {
+	transition:opacity 400ms; opacity: 1;
+}
+.owl-carousel .owl-item img.owl-lazy {
+	transform-style: preserve-3d;
+}
+.owl-carousel .owl-video-wrapper {
+	background: rgb(0, 0, 0); height: 100%; position: relative;
+}
+.owl-carousel .owl-video-play-icon {
+	background: url("owl.video.play.png") no-repeat; transition:transform 100ms; left: 50%; top: 50%; width: 80px; height: 80px; margin-top: -40px; margin-left: -40px; position: absolute; z-index: 1; cursor: pointer; -webkit-backface-visibility: hidden;
+}
+.owl-carousel .owl-video-play-icon:hover {
+	transform: scale(1.3);
+}
+.owl-carousel .owl-video-playing .owl-video-tn {
+	display: none;
+}
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+	display: none;
+}
+.owl-carousel .owl-video-tn {
+	background-position: center; transition:opacity 400ms; height: 100%; opacity: 0; background-repeat: no-repeat; background-size: contain;
+}
+.owl-carousel .owl-video-frame {
+	width: 100%; height: 100%; position: relative; z-index: 1;
+}

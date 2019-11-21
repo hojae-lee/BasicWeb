@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>두번쨰 팝업창</title>
+    <script>
+        function openerCtrl(){
+            /*
+            opener의 opener속성을 이용할 때 해당 팝업창을 열어준 부모창이 사라지면 중간에 다리역할을 하던
+            창이 없어진 결과가 되기 때문에 스크립트 오류가 발생하고 더이상 부모창을 제어할수 없게 된다.
+            */
+            var tempZip = parseInt(Math.random()*100000);
+            opener.opener.document.getElementById("zipcode").value = tempZip;
+            opener.opener.document.getElementById("addr1").value = "여기는 한국소프트웨인재개발원";
+        }
+    </script>
+</head>
+<body>
+    <h2>openChild Secomnd 창</h2>
+    
+    <p style="text-align: center;">
+       
+        <button onclick="openerCtrl();">
+        opener>opener로 데이터 보내기       
+         </button>
+         
+        <button onclick="opener.close();">
+        opener닫기        
+        </button>
+        
+        <button onclick="self.close();">
+        self 닫기
+        </button>
+    </p>
+</body>
+</html>

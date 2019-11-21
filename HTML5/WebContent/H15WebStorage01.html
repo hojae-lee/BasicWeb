@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>H15WebStorage01.html</title>
+</head>
+<body>
+    <h2>웹 스토리지</h2>
+    <script>
+        /*
+        웹스토리지
+        :클라이언트에 데이터를 저장 할 수 있도록 지원하는 HTML5의 기능으로 쿠키와 유사하다.
+        쿠키는 약4kb까지만 데이터를 저장할수 있는 반면에 웹스토리지는 약 5mb까지 저정할수있따.
+        하나의 도메인에 하나의 웹스토리지가 생기는 구조라고 생각하면 된다.
+        즉 도메인이 바뀌면 웹스토리지는 리셋되어 새로운 저장소가 생성된다.
+        로컬스토리지:반영구적으로 데이터를 저장하며 브라우저를 종료해도 데이터가 유지된다.
+        세션스토리지:세션마다 개별적으로 데이터가 저장되며 브라우저를 종료하면 데이터가 자동삭제된다.
+        */
+        var span;
+        window.onload = function(){
+            span =document.getElementById("result");
+            if(typeof(Storage) != undefined){
+                span.innerHTML = "웹 스토리지 지원합니다";
+                //웹스토리지를 지원하는 브라우저라면 설정한 벼수를 가져온다.
+                var counter = localStorage.getItem("VISIT_COUNTER");
+                if(counter == null){
+                    localStorage.setItem("VISIT_COUNTER",1);
+                    span.innerHTML = "처음방문하셨군영";
+                }
+                else{
+                    counter++;
+                    span.innerHTML = counter+"번째 방문이군요!!";
+                    localStorage.setItem("VISIT_COUNTER", counter);
+                }
+            }
+            else{
+                span.innerHTML = "웹 스토리지를 지원하지 않은 브라우저입니다.";
+            }
+        }
+        var removeKey = function(){
+            localStorage.removeItem("VISIT_COUNTER");
+            span.innerHTML = "방문 횟수가 초기화 됩니다."
+        }
+    </script>
+    
+    <fieldset>
+        <legend>웹스토리지-로컬스토리지를 이용한 방문횟수 카운팅</legend>
+        <span id="result" style="color: red; font-size: 1.5em; font-weight: bold"></span>
+        <button onclick="removeKey();">로컬 스토리지 삭제</button>
+    </fieldset>
+</body>
+</html>

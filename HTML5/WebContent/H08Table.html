@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>H08Table</title>
+</head>
+<body>
+<h2>table 태그</h2>
+
+<!-- 
+	table 태그의 속성
+	-bgcolor 표의 배경색을 지정한다.
+	-cellpadding cell과 컨텐츠 사이의 여백을 지정
+	-cellsapcing cell과 cell사이의 여백을 지정한다.
+	
+	table 표 형태로 컨텐츠를 표시하기 위한 태그 하위태그로 tr,td와 같은 태그가 있다.
+	tr 행을 표시.
+ -->
+ 
+	<h3>table 태그의 속성을 이용한 테이블 디자인</h3>
+	<table border="10" cellpadding = "5" cellspacing = "10" bgcolor= "skyblue"  width=300 align = "center">
+		<tr>
+			<td align = "center">가</td>
+			<td align = "center">나</td>
+			<td align = "center">다</td>
+		</tr>
+		<tr>
+			<td align = "center">라</td>
+			<td align = "center">마</td>
+			<td align = "center"><img alt="사과" src="./images/apple.png"></td>
+		</tr>
+	</table>	
+	<h3>Css속성을 이용한 테이블 디자인</h3>
+	<table border="10" width = 300 align = "center" style="border-spacing:10px; background-color:orange;">
+		<tr>
+			<td style = "padding:5px; border:1px solid black;" align = "center">가</td>
+			<td style = "padding:5px; border:1px solid red;" align = "center">나</td>
+			<td style = "padding:5px; border:1px solid yellow;" align = "center">다</td>
+		</tr>
+		<tr>
+			<td style = "padding:5px; border:1px solid blue;" align = "center">라</td>
+			<td style = "padding:5px; border:1px solid green;" align = "center">마</td>
+			<td style = "padding:5px; border:1px solid pink;" align = "center"	><img alt="바나나" src="./images/banana.png"></td>
+		</tr>
+	</table>
+	
+	<h3>셀병합</h3>
+	
+	<table border=1 width="300">
+		<tr>
+			<td>1행 1열</td>
+			<td>1행 2열</td>
+			<td>1행 3열</td>
+		</tr>
+		<tr>
+			<td>2행 1열</td>
+			<td>2행 2열</td>
+			<td>2행 3열</td>
+		</tr>
+		<tr>
+			<td>3행 1열</td>
+			<td>3행 2열</td>
+			<td>3행 3열</td>
+		</tr>
+	</table>
+	
+	<h4>1행의 3개의 셀을 병합</h4>
+	<table border=1 width="300">
+		<tr>
+			<td colspan="2">1행 1열</td>
+			<!-- 
+			<td>1행 2열</td>
+			<td>1행 3열</td>
+			 -->
+		</tr>
+		<tr>
+			<td>2행 1열</td>
+			<td>2행 2열</td>
+			<td>2행 3열</td>
+		</tr>
+		<tr>
+			<td>3행 1열</td>
+			<td>3행 2열</td>
+			<td>3행 3열</td>
+		</tr>
+	</table>
+	
+	<h4>2행2열과 3행2열 병합</h4>
+	<table border=1 width="300">
+		<tr>
+			<td colspan="3">1행 1열</td>
+			<!-- 
+			<td>1행 2열</td>
+			<td>1행 3열</td>
+			 -->
+		</tr>
+		<tr>
+			<td>2행 1열</td>
+			<td rowspan="2">2행 2열</td>
+			<td>2행 3열</td>
+		</tr>
+		<tr>
+			<td>3행 1열</td>
+			<td>3행 3열</td>
+		</tr>
+	</table>
+	
+	<h4>테이블연습 오늘의 수입 지출</h4>
+	
+	<table border = 1 width = "700" align = "center">
+		<tr>
+			<td colspan ="3" style = "padding:5px; border:2px solid red; background-color: yellow; font-weight: bold;" >오늘의 수입/지출</td>
+		</tr>
+		<tr>
+			<td align = "center" style = "padding:1px; border:2px solid red; background-color: pink; font-weight: bold">내용</td>
+			<td align = "center" style = "padding:1px; border:2px solid red; background-color: pink; font-weight: bold">수입</td>
+			<td align = "center" style = "padding:1px; border:2px solid red; background-color: pink; font-weight: bold">지출</td>
+		</tr>
+		<tr>
+			<td style = "padding:1px; border:2px solid red;">월급</td>
+			<td style = "padding:1px; border:2px solid red;">1,000,000</td>
+			<td style = "padding:1px; border:2px solid red;"></td>
+		</tr>
+		<tr>
+			<td style = "padding:1px; border:2px solid red;">점심값</td>
+			<td style = "padding:1px; border:2px solid red;"></td>
+			<td style = "padding:1px; border:2px solid red;">5000</td>
+			
+		</tr>
+		<tr>
+			<td style = "padding:1px; border:2px solid red;">부모님선물</td>
+			<td style = "padding:1px; border:2px solid red;"> </td>
+			<td style = "padding:1px; border:2px solid red;">30000</td>
+			
+		</tr>
+		<tr>
+			<td align = "center" rowspan="3" style = "padding:5px; border:2px solid red; background-color: pink; font-weight: bold;">총계</td>
+			<td style = "padding:1px; border:2px solid red;">수입</td>
+			<td style = "padding:1px; border:2px solid red;">지출</td>
+		</tr>
+		<tr>
+			<td style = "padding:1px; border:2px solid red;">1,000,000</td>
+			<td style = "padding:1px; border:2px solid red;">남은돈</td>
+		</tr>
+		<tr>
+			<td style = "padding:1px; border:2px solid red;">35,000</td>
+			<td style = "padding:1px; border:2px solid red;">965,000</td>
+		</tr>
+	</table>
+	
+	<!-- 
+		테이블의 하위태그
+			-td : Table Data Cell의 약어로 하나의 칸을 표시한다.
+			반드시 tre태그 하위에 상빙ㅂ되어야한다.
+			-th: table head의 약어로 td와 동일하지만 텍스트가 자동으로 bold로 표시되면서 가운데 정렬된다.
+	 -->
+	
+	<h4>td와 th의 차이</h4>
+	<table border=1 width="300">
+		<tr>
+			<th>1행 1열[th]</th>
+			<th>1행 2열[th]</th>
+			<th>1행 3열[th]</th>
+		</tr>
+		<tr>
+			<th>2행 1열[th]</th>
+			<th>2행 2열[th]</th>
+			<th>2행 3열[th]</th>
+		</tr>
+		<tr>
+			<th>3행 1열[th]</th>
+			<th>3행 2열[th]</th>
+			<th>3행 3열[th]</th>
+		</tr>
+	</table>
+	
+	
+	<!-- 
+	웹표준을 위한 테이블속성
+	caption 테이블의 제목
+	summary 테이블의 요약
+	colgroup col태그를 그룹으로 관리
+	col 테이블의 하나이상의 열 td에 대해 속성을 정의
+	tbdoy 표에서 내용영역에 해당하는 부분을 의미
+	thead 표에서 헤더영영ㄱ에 해당하는 부분을 의미
+	tfoot 표에서 푸터영역에 해당하는 부분을 의미
+	 -->
+	<h3>웹접근성을 고려한 테이블 속성</h3>
+		
+	<table summary="회사 임직원들의 연봉표입니다."
+	style = "text-align:center; width:400px; background-color:red; borer-sparing:1px">
+		<caption>직원 연봉표</caption>
+			<thead>
+				<tr style="background-color:white; height:50px">
+					<th style="width:15%">번호</th>
+					<th style="width:55%">이름</th>
+					<th>연봉</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr style="background-color:white; height:30px">
+					<th>1</th>
+					<th>김길동</th>
+					<th>3000만원</th>
+				</tr>
+				<tr style="background-color:white; height:30px">
+					<th>3</th>
+					<th>홍길동</th>
+					<th>2500만원</th>
+				</tr>	
+			</tbody>
+			<tfoot>
+				<tr style="background-color:white; hegiht:30px">
+					<th>총급여</th>
+					<td colspan="2">1억500만원</td>
+				</tr>
+			</tfoot>
+		
+	</table>
+	
+	<h4>colgroup 및 col 적용한 테이블</h4>
+	
+	<table summary="회사 임직원들의 연봉표입니다."
+	style = "text-align:center; width:400px; background-color:red; borer-sparing:1px">
+		<caption>직원 연봉표</caption>
+		<colgroup>
+			<col width="10%"/>
+			<!-- * 남은영역의 크기를 뜻함. -->
+			<col width="*"/>
+			<col width="30%"/>
+		</colgroup>
+			<thead>
+				<tr style="background-color:white; height:50px">
+					<th>번호</th>
+					<th>이름</th>
+					<th>연봉</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr style="background-color:white; height:30px">
+					<th>1</th>
+					<th>김길동</th>
+					<th>3000만원</th>
+				</tr>
+				<tr style="background-color:white; height:30px">
+					<th>3</th>
+					<th>홍길동</th>
+					<th>2500만원</th>
+				</tr>	
+			</tbody>
+			<tfoot>
+				<tr style="background-color:white; hegiht:30px">
+					<th>총급여</th>
+					<td colspan="2">1억500만원</td>
+				</tr>
+			</tfoot>
+		
+	</table>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</body>
+</html>

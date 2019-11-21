@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>J14WindowObject01</title>
+<script>
+    /*
+    window객체 : 창과 관련된 객체로 window는 주로 생략이 가능하다.
+    
+    alert : 단순한 경고창 사용자에게 메세지를 전달할때 주로 사용함.
+    confirm : 대화상자의 일종으로 사용자에게 어떤 액션을 취할지 여부를 물어볼떄 사용
+    '확인'을 누를경우 true가 반환되고 '취소'를 누를경우 false가 반환된다.
+    prompt : 사용자로부터 입력을 받기위한 대화상자로 디폴트값이 필요한 경우에는 두번쨰 인자에 입력해주면된다.
+    ex) prompt("창에보일메시지", "디폴트값");
+    */
+    var fn = {
+        login:function(){
+            var user= document.getElementById("user");
+            if(user.value==""){
+                window.alert("아이디를 입력해주세요");
+                user.focus();
+            }
+        },
+        drop:function(){
+            var answer = window.confirm("정말 삭제하시겠어요?");
+            if(answer==true){
+                alert("삭제되었습니다.");
+            }
+            else if(answer==false){
+                alert("삭제를 취소하였습니다.");
+            }
+        },
+        insertName:function(){
+            var name = 
+                window.prompt("당신의 이름은 무엇인가요?");
+            window.alert("당신의 이름은 "+name+" 입니다");
+        },
+        insertAge:function(){
+            var age = window.prompt("당신의 나이는?","20");
+            window.alert("당신은 10년 후 "+(window.parseInt(age)+10)+" 살입니다.");
+        }
+    }
+</script>
+</head>
+<body>
+    <h2>window 객체</h2>
+    
+    <h3>대화 상자 (alert,confirm,prompt)</h3>
+    
+    아이디: <input type="text" id="user">
+    <br/>
+    <input type="button" value="로그인" onclick="fn.login();">
+    <input type="button" value="삭제하기" onclick="fn.drop();">
+    <input type="button" value="이름입력하기" onclick="javascript:fn.insertName();">
+    <input type="button" value="나이입력하기" onclick="javascript:fn.insertAge();">
+    
+</body>
+</html>

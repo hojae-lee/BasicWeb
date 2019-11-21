@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>첫번재 자식창</title>
+    <script>
+        function openChild2(){
+            window.open("openChild2nd.html","child2","width=300,height=300,left=300,top=0");
+        }
+        
+        //부모창의 버튼을 text상자로 변경함.
+        var openerText = function(){
+            opener.document.getElementById("btnFirst").type = "text";
+            opener.document.getElementById("btnFirst").style.backgroundColor = "red";
+        }
+        //부모창의 text상자를 button으로 변경함.
+        var openerButton = function(){
+            opener.document.getElementById("btnFirst").type = "button";
+            opener.document.getElementById("btnFirst").style.backgroundColor = "blue";
+        }
+    </script>
+</head>
+<body>
+    <h2>openChild First 창</h2>
+    <p style="text-align: center">
+        <button onclick="openChild2();">
+            팝업에서 팝업열기
+        </button>
+        
+        <button onclick="openerText();">
+            부모창의 버튼을 text박슻로 변경하기
+        </button>
+        
+        <button onclick="openerButton();">
+            부모창의 버튼을 button으로 변경하기
+        </button>
+    </p>
+</body>
+</html>

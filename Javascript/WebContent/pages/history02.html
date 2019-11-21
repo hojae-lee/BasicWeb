@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2>history02-회원가입</h2>
+    <h3>회원가입을 진행해 주세요</h3>
+    
+    <!--
+        href속성에서 JS함수 호출시 반드시 'javascript:함수명()' 형태로 입력해야 한다.
+        onclick과 같은 이벤트리스너에서 호출시에는 'javascript:'를 생략해도 무방하다.
+    -->
+    <p>
+        <a href="javascript:history.go(-1);">1page뒤로</a>
+        <br/>
+        <a href="#" onclick="javascript:history.go(-2);">2page뒤로</a>
+    </p>
+</body>
+</html>

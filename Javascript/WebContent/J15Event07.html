@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>J15Event07.html</title>
+</head>
+<body>
+    <h3>테이블에 mouseover/mouseout 이벤트 적용</h3>
+    <table style = "border-spacing: 1px; width: 400px; background-color: gray;">
+        <tr style="background-color: yellow;">
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+        </tr>
+        <tr style="background-color: gray;" onmouseover="this.style.backgroundColor='green';" onmouseout="this.style.backgroundColor='gray';">
+            <td>1</td>
+            <td>어벤져스</td>
+            <td>페이즈1</td>
+        </tr>
+        <tr style="background-color: white;"  onmouseover="this.style.backgroundColor='green';" onmouseout="this.style.backgroundColor='white';">
+            <td>2</td>
+            <td>어벤져스2-울트론의 시대</td>
+            <td>페이즈2</td>
+        </tr>
+        <tr style="background-color: gray;"  onmouseover="this.style.backgroundColor='green';" onmouseout="this.style.backgroundColor='gray';">
+            <td>3</td>
+            <td>어벤져스3-인피니티워</td>
+            <td>페이즈3</td>
+        </tr>
+        <tr style="background-color: white;"  onmouseover="this.style.backgroundColor='green';" onmouseout="this.style.backgroundColor='white';">
+            <td>4</td>
+            <td>어벤져스4-엔드게임</td>
+            <td>페이즈4</td>
+        </tr>
+    </table>
+    
+    <script>
+        function fnScale(flag){
+            var title = document.getElementById("title");
+            /*
+            현재 HTML 문서에 존재하는 div태그중에서 첫번쨰 요소를 가져와서 변수에 저장한다.
+            */
+            var div = document.getElementsByTagName("div")[0];
+            
+            if(flag==1){
+                //마우스를 눌렀을때 (좌클릭/우클릭 모두 감지함)
+                title.innerHTML = "<big>mousedown 이벤트 발생</big>";
+                div.style.backgroundColor = "green";
+                //박스의 세로크기와 가로크기를 실시간으로 가져와서 2배로 늘림
+                div.style.width = parseInt(div.style.width)*2+"px";
+                div.style.height = parseInt(div.style.height)*2+"px";
+            }
+            else if(flag==2){
+                //마우스를 뗐을때
+                title.innerHTML = "mouseup 이벤트 발생";
+                div.style.backgroundColor = "red";
+                div.style.width = "100px";
+                div.style.height = "100px";
+            }
+        }
+    </script>
+    
+    <h3 id= "title">mousedown/mouseup</h3>
+    <h4>스케일 및 색상변경</h4>
+    <div onmousedown="fnScale(1);" onmouseup="fnScale(2);" style="background-color: red; width: 100px;
+        height: 100px;">여기를 클릭해보세요
+    </div>
+    
+    <script>
+        //mousedown 이벤트가 발생할때마다 div박스가 우측으로 세번씩 50px이동하도록 처리한다.
+    var timer, count=1, divObj;
+        
+    function setTimer(obj){
+        divObj = obj;
+        /*
+        setInterval("호출할함수명()", 호출시간간격);
+        ->1/1000초 단위이므로 아래는 0.3초마다 호출하게 된다.
+        */
+        timer = setInterval("moveObj()",50);
+    }
+    function moveObj(){
+        if(count%3==0){
+            /*
+            setInterval()로 인해 동작중인 함수의 실행을 정지시킨다.
+            */
+            clearInterval(timer);
+        }
+        count++;
+        
+        /*
+        div박스의 left속성을 실시간으로 얻어와서 50px식 증가시킨다.
+        좌측여백이 커지므로 div박스가 우측으로 디오하는것처럼 보이게 된다.
+        */
+        var left = parseInt(divObj.style.left);
+        divObj.style.left = (left+50)+"px";
+    }
+    </script>
+    <h3>mousedown이벤트</h3>
+    <h4>div상자의 위치이동</h4>
+    <div onmousedown="setTimer(this);" style="left:0; top:0; position: relative; width: 100px; height: 100px; background-color: blue;" >
+    </div>
+    
+    <!--
+    연습문제] 아래 트럼프 이미지에 마우스를 오버햇을떄 2.jpg로 교체 [mouseoverFunc()]
+    아웃했을때 1.jpg로 교체 [mouseoutFunc()]
+    다운했을때 이미지크기를 2배로 늘린다. [mousedownFunc()]
+    업했을때 이미지크기를 원래대로 돌린다. [mouseupFunc()]
+    -->
+    
+    <script>
+//        var mouseobj;
+//        function mouseoverFunc(obj){
+//            mouseobj = obj;
+//            mouseobj.src ="./images/2.jpg";
+//        }
+//        
+//        function mouseoutFunc(){
+//            mouseobj.src = "./images/1.jpg";
+//        }
+//        
+//        function mousedownFunc(obj){    
+//            mouseobj = obj;
+//            mouseobj.style.width = parseInt(mouseobj.style.width)*2+"px";
+//            mouseobj.style.height = parseInt(mouseobj.style.height)*2+"px";
+//        }
+//        
+//        function mouseupFunc(){     
+//            mouseobj.style.width = "225px";
+//            mouseobj.style.height = "313px";
+//        }
+        
+        function mouseoverFunc(obj){
+           obj.src ="./images/2.jpg";
+        }
+        
+        function mouseoutFunc(){
+            var img = document.getElementsByTagName("img");
+            img[0].src = "./images/1.jpg";
+        }
+        
+        var imgTag;
+        
+        window.onload = function(){
+            imgTag = document.getElementsByTagName("img")[0];
+            imgTag.onmousedown = mousedownFunc;
+            imgTag.onmouseup = mouseupFunc;
+        }
+        
+        function mousedownFunc(){    
+            imgTag.style.width = parseInt(imgTag.style.width)* 2+"px";
+            imgTag.style.height = parseInt(imgTag.style.height)* 2+"px";
+        }
+        
+        function mouseupFunc(){     
+            imgTag.style.width = parseInt(imgTag.style.width)/ 2+"px";
+            imgTag.style.height= parseInt(imgTag.style.width)/ 2+"px";
+        }
+    </script>
+    <h3>이미지에 마우스 이벤트 적용하기</h3>
+    <img src="./images/1.jpg" alt="하트" style="width:225px;heigth:313px;"
+        onmouseover = "mouseoverFunc(this);" onmouseout="mouseoutFunc();">
+</body>
+</html>

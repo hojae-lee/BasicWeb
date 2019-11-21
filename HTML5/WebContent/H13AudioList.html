@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H13AudioList.html</title>
+    <script>
+        var divMsg;
+        var audio;
+        var select;
+        var index=0;
+        
+        window.onload = function(){
+            divMsg = document.getElementById("msg");
+            audio = document.getElementById("audio");
+            select = document.getElementById("select");
+            
+            //audio태그에서 한곡의 연주가 끝났을때 발생되는 이벤트
+            audio.onended = function(e){
+                //매개변수로 전달되는 이벤트객체를 통해 id속성에 접근할수 있따.
+                index++;
+                index %= select.length;
+                myPlay(index);
+            }
+        }
+        
+        function changePlay(){
+            myPlay(select.selectedIndex);
+            index = select.selectedIndex;
+        }
+        
+        function control(e){
+            if(e.target.id == "play"){
+                myPlay(index);
+            }
+            else if(e.target.id == "next"){
+                index++;
+                index %= select.length;
+                myPlay(index);
+                select.selectedIndex = index;
+            }
+        }
+        
+        function myPlay(idx){
+            audio.src = select.options[idx].value;
+            audio.play();
+            divMsg.innerHTML = select.options[idx].text +" 을 재생합니다."
+        }
+    </script>
+</head>
+<body>
+    <h2>오디오 리스트 연속재생</h2>
+    <hr/>
+    <p>
+        처음 play버튼을 누르면 리스트에 있는 곡이 연속하여 자동재생 됩니다. 마우스로 다른 곡을 선택하면
+        곡이 바뀝니다. next버튼을 누르면 다음 곡으로 넘어갑니다.
+    </p>
+    <hr/>
+    <audio id="audio" controls>
+        <p>
+            브라우저가 audio태그를 지원하지 않습니다.
+        </p>
+    </audio>
+    <br/>
+    <select id="select" size="3" onchange="changePlay();">
+        <option value="./media/Bring_It_All_Back.mp3">Bring_It_All_Back잉</option>
+        <option value="./media/I_Remember_You.mp3">I_Remember_You잉</option>
+        <option value="./media/Kissing_A-Fool.mp3">Kissing_A-Fool잉</option>
+        <option value="./media/When_I_First-Kissed_You.mp3">When_I_First-Kissed_You잉</option>
+        <option value="./media/My_Love.mp3">My_Love잉</option>
+    </select>
+    <button type="button" id="play" onclick="control(event);">Play</button>
+    <button type="button" id="next" onclick="control(event);">Next</button>
+    <br/>
+    <div id="msg">현재 연주되는 곡명이 보입니다.</div>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+.owl-theme .owl-nav {
+	text-align: center; margin-top: 10px; -webkit-tap-highlight-color: transparent;
+}
+.owl-theme .owl-nav [class*='owl-'] {
+	background: rgb(214, 214, 214); margin: 5px; padding: 4px 7px; border-radius: 3px; color: rgb(255, 255, 255); font-size: 14px; display: inline-block; cursor: pointer;
+}
+.owl-theme .owl-nav [class*='owl-']:hover {
+	background: rgb(134, 151, 145); color: rgb(255, 255, 255); text-decoration: none;
+}
+.owl-theme .owl-nav .disabled {
+	cursor: default; opacity: 0.5;
+}
+.owl-theme .owl-nav.disabled + .owl-dots {
+	margin-top: 10px;
+}
+.owl-theme .owl-dots {
+	text-align: center; -webkit-tap-highlight-color: transparent;
+}
+.owl-theme .owl-dots .owl-dot {
+	display: inline-block; -ms-zoom: 1;
+}
+.owl-theme .owl-dots .owl-dot a {
+	background: rgb(214, 214, 214); margin: 5px 7px; border-radius: 30px; transition:opacity 200ms; width: 10px; height: 10px; display: block; -webkit-backface-visibility: visible;
+}
+.owl-theme .owl-dots .owl-dot.active a {
+	background: rgb(134, 151, 145);
+}
+.owl-theme .owl-dots .owl-dot:hover a {
+	background: rgb(134, 151, 145);
+}

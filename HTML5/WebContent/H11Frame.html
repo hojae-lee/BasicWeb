@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>H11Frame.html</title>
+<frameset rows = "100px,*,50px" border="5" frameborder="1">
+	<frame src = "./frame/topFrame.html" name = "topFrame" scrolling = "no" marginwidth="0" marginheight="0" noresize />
+	<frameset cols="300px,*" border="5" frameborder="1">
+		<frame src = "./frame/leftFrame.html" name = "leftFrame"/>
+		<frame src = "./frame/contentFrame.html" name="contentFrame"/>
+	</frameset>
+	<frame src = "./frame/bottomFrame.html" name="bottomFrame" scrolling="no" marginwidth="0" marginheight="0"/>
+</frameset>
+<noframes>이 브라우저는 프레임을 지원하지않습니다.</noframes>
+
+</head>
+<body>
+	프레임은 body태그안으로 들어가면 안됩니다.
+
+</body>
+</html>

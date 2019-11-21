@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>J01Variable.html</title>
+<script>
+/*
+ 자바스크립트
+ js에서는 대소문자를 구분한다,
+ 하나의 명령행이 끄탄면 ;으로 명령의 끝을 알린다.
+ 변수에 대입한 값에 따라 자료형이 결정된다.
+ 변수선언언은 var키워드를 통해 이루어진다.
+ */
+ 
+	var num;
+	document.write("<h2>변수 초기화 전</h2>")
+	document.write("num의 자료형:"+typeof(num)+", num에 저장된 데이터:"+num);
+	/*
+	 	document.write() js에서 웹브라우저상에 문자열이나 변수를 출력하고자 할떄 사용하는 내장함수이다.
+	 	alert() 사용자에게 경고메세지를 띄울떄 사용하는 내장함수이다.
+	 	typeof() 해당 변수의 자료형을 반환한다.
+	 */
+	
+	num = 100;
+	document.write("<h2>변수 초기화 후</h2>");
+	document.write("num의 자료형:"+typeof(num)+", num에 저장된 데이터:"+num);
+	
+	num = '문자열입니다.';
+	document.write("<br/>num의 자료형:"+typeof(num)+", num에 저장된 데이터:"+num);
+	/*
+		문자열을 표기할떄는 싱글 더블 쿼테이션 구분없음.
+		js에서는 문자와 문자열의 차이는 없다.
+	*/
+	
+	num = true;
+	document.write("<br/>num의 자료형:"+typeof(num)+", num에 저장된 데이터:"+num);
+	
+	var num1=10, num2, str1 = "자바스크립트", str2;
+	document.write("<br />num1+num2="+(num1+num2));
+	
+	/*
+	NaN js에서 숫자가 아님을 표현하는 용어이다.
+	*/
+	
+	if(isNaN(num1+num2)){
+		/*
+		isNaN()은 매개변수가 숫자인지 검사하는 함수.
+		number타입이면 false 아니면 true
+		*/
+		alert("NaN이다. 즉 숫자가 아니다.");
+	}
+	else{
+		alert("NaN이 아니다. 즉 숫자이다");
+	}
+	
+	document.write("<br/>str1+str2="+(str1+str2));
+	document.write("<br/>num1+str1="+(num1+str1));
+	
+	/*
+	자바스크립트의 기타 자료형: object형이 된다.
+	
+	날짜시간함수
+		getYear() : 1900년도부터 지금까지 지난 년수를 반홯나다. 즉1900을 더했을때 현재년도가 출력된다.
+		getMonth() : 월0~11형태로 반환한다. +1해야 정상적인 현재월이 된다.
+	*/
+	document.write("<h2>기타자료형</h2>");
+	var date = new Date();
+	document.write("date의 자료형:"+typeof(date)+", date에 저장된 데이터"+date);
+	document.write("<br/>"+(date.getYear()+1900)+"년 "+(date.getMonth()+1)+"월 "+date.getDate()+"일");
+	
+	/*
+	null의 의미
+		-아무런 값이 없다
+		-0이거나 '' "" 는 null이 아니라  0혹은 빈문자열이 된다.
+		null 0 false 나머지 true
+	*/
+	var nullvar = null;
+	document.write("<br/>nullvar의 자료형:"+typeof(nullvar)+", nullvar에 저장된 데이터:"+nullvar);
+	document.write("<br/>document의 자료형:"+typeof(document)+", document에 저장된 데이터"+document);
+	
+	var novar = 100;
+	document.write("<br/>novar="+ novar + ", novar의 자료형:"+typeof(novar));
+	
+	
+	/*
+	자료형에 대한 정리
+		실수나 정수 : number 타입
+		문자열('',""): string 타입
+		true, false : boolean 타입
+		document, window, null, Date, Math등 : Object 타입
+		변수 정의 후 초기화 하지 않은 경우 : undefined 타입
+		변수를 정의하지 않고 출력 : Error
+	*/
+	
+</script>
+</head>
+<body>
+</body>
+</html>

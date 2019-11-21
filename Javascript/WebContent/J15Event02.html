@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>J15Event02.html</title>
+    <script>
+    window.onload = function(){
+        alert("문서의 load가 완료되었습니다.");
+    }
+    </script>
+</head>
+<!-- 
+    load이벤트 : 해당 HTML문서의 전체가 로딩된 이후 발생되는 이벤트로 문서를 모두 해석한 후 실행해야 되는
+    함수가 있을때 주로 사용함.
+    load이벤트 활용방법2 : window 객체에리스너를 부착한다.
+-->
+<body onload="loadEventFunc();">
+    <h2>이벤트 - load(2)</h2>
+    
+    <script>
+        alert("문서가 끝나기 직전");
+    </script>
+</body>
+</html>

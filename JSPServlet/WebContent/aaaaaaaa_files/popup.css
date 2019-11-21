@@ -1,0 +1,570 @@
+.b-modal {
+	opacity: 1 !important; background-color: rgba(0, 0, 0, 0.4) !important;
+}
+.pop_wrap {
+	margin: 0px 10px; display: none; position: relative;
+}
+.pop_wrap.img_type .pop_cont {
+	padding-top: 10px;
+}
+.pop_wrap.img_type .popbtn_close {
+	top: 0px; width: 30px; height: 30px; right: 5px; display: block; position: absolute; z-index: 3;
+}
+.pop_type1 {
+	background-color: rgb(255, 255, 255);
+}
+.pop_type1 .popbtn_close {
+	top: 0px; right: 0px; display: block; position: absolute; z-index: 3;
+}
+.popbtn_close .is_ico {
+	margin: auto;
+}
+.pop_title {
+	background: rgb(245, 245, 245); padding: 20px 15px; font-size: 1em;
+}
+.top_line_title {
+	margin: 25px 0px 10px; font-size: 1.25em; font-weight: 500;
+}
+.top_line_title > span {
+	padding-top: 5px; border-top-color: rgb(233, 64, 64); border-top-width: 1px; border-top-style: solid; display: inline-block;
+}
+.pop_cont {
+	padding: 0px 15px;
+}
+.pop_cont_head {
+	padding: 40px 0px; text-align: center;
+}
+.pop_cont_head .bg_txt {
+	font-size: 0.75em; margin-left: 0px;
+}
+.pop_cont_head h5 {
+	font-size: 1em; margin-top: 10px;
+}
+.pop_cont_body {
+	padding: 20px 0px; font-size: 0.81em;
+}
+.pop_cont_body .narration_area p {
+	font-size: 0.75rem;
+}
+.pop_wrap.img_type .pop_cont_body {
+	border: 0px currentColor; border-image: none;
+}
+.pop_wrap .btn_wrap {
+	padding-bottom: 20px; margin-top: 20px;
+}
+.pop_wrap .btn_wrap button {
+	padding: 14px 0px; width: 48%; max-width: 230px;
+}
+.pop_confirm {
+	padding: 20px 0px; text-align: center;
+}
+.pop_confirm input {
+	background: rgb(233, 64, 64); padding: 15px 70px; border: currentColor; border-image: none; color: rgb(255, 255, 255); font-size: 0.75em;
+}
+.pop_cont_body .table_area {
+	padding: 0px;
+}
+.choice_area {
+	padding-top: 40px;
+}
+.choice_area :nth-child(2).choice_wrap {
+	margin-left: 10px;
+}
+.ftc_se {
+	text-decoration: underline;
+}
+.ftc_gc {
+	text-decoration: underline;
+}
+.sp_block {
+	display: block;
+}
+.is_ico.ico_close {
+	background: url("../images/common/ico_close.png") no-repeat 0px 0px / 100% 100%; width: 10px; height: 10px; display: inline-block;
+}
+.popzip .pop_cont_body {
+	border-top-color: currentColor; border-bottom-color: currentColor; border-top-width: medium; border-bottom-width: medium; border-top-style: none; border-bottom-style: none;
+}
+.popzip .input_box {
+	width: 100%; position: relative;
+}
+.popzip .inc_ico.isi_search1 {
+	top: 10px; right: 10px; position: absolute;
+}
+.popzip .billiard {
+	text-align: left; color: rgb(111, 112, 114); padding-top: 10px; padding-bottom: 30px;
+}
+.popzip .input_box + .table_box {
+	margin-top: 20px;
+}
+.popzip td span {
+	display: block;
+}
+.popzip .popbtn_close {
+	top: 15px; right: 15px;
+}
+.popzip .al_l {
+	text-align: left;
+}
+.popzip .table_box {
+	height: 180px; -ms-overflow-y: auto;
+}
+.popup_wrap {
+	display: none;
+}
+.popup_wrap .pop_container {
+	padding: 40px 15px 20px; position: relative; background-color: rgb(255, 255, 255);
+}
+.popup_wrap .pop_container .pop_close {
+	top: 0px; width: 30px; height: 30px; right: 10px; display: block; position: absolute;
+}
+.popup_wrap .pop_container .pop_close .isi_close1 {
+	margin: 10px auto;
+}
+.pop_cont_body .agree_chk {
+	text-align: left; margin-top: 15px;
+}
+.popup_terms .agree_area {
+	padding: 30px 0px; border: currentColor; border-image: none; height: 450px; text-align: left;
+}
+.popup_terms .pop_cont_body {
+	border: currentColor; border-image: none;
+}
+.popup_terms.pop_type1 .popbtn_close {
+	top: 15px; right: 15px;
+}
+.popup_reporter.pop_type1 .popbtn_close {
+	top: 15px; right: 15px;
+}
+.pop_cont_body .scroll_area {
+	height: 50vh; -ms-overflow-x: hidden; -ms-overflow-y: auto;
+}
+.pop_newsletter {
+	text-align: left;
+}
+.pop_newsletter ol li {
+	line-height: 1.8; font-size: 0.87rem;
+}
+.pop_newsletter ol li > p {
+	color: rgb(111, 112, 114); padding-left: 10px; font-size: 0.75rem;
+}
+#popSeminarApply ul li {
+	line-height: 1.6;
+}
+#popSeminarApply .info {
+	margin-top: 10px;
+}
+#popSeminarApply .info b.imp {
+	top: 0px; font-size: 1.25em; margin-left: 10px; position: absolute;
+}
+#popSeminarApply .btn_wrap {
+	padding-top: 20px; border-top-color: rgb(225, 225, 225); border-top-width: 1px; border-top-style: solid;
+}
+#popArchiveInfo .scroll_area {
+	height: 60vh;
+}
+#popArchiveInfo ul li {
+	line-height: 1.6; margin-top: 5px;
+}
+#popArchiveInfo .txt_link {
+	text-decoration: underline;
+}
+#popArchiveInfo .archive_step li {
+	padding: 15px 0px; text-align: center; position: relative;
+}
+#popArchiveInfo .archive_step li::after {
+	background: url("../images/sub/arr_archive_step.png") no-repeat center; left: 50%; width: 6px; height: 10px; bottom: -3px; margin-left: -3px; display: block; position: absolute; content: ""; transform: rotate(90deg);
+}
+#popArchiveInfo .archive_step li:last-child::after {
+	display: none;
+}
+#popArchiveInfo .archive_step li > div {
+	border-radius: 50%; width: 100px; height: 100px; padding-top: 15px; display: inline-block; position: relative; box-sizing: border-box; background-color: rgb(245, 245, 245);
+}
+#popArchiveInfo .archive_step li > div > span {
+	background-position: top; left: 50%; top: 50%; width: 100%; padding-top: 35px; font-size: 0.93em; display: block; position: absolute; transform: translate(-50%, -50%); background-repeat: no-repeat;
+}
+#popArchiveInfo .archive_step li > div.step1 > span {
+	background-image: url("../images/sub/icon_archive_step1.png");
+}
+#popArchiveInfo .archive_step li > div.step2 > span {
+	background-image: url("../images/sub/icon_archive_step2.png");
+}
+#popArchiveInfo .archive_step li > div.step3 > span {
+	background-image: url("../images/sub/icon_archive_step3.png");
+}
+#popArchiveInfo .archive_step li > div.step4 > span {
+	background-image: url("../images/sub/icon_archive_step4.png");
+}
+#popArchiveInfo .con_btn .bullet_squaredot::before {
+	top: 14px;
+}
+#popArchiveInfo .con_btn li {
+	margin-top: 5px;
+}
+#popArchiveInfo li div.btn_ui {
+	background: rgb(233, 64, 64); padding: 7px 8px; text-align: center; color: rgb(255, 255, 255); font-size: 0.87em; display: inline-block; position: relative;
+}
+#popArchiveInfo .search_guide {
+	padding: 10px; margin-top: 20px;
+}
+#popArchiveInfo .search_guide h5 {
+	padding-left: 10px; font-size: 1em; font-weight: 400; margin-bottom: 10px; position: relative;
+}
+#popArchiveInfo .search_guide h5::before {
+	left: 0px; top: 5px; height: 10px; border-left-color: rgb(224, 172, 78); border-left-width: 1px; border-left-style: solid; display: block; position: absolute; content: "";
+}
+#popArchiveInfo .search_guide table {
+	text-align: left; border-collapse: collapse;
+}
+#popArchiveInfo .search_guide table td {
+	padding: 15px 5%; border: 1px solid rgb(225, 225, 225); border-image: none; color: rgb(111, 112, 114);
+}
+#popArchiveInfo .search_guide table + p {
+	margin-top: 10px;
+}
+.pop_cont_body .table_area table {
+	text-align: left;
+}
+.pop_cont_body [class*='_box'] {
+	vertical-align: middle;
+}
+.pop_cont_body .m_block ~ .m_block {
+	margin-top: 10px;
+}
+.pop_cont_body .select_box {
+	border: 0px currentColor; border-image: none; height: 40px; background-color: rgb(245, 245, 245);
+}
+.pop_cont_body .input_box {
+	border: 0px currentColor; border-image: none; height: 40px; background-color: rgb(245, 245, 245);
+}
+.pop_cont_body .select_box select {
+	padding-right: 40px; padding-left: 10px;
+}
+.pop_cont_body .select_box::after {
+	background: url("../images/common/icon_select.png") no-repeat center; top: 50%; right: 0px; display: block; position: absolute; z-index: 0; min-height: 40px; min-width: 40px; content: ""; transform: translateY(-50%);
+}
+.pop_cont_body .input_box .input_wrap {
+	margin-right: 45px;
+}
+.pop_cont_body .input_box .input_wrap input {
+	height: 40px; line-height: 40px;
+}
+.pop_cont_body .table_area .phone .inline_block .select_box {
+	width: 28%; float: left;
+}
+.pop_cont_body .table_area .phone .inline_block .input_box {
+	width: 28%; float: left;
+}
+.pop_cont_body .table_area .phone .inline_block .dash {
+	width: 5%; text-align: center; line-height: 30px; float: left;
+}
+.pop_cont_body .table_area .birth .inline_block span {
+	text-align: center;
+}
+.pop_cont_body .table_area .recieve label {
+	color: rgb(111, 112, 114); font-size: 1em !important; margin-bottom: 10px;
+}
+.pop_cont_body .table_area table tr td.recieve {
+	padding: 16px 15px;
+}
+.pop_cont_body .table_area .table_bookinfo {
+	border: currentColor; border-image: none;
+}
+.pop_cont_body .table_area .table_bookinfo tr th {
+	background: none; padding: 10px 0px 5px; border: currentColor; border-image: none; text-align: left; vertical-align: top;
+}
+.pop_cont_body .table_area .table_bookinfo tr td {
+	padding: 5px 0px;
+}
+.pop_cont_body .table_area .table_bookinfo .input_box {
+	border: 0px currentColor; border-image: none; width: 100%;
+}
+.pop_cont_body .table_area .table_bookinfo textarea {
+	border: 0px currentColor; border-image: none; width: 100%; height: 125px;
+}
+.pop_cont_body .table_area .table_bookinfo .choose_year .select_box {
+	width: 25%; float: left;
+}
+.pop_cont_body .table_area .table_bookinfo .choose_year .inline_block span {
+	width: 5.3%; text-align: center; line-height: 30px; float: left;
+}
+.pop_cont_body .table_area .table_bookinfo .phone .inline_block span {
+	width: 5.3%; text-align: center; line-height: 30px; float: left;
+}
+.pop_cont_body .table_area .table_bookinfo .choose_time .select_box {
+	width: 45%; float: left;
+}
+.pop_cont_body .table_area .table_bookinfo .choose_time .inline_block span {
+	width: 5%; text-align: center; line-height: 30px; float: left;
+}
+.pop_cont_body .table_area .table_bookinfo td p {
+	margin-top: 5px;
+}
+.pop_cont_body .table_area .table_bookinfo td p:first-child {
+	margin-top: 0px;
+}
+@media all and (min-width:768px)
+{
+.pop_cont_body .table_area .select_box {
+	height: 38px; line-height: 38px;
+}
+.table_area .input_box {
+	height: 38px; line-height: 38px;
+}
+.pop_cont_body .table_area .phone .inline_block .dash {
+	height: 38px; line-height: 38px;
+}
+.pop_cont_body .family_info .birth2 span {
+	height: 38px; line-height: 38px;
+}
+}
+@media all and (min-width:1024px)
+{
+.pop_wrap.img_type .popbtn_close {
+	width: 40px; height: 40px; right: 17px;
+}
+.pop_type1 .popbtn_close {
+	top: 40px; right: 40px;
+}
+.pop_wrap {
+	width: 680px;
+}
+.pop_wrap.img_type {
+	width: auto;
+}
+.pop_title {
+	padding: 40px 30px; font-size: 1.5em;
+}
+.top_line_title {
+	margin: 60px 0px 25px; font-weight: 500;
+}
+.top_line_title > span {
+	padding-top: 5px; border-top-color: rgb(233, 64, 64); border-top-width: 1px; border-top-style: solid; display: inline-block;
+}
+.pop_cont {
+	padding: 0px 30px;
+}
+.pop_cont_head {
+	padding: 70px 0px;
+}
+.pop_cont_head .bg_txt {
+	font-size: 0.87em;
+}
+.pop_cont_head h5 {
+	font-size: 1.5em; margin-top: 10px;
+}
+.pop_cont_body {
+	padding: 30px 0px; font-size: 1em;
+}
+.pop_wrap .btn_wrap {
+	padding-bottom: 30px; margin-top: 30px;
+}
+.pop_wrap .btn_wrap button {
+	padding: 19px 0px; width: 230px;
+}
+.pop_confirm {
+	padding: 30px 0px;
+}
+.pop_confirm input {
+	padding: 20px 100px; font-size: 1em;
+}
+.choice_area {
+	padding-top: 60px;
+}
+.choice_area :nth-child(2).choice_wrap {
+	margin-left: 60px;
+}
+.ftc_se {
+	text-decoration: underline;
+}
+.ftc_gc {
+	text-decoration: underline;
+}
+.sp_block {
+	margin-top: 10px; display: block;
+}
+.is_ico.ico_close {
+	width: 13px; height: 13px;
+}
+.popzip .input_box {
+	height: 70px; line-height: 70px;
+}
+.popzip .inc_ico.isi_search1 {
+	top: 29px;
+}
+.popzip .pop_cont {
+	padding-bottom: 50px;
+}
+.popzip .table_box {
+	height: 304px;
+}
+.popup_terms .agree_area {
+	padding: 10px 0px 30px;
+}
+.popup_terms .mCSB_draggerContainer {
+	display: none;
+}
+.popup_terms.pop_type1 .popbtn_close {
+	top: 40px; right: 30px;
+}
+.popup_reporter.pop_type1 .popbtn_close {
+	top: 40px; right: 30px;
+}
+.pop_newsletter ol li {
+	font-size: 1rem;
+}
+.pop_newsletter ol li > p {
+	font-size: 0.87rem;
+}
+#popSeminarApply {
+	width: 900px;
+}
+#popSeminarApply .info {
+	margin-top: 20px;
+}
+#popSeminarApply .info li {
+	position: relative;
+}
+#popSeminarApply .info b.imp {
+	top: -4px; font-size: 1.5em; margin-left: 10px; vertical-align: bottom; position: absolute;
+}
+#popSeminarApply .btn_wrap {
+	padding-top: 40px;
+}
+#popArchiveInfo {
+	width: 900px;
+}
+#popArchiveInfo .archive_step li {
+	width: 25%; text-align: center; float: left;
+}
+#popArchiveInfo .archive_step li::after {
+	left: auto; top: 50%; right: -3px; bottom: auto; margin-top: -5px; margin-left: 0px; position: absolute; content: ""; transform: rotate(0deg);
+}
+#popArchiveInfo .archive_step li > div {
+	width: 160px; height: 160px; padding-top: 40px;
+}
+#popArchiveInfo .archive_step + .top_line_title {
+	margin: 20px 0px 25px;
+}
+#popArchiveInfo .con_btn .bullet_squaredot::before {
+	top: 16px;
+}
+#popArchiveInfo .con_btn li {
+	margin-top: 8px;
+}
+#popArchiveInfo li div.btn_ui {
+	padding: 7px 12px; text-align: center; color: rgb(255, 255, 255);
+}
+#popArchiveInfo .search_guide h5 {
+	font-size: 0.93em;
+}
+#popArchiveInfo .search_guide h5::before {
+	top: 6px; height: 12px;
+}
+#popArchiveInfo .search_guide table td {
+	padding: 15px 5%; border: 1px solid rgb(225, 225, 225); border-image: none; color: rgb(111, 112, 114); font-size: 0.93em;
+}
+#popArchiveInfo .search_guide table + p {
+	font-size: 0.87em; margin-top: 15px;
+}
+.scroll_area .table_area table {
+	width: 96%;
+}
+.pop_cont_body .table_area .table_bookinfo .choose_year .inline_block span {
+	line-height: 48px;
+}
+.pop_cont_body .table_area .table_bookinfo .choose_time .inline_block span {
+	line-height: 48px;
+}
+.pop_cont_body .table_area .table_bookinfo .phone .inline_block span {
+	line-height: 48px;
+}
+.pop_cont_body .table_area .table_bookinfo .choose_year .select_box {
+	width: 26%;
+}
+.pop_cont_body .table_area .table_bookinfo .choose_year .inline_block span {
+	width: 7.3%;
+}
+.pop_cont_body .table_area .table_bookinfo .phone .inline_block span {
+	width: 7.3%;
+}
+.pop_cont_body .table_area .table_bookinfo .choose_time .select_box {
+	width: 43%;
+}
+.pop_cont_body .table_area .table_bookinfo .choose_time .inline_block span {
+	width: 7%;
+}
+.pop_cont_body .table_area .table_bookinfo tr td {
+	padding: 10px 0px;
+}
+.pop_cont_body .table_area .table_bookinfo tr th {
+	padding: 20px 0px 10px;
+}
+.pop_cont_body .table_area table.table_bookinfo tr td.phone {
+	width: 100%;
+}
+.pop_cont_body .table_area .input_box .input_wrap input[type=text] {
+	height: 48px; line-height: 48px;
+}
+.pop_cont_body .table_area .input_box .input_wrap input[type=password] {
+	height: 48px; line-height: 48px;
+}
+.pop_cont_body .table_area .birth .inline_block span {
+	height: 48px; line-height: 48px;
+}
+.pop_cont_body .table_area .select_box {
+	height: 48px; line-height: 48px;
+}
+.pop_cont_body .table_area .input_box {
+	height: 48px; line-height: 48px;
+}
+.pop_cont_body .table_area .phone .inline_block .dash {
+	height: 48px; line-height: 48px;
+}
+.pop_cont_body .table_area .input_width {
+	width: 35%; float: left;
+}
+.pop_cont_body .table_area .billiard {
+	text-align: left;
+}
+.pop_cont_body .table_area .asterisk {
+	text-align: left;
+}
+.pop_cont_body .table_area .billiard {
+	width: 60%; padding-left: 20px; margin-left: 10px; float: left;
+}
+.pop_cont_body .table_area table tr td.birth {
+	width: 65%;
+}
+.pop_cont_body .table_area table tr td.phone {
+	width: 65%;
+}
+.pop_cont_body .table_area table tr td.birth span {
+	padding-right: 2%;
+}
+.pop_cont_body .table_area table tr td.birth span:last-child {
+	padding-right: 0px;
+}
+.pop_cont_body .table_area .birth .select_box {
+	width: 26%;
+}
+.pop_cont_body .table_area .phone .inline_block .select_box {
+	width: 26%;
+}
+.pop_cont_body .table_area .phone .inline_block .input_box {
+	width: 26%;
+}
+.pop_cont_body .table_area .phone .inline_block .dash {
+	padding: 0px 6px;
+}
+.pop_cont_body .table_area .billiard.billiard2 {
+	width: 100%; margin-left: 0px;
+}
+}
+.pop_cont_body .table_area .inline_block::after {
+	height: 0px; line-height: 0; clear: both; font-size: 0px; float: none; display: block; visibility: hidden; content: "";
+}
+#popArchiveInfo .archive_step ol::after {
+	height: 0px; line-height: 0; clear: both; font-size: 0px; float: none; display: block; visibility: hidden; content: "";
+}

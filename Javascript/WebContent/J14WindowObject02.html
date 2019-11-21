@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>J14WindowObject02.html</title>
+<script>
+    /*
+    setTimeout : 매개변수에 주어진 시간이 되면 해당 함수를 딱 한번만 호출할떄 사용하는 함수
+    -사용법 
+        var 타이머변수
+            = setTimeout("함수명()", 1000분의1초);
+    -해제시
+        clearTimeout(타이머변수);
+    setInterval : 매개변수에 주어진 시간 간격마다 해당함수를 지속적으로 호출할 떄 사용하는 함수
+    -사용법
+        var 타이머변수
+            = setInterval('함수명()',1000분의1초);
+    -해제시
+        clearInterval(타이머변수);
+    */
+    function fnOnce(){
+        alert("5초후 딱 한번만 실행됨");
+    }
+    function fnContinue(){
+        alert("3초마다 매번 실행됨");
+    }
+    
+    var timeOnce,timerMode;
+    
+    function fnCallAfter(flag){
+        /*
+        아래 시간관련 함수를 사용할시 다른 함수를 호출할떄는 반드시 '함수명()'과 같은 문자열의 형태로 기술해야한다.
+        */
+        if(flag=="T"){
+            timerOnce = window.setTimeout("fnOnce()",5000);
+        }
+        else{
+            timerMode = window.setInterval("fnContinue()",3000);
+        }
+    }
+    
+    function fnCallBreak(flag){
+        /* 실행을 멈추고 싶을때는 참조변수를 사용하여 clear한다.*/
+        if(flag==1){
+            clearTimeout(timerOnce);
+        }
+        else{
+            clearInterval(timerMode);
+        }
+    }
+    
+    function displayTime(){
+        //Date객체를 통해 현재시간을 가져와서 문자열로 만들어준다.
+        var date = new Date();
+        var displayClock = document.getElementById("clock");
+        displayClock.innerHTML = date.getHours()+"시 "+
+            date.getMinutes()+"분 "+
+            date.getSeconds()+ "초 ";
+    }
+    function displayTimeCall(){
+        //1초에 한번씩 시스템에서 시간을 가져오도록 설정한다.
+        setInterval("displayTime()",10000);
+    }
+</script>
+</head>
+<body>
+    <h2>setInterval(), setTimeout()함수</h2>
+    <h3>일정 시간 후 함수실행</h3>
+    <input type="button" value="5초후 함수실행" onclick="fnCallAfter('T');">
+    <input type="button" value="함수호출중지" onclick="fnCallBreak(1);">
+    
+    <h3>일정 시간마다 함수실행</h3>
+    <input type="button" value="3초마다함수실행" onclick="fnCallAfter('I');">
+    <input type="button" value="함수호출중지" onclick="fnCallBreak(2);">
+    
+    <h3>간단한 디지털 시계 구현하기</h3>
+    <span id="clock" style="color:red; font-size: 1.8em; font-weight: bold;"></span>
+    <button type="button" onclick="displayTimeCall();">디지털시계</button>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>C05Border03.html</title>
+<style>
+	*{margin:0; padding:0}
+	div{
+		width:200px; height:200px; line-height:200px;
+		text-align:center; border:1px solid red; padding:10px;
+	}
+	/*
+	box-sizing: 박스를 기본값으로 세팅한대로 크기를 유지할지를 결정하는 속성
+		content-box:기본값
+		border-box:가로세로 모두 패딩값과 보더값을 포함하는 값
+			즉패딩과 보더 상관없이 설정한 크기대로 표현하게된다.
+	*/
+	#box1{
+	/*
+	위에서 div박스에 공통적으로 padding을 10px을 적용하였으나 아래에서 padding을 0px로 재설정하였다,
+	원래크기인 200px크기로 출력된다.
+	*/
+		border:0; padding:0; background-color:orange;
+	}
+	#box2{
+		background-color:purple;
+		box-sizing:border-box;
+	}
+	#box3{
+	/*
+	공통으로 적용된 padding이 10px이므로 우측&하단으로 20px만큼 사이즈가 커진상태로 출력된다.
+	*/
+		background-color:#CECECE;
+		box-sizing:content-box;
+	}
+</style>
+</head>
+<body>
+	<h2>box-sizing속성</h2>
+	
+	<div id="box1">box1</div>
+	<br />
+	<div id="box2">box2</div>
+	<br />
+	<div id="box3">box3</div>
+
+</body>
+</html>

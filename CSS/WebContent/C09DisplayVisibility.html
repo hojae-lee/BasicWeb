@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>C09DisplayVisibility.html</title>
+<style>
+	fieldset div{
+		width: 100px; height: 100px;
+		text-align: center; line-height: 100px;
+	}
+	.div1{ background-color: red}
+	.div2{ background-color: blue}
+	.div3{ background-color: green}
+</style>
+</head>
+<body>
+
+	<h3>display속성으로 block과 inline속성 변경하기</h3>
+	
+	<style>
+		fieldset.inline div{
+			display:inline;
+		}
+	</style>
+	<fieldset class="inline">
+		<legend>가로배치로 변경</legend>
+		<div class="div1">left</div>
+		<div class="div2">center</div>
+		<div class="div3">right</div>
+	</fieldset>
+	
+	<style>
+		fieldset.inline_block div{
+			display:inline-block;
+		}
+	</style>
+	
+	<h4>block - > inline-block</h4>
+	<fieldset class="inline_block">
+		<legend>가로배치로 변경블럭속성 유지</legend>
+		<div class="div1">left</div>
+		<div class="div2">center</div>
+		<div class="div3">right</div>
+	</fieldset>
+	
+	<style>
+		fieldset.block span{
+			display:block;
+		}
+	</style>
+	
+	<h4>inline - > block</h4>
+	<fieldset class="block">
+		<legend>세로배치로 변경</legend>
+		<span class="div1">left</span>
+		<span class="div2">center</span>
+		<span class="div3">right</span>
+	</fieldset>
+	
+</body>
+</html>

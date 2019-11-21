@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>J13LocationHistory.html</title>
+<script>
+/* 
+   location : 페이지를 이동할떄 사용한다. html의 a태그와 동일한 역할을
+      하며, target을 걸어야 할 경우에는 "타겟.location" 형태로
+      작성하면 된다.
+   history : 페이지 이동은 동일하나 이전에 이덩했던 내역이 있는
+      경우에만 이동이 가능하다. IE/크롬과 같은 브라우저에서 "뒤로"
+      버튼과 동일한 기능을 수행한다.
+*/
+    function fnLogin(){
+
+          var id =document.getElementById("user_id").value;
+          var pw =document.getElementById("user_pw").value;
+
+          if(id=="Kim" && pw=="1234"){
+             location.href="./pages/history01.html";
+          }
+          else{
+             location.href="./pages/history02.html";
+          }
+       }
+    
+    function fnLoginIframe(){
+        //타겟을 지정할때는 location앞에 타겟명을 기술한다.
+        framArea.location.href = "./pages/history01.html";
+    }
+</script>
+</head>
+<body>
+   <h2>로그인 화면</h2>
+   아이디: <input type="text" id="user_id" />
+   <br />
+   패스워드: <input type="text" id="user_pw" />
+   <br />
+   <input type="button" value="로그인" onclick="fnLogin();"/>
+   <br/>
+   <input type="button" value="로그인[iframe]" onclick="fnLoginIframe();">
+   
+   <hr/>
+   
+   <iframe src="" frameborder="1" name="framArea" width="300" height="200"></iframe>
+</body>
+</html>

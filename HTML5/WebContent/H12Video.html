@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>H12Video.html</title>
+</head>
+<body>
+	<h2>기본 비디오 태그</h2>
+	<!-- 
+	autoplay 화면이 로딩될떄 해당 동영상을 즉시 플레이 최근에는 사용자가 원할때만 플레이할수있도록
+	autoplay를 지원하지 않는 추세임.
+	 -->
+	 <!-- <video src="./media/video.mp4" autoplay controls width="300" height="200">
+	</video>
+	해당 브라우저가 비디오를 지원하지 않는 경우
+		<a href="./media/video.mp4">여기</a>를 클릭하세요
+		
+	 -->
+	 
+	 <!-- 
+	 	source하위태그 : 웹브라우저가 모든 포멧을 지원하지 못하기 때문에 여러 항목중 해당 브라우저가 지원하는 포맷의
+	 	파일을 찾아 플레이할 수 있도록 하는 태그
+	 	즉 미디어를 령ㅇ러ㅓㄹ자ㅓㄹㅈ러ㅓㄹ자러ㅏㅈ러라ㅓㅣㅏㅣ아ㅓㅏㄹㅇ러새
+	  -->
+	  
+
+	<h2>video의 하위태그 source 사용하기</h2>
+	
+	<video autoplay controls width="300" height="200">
+	<source src="./media/video.3gp"></source>
+	<source src="./media/video.mp4"></source>
+	
+	해당 브라우저가 비디오를 지원하지 않는 경우
+		<a href="./media/video.mp4">여기</a>를 클릭하세요
+    </video>
+
+	
+	<script>
+        var video;
+        
+        window.onload = function(){
+            var currentSpan = document.getElementById("currenttime");
+            var totalSpan = document.getElementById("totaltime");
+            
+            video = document.getElementById("video");
+            video.addEventListener("timeupdate",function(){
+                currentSpan.innerHTML = video.currentTime;
+                totalSpan.innerHTML = video.duration;
+            });
+        }
+        
+        function play(){
+            video.hidden = "";
+            video.play();
+        }
+        function stop(){
+            video.pause();
+        }
+        function start(){
+            video.currentTime = 0;
+            video.play();
+        }
+        
+    </script>
+	
+	<h2>자바스크립트를 이용한 커스텀 비디오 만들기</h2>
+	<h4>JS수업 후 나중에 다시 돌아온다.</h4>
+	<div>
+	    <video id="video" width="300" height="200" src="./media/video.mp4" hidden></video>
+	</div>
+	<div>
+	    <input type="button" value="재생하기" onclick="play();">
+	    <input type="button" value="일시정지" onclick="stop();">
+	    <input type="button" value="처음부터재생하기" onclick="start();"><br/>
+	    <span id="currenttime"></span> / <span id="totaltime"></span>
+	</div>
+</body>
+</html>

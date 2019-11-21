@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>C03Font.html</title>
+<style>
+	body{
+		font-size:12px;
+	}
+	
+	/*
+	CSS의 단위
+	
+	pt : 프린트와 연계에서 사용할수 있는 단위
+	px : 모니터와 같은 스크린매체에서 사용되는 고정된 크기의 단위이다.
+	em : 1em은 현재 지정된 기본폰트사이즈와 동일하다. 주로 모바일환경에서 많이 사용된다.
+	*/
+</style>
+</head>
+<body>
+	<h2>기본상태의 텍스트 크기</h2>
+	
+	기본상태의 글자크기 stlye에서 지정하지 않은 경우
+	<br />
+	<span style="font-size:16px">글자크기16px</span><br />
+	<span style="font-size:12pt">글자크기12pt</span><br />
+	<span style="font-size:1em">글자크기1em</span><br /><br />
+	<span style="font-size:32px">글자크기32px</span><br />
+	<span style="font-size:24pt">글자크기24pt</span><br />
+	<span style="font-size:2em">글자크기2em</span><br /><br />
+	<span style="font-size:8px">글자크기8px</span><br />
+	<span style="font-size:6pt">글자크기6pt</span><br />
+	<span style="font-size:0.5em">글자크기0.5em</span><br />
+	
+	<h2>기본폰트 12px 설정 후 텍스트 크기</h2>
+	
+	기본상태의 글자크기 스타일에서 지정한 경우
+	<br />
+	<span style="font-size:12px">글자크기12px</span>
+	<span style="font-size:9pt">글자크기9pt</span>
+	<span style="font-size:1em">글자크기1em</span>
+	<span style="font-size:1.5em">글자크기1.5em</span>
+	<span style="font-size:2em">글자크기2em</span>
+	
+	<h3>글자 모양에 관련된 속성</h3>
+	<span style = "font-size:1.8em; font-family:궁서">글자크기 글꼴 아무거나</span>
+	
+	<!-- 
+	bold: 두꺼운
+	normal : 기본
+	lighter : 얇게
+	
+	 -->
+	<h2>테긋트의 두께 및 스타일</h2>
+	<span style = "font-weight:right; font-family:맑은 고딕">글자크기 글꼴 아무거나</span>
+	
+	<h3>테긋트 사이의 간격</h3>
+	<span style = "letter-spacing:1em; border:1px solid red;">한국소프트웨어인재 개발원</span>
+	
+	<!-- 
+	line-height : 줄간격 즉 라인사이의 간격을 띄우는데 블럭엘리먼트와 인라인엘리먼트는 조금 다르게 적용된다.
+	
+	block element 컨텐츠의 영역중 세로영역이 늘어나서 마치 줄간격이 생긴것 같은 효과가 나타난다.
+	Inline element 컨텐츠의 영역은 크기가 변하지 않고 지정된 사이즈만큼 줄간격이 생기게 된다.
+	 -->
+	<h3>줄사이의 간격</h3>
+	<h4 style="line-height:0em; border:1px solid blue;">블럭엘리먼트1에 줄간격 적용</h4>
+	
+	<div class="inline">
+		<span style="line-height:5em; border:1px solid black">인라인엘리먼트1</span><br />
+		<span style="border:1px solid black">인라인엘리먼트2</span><br />
+		<span style="border:1px solid black">인라인엘리먼트3</span><br />
+	</div>
+	
+	<h3>수직상태에서의 가운데 정렬1</h3>
+	<div style="border:1px solid black; height:200px; width:200px; line-height:200px">
+		나는 텍스트1
+	</div>
+	
+	<!-- 방법2: box안의 여백 padding을 줘서 텍스트를 아래로 밀어준다. 이게 세로영역이 변경되므로
+			사이즈 조절이 필요하다.
+	 -->
+	<div style="border:1px solid red; height:200px; width:200px; padding-top:100px;">
+		나는 텍스트2
+	</div>
+
+</body>
+</html>

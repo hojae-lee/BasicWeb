@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>C01Selector03.html</title>
+<style>
+	#content{
+		width:300px; background-color:yellow;
+	}
+	ul li{
+		list-style:none; border:1px solid green;
+		font-size:24px; font-weight: bold; height:50px;
+	}
+	
+	/*
+	11.구조선택자: 동일한 수준의 태그들 중 홀수번재 혹은 짝수번재 요소를 선택하여 효과를 줄 떄 사용한다.
+	*/
+	div#content ul li:nth-child(2n+1){
+		background-color : #820F6B;
+	}
+	div#content ul li:nth-child(2n){
+		background-color : skyblue;
+	}
+	div#content ul li:first-child{
+		background-color : red; color:#ffffff;
+	}
+	div#content ul li:last-child{
+		background-color : blue; color:#ffffff;
+	}
+	
+	/*
+	12.문자선택자 : 특정 요소의 글자를 선택하여 효과를 지정한다.
+	*/
+	#start:first-letter, #end:first-letter{
+		font-size:30px;
+	}
+	
+	#start:first-line, #end:first-line{
+		color:red; font-weight: bold;
+	}
+	
+	#character p:first-child::selection{
+		color:yellow; background-color: black;
+	}
+	
+	/* n을 사용하지 않고 정수로 요소를 지정할수 있음.*/
+	li:nth-child(2){
+		color:red;
+	}
+	
+	
+</style>
+</head>
+<body>
+	<h2>구조선택자</h2>
+	<!-- .content>ul>li*6 -->
+	<div id="content">
+		<ul>
+			<li>메뉴1</li>
+			<li>메뉴2</li>
+			<li>메뉴3</li>
+			<li>메뉴4</li>
+			<li>메뉴5</li>
+			<li>메뉴6</li>
+		</ul>
+	</div>
+	
+	<h2>문자선택자</h2>
+	<div id="character">
+		<p id= "start">
+			강의시작날짜 <br /> 19년 4월 10일
+			</p>
+		<p id= "end">
+			강의종료날짜 <br /> 19년 4월 15일
+			</p>
+	</div>
+	
+	<div>
+		<ul>
+			<li>메뉴1</li>
+			<li>메뉴2</li>
+			<li>메뉴3</li>
+			<li>메뉴4</li>
+			<li>메뉴5</li>
+		</ul>
+	</div>
+</body>
+</html>

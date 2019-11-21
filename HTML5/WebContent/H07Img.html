@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>H07Img</title>
+</head>
+<body>
+<!-- 
+img태그 : 웹브라우저에 이미즈를 표시할떄 사용하는 태그
+속성
+	src : 이미지의 경로를 기술한다.
+	alt : 대체텍스트
+	width: 이미지가로크기
+	height: 이미지세로크기
+	usemap : 이미지를 map으로 사용할때 값을 지정한다. 값 지정시 #을 붙인다.
+	
+	-Inline Element
+	-종료태그가 별도로 없다.
+	-width,height를 지정하지 않으면 이미지의 원본크기로 표시된다.
+ -->
+	<h2>img 태그</h2>
+	
+	<h3>이미지를 원본크기대로 표시하기</h3>
+	<img src="./images/1.png" alt="스펀지밥">
+	
+	<h2>이미지 크기설정</h2>
+	<img src="./images/1.png" width = "100" alt="스포진지밥" />
+	<img src="./images/2.png" width = "100" height = "200" alt="지잉징이" />
+	
+	<h2>이미지에 링크걸기</h2>
+	<a href="http://ikosmo.co.kr/" target="blank"><img src="./images/logo.png" alt="로고" /></a>
+
+	<h2>외부에있는 이미지 가져오기</h2>
+	<img src="http://ikosmo.co.kr/img/client/com/top_logo.gif" alt="한국소프트웨어이재개발원" />
+	
+	<h2>이미지맵 사용하기</h2>
+	<img src="./images/Map01.png" alt="이미지맵사용하기" usemap="#MyImage">
+	
+	<map name="MyImage">
+		<area shape="rect" coords="71,128,173,230" href="http://daum.net" alt="네이버" target="_blank">
+		<area shape="circle" coords="248,180,49" href="http://naver.net" alt="네이버" target="_blank">
+		<area shape="poly" coords="373,130,306,231,437,231" href="http:google.com" alt="구글" target = "_blank"/>
+		<area shape="poly" coords="498,130,482,165,445,179,483,195,499,230,513,192,551,181,514,164" href="http:google.com" alt="구글" target = "_blank"/>
+	</map>
+	
+	<img src="./images/뛰어노는아이.png" alt="이미지맵사용하기" usemap="#MImage">
+		
+	<map name="MImage">
+		<area shape="circle" alt="네이버"  coords="310,153,74" href="http://naver.com" target="_blank" />
+		<area shape="circle" alt="네이버"  coords="530,147,70" href="http://naver.com" target="_blank" />
+		<area shape="poly" alt="네이버"  coords="347,239,494,228,456,334" href="http://naver.com" target="_blank" />
+	</map>
+
+	<!-- 
+	<map id="imgmap2019610105038" name="imgmap2019610105038"><area shape="rect" alt="" title="" coords="73,130,172,229" href="" target="" /><area shape="circle" alt="" title="" coords="248,180,49" href="" target="" /><area shape="poly" alt="" title="" coords="373,130,306,231,437,231" href="" target="" /><area shape="poly" alt="" title="" coords="498,130,482,165,445,179,483,195,499,230,513,192,551,181,514,164" href="" target="" /><!-- Created by Online Image Map Editor (http://www.maschek.hu/imagemap/index)</map>
+	-->
+	
+	<!-- 
+	이미지맵 사용하기 
+	map태그 : 이미지의 영역을 분할해서 마치 지도처럼 사용하게 해주는 태그로 각 영역별로 링크를 다르게 걸수 있다.
+	
+	사용법
+	<img src="./images/Map01.png" alt="이미지맵사용하기" usemap="#MyImage">
+	
+	<map name="MyImage">
+		<area shape="circle" coords="248,180,49" href="http://naver.net" alt="네이버" target="_blank">
+	</map>
+	
+	area태그 : map의 하위태그로 이미지를 분할할떄 사용한다.
+	속성
+		href: 주소
+		shape: circle rectangle polygon
+		coords : shape속성값에 따라 각분할 영역을 지정하는 좌표값을 설정한다.
+		circle circ
+			coords = x,y반지름
+		rectangle
+			coords = left top right bottom
+		polygon
+			coords = "각 꼭지점의 x,y의 좌표1..."
+	 -->
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+</body>
+</html>

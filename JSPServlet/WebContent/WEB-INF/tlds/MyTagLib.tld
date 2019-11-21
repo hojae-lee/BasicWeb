@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+  version="2.0">
+  
+  <description>My Tag Library</description>
+  <tlib-version>1.1</tlib-version>
+  <!-- 차후 EL에서 함수 호출시 사용할 접두어 -->
+  <short-name>my</short-name>
+  
+  <!-- EL에서 사용할 함수정의시 사용하는 엘리먼트 -->
+  <function>
+  	<!-- EL에서 사용할 메소드 명 -->
+  	<name>isNumber</name>
+  	<!-- function-class 패키지명 포함 클래스의 전체경로, 풀경로 -->
+  	<function-class>eltag.MyTagLib</function-class>
+  	<!-- signature 함수의 모양
+  		메소드의 원형을 기록한다.
+  		리턴타입과 인자의 타입은 패키지를 포함한 풀경로를 사용해야 한다.
+  		단 기본자료형인 경우에는 자료형만 쓰면 된다.
+  	 -->
+  	<function-signature>boolean isNumber(java.lang.String)</function-signature>
+  	
+  </function>
+  
+  <function>
+  	<!-- EL에서 사용할 메소드 명 -->
+  	<name>getGender</name>
+  	
+  	<function-class>eltag.MyTagLib</function-class>
+
+  	<function-signature>java.lang.String getGender(java.lang.String)</function-signature>
+  	
+  </function>
+  
+  <function>
+  	<name>memberLogin</name>
+  	
+  	<function-class>eltag.MyTagLib</function-class>
+
+  	<function-signature>boolean memberLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String)</function-signature>
+  	
+  </function>
+  
+</taglib>
+

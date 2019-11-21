@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H16Canvas02.html</title>
+    <script>
+        window.onload = function(){
+            
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            
+            ctx.font ="25pt 굴림체";
+            ctx.fillStyle = "rgba(255,0,0,1)";
+            
+            ctx.strokeStyle = "red";
+            ctx.moveTo(50, 20);
+            ctx.lineTo(50, 180);
+            ctx.stroke();
+            
+            ctx.shadowColor = "rgba(0,255,0,0.9)"//색깔;
+            ctx.shadowOffsetX = 3; //그림자의 X위치
+            ctx.shadowOffsetY = 3; //그림자의 Y위치
+            ctx.stroke();
+            
+            ctx.shadowColor = "rgba(0,255,0,0.9)";
+            ctx.shadowOffsetX = 3;
+            ctx.shadowOffsetY = 3;
+            ctx.shadowBlur = 2;
+            
+            ctx.textAlign = "start";//테스트의 좌측을 기준
+            //fillText("표현할 텍스트", 캔버스기준X위치값,Y위치값);
+            ctx.fillText("HTML5_START" ,50,50);
+            
+            ctx.textAlign = "end";//테스트위 우측을 기준
+            ctx.fillText("HTML5_END",50,80);
+            
+            ctx.textAlign = "center";//테스트의 가운데를 기준
+            ctx.fillText("HTML5_CENTER",50 ,120);
+            
+            ctx.textAlign = "left";//테스트의 좌측을 기준
+            ctx.fillText("HTML5_LEFT",50,150);
+            
+            ctx.textAlign = "right";//테스트의 우측을 기준
+            ctx.fillText("HTML5_RIGHT",50,180);
+        }
+    </script>
+</head>
+<body>
+    <h2>canvas태그</h2>
+    <canvas id="canvas" style="border: 1px red solid" width="200" height="200"></canvas>
+</body>
+</html>

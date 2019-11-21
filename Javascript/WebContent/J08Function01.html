@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>J08Function01.html</title>
+<script>
+/*
+ 함수정의 방법
+ 유명함수
+ function 함수명(num1,num2....){
+	함수의 몸체;
+	return 변수 혹은 값;
+}
+ 무명함수
+ var 변수 = function(매개변수){
+	 함수의 몸체;
+	 return 변수 혹은 값
+ }
+ ※ 함수정의시 매개변수에는 var를 쓸 수 없다 변수명만 쓸수있다.
+ ※ 함수안에서 선언된 변수는 함수의 실해잉 끝나면 메모리에서 소멸되는 지역변수이다.
+ ※ 스크립트태그안에서 선언한 변수는 해당페이지 전역에서 사용할수있는 전역변수가 된다.
+ ※ html문서내에서 스크립트태그를 여러개 선언할수있는데 이때에는 각각의 스크립트가 하나의 블럭으로 이어지는 개념이라는것을
+ 	알아두자 js에서 전역은 html문서 전체를 말하는것이다.
+ */
+
+	function noParamNoReturn(){
+		document.write("====메뉴====<br/>");
+		document.write("1.계속 2.나가기</br>");
+		document.write("==============<br/><br/>");
+	}
+	noParamNoReturn();
+	
+	var yesParamNoReturn = function(start,end){
+		var sum=0;
+		for(var i=start; i<=end; i++){
+			sum +=i;
+		}
+		document.write(start+"부터 "+end+"까지의 합:"+ sum+"<br/>");
+	}
+	
+	yesParamNoReturn(1,10);
+	yesParamNoReturn(1,100);
+	yesParamNoReturn(1,1000);
+	
+	var noParamYesReturn = function(){
+		
+		var name = prompt("이름을 입력하세요","");
+		var age = prompt("나이를 입력하세요","20");
+		
+		return name + "은 "+age+" 살입니다.<br/>";
+		
+		document.write("return은 이후 출력문");
+	}
+	document.write(noParamYesReturn());
+	
+	var yesparamYesReturn = function(num1,num2){
+		return num1>num2 ? num1: num2;
+	}
+	document.write("큰수는?"+ yesparamYesReturn(10,20));
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

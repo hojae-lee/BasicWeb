@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>J04if.html</title>
+<script>
+/*
+	JS에서는 if(비교식 눈리식)뿐만 아니라 산술식 등 모든값이 올 수 있다.
+	
+	자바에서는 true false를 판단할수 있는 비교식이나 논리식이 와야한다.
+	산술식은 허용하지 않는다.
+	
+	JS에서 모든 식이 가능한 이유는 0 null false이외의 모든값을 true로 판단하기 때문이다.
+ */
+	var nullvar = null, num1 = num2 = 10;
+	
+	if(num1-num2){
+		document.write("num1-num2는 참이다. <br/>");
+	}
+	else{
+		document.write("num1-num2는 거짓이다.<br/>");
+	}
+		
+	//방법1
+	num1 > num2 ?
+			document.write(num1+"이 "+num2+"보다 크다<br/>")
+			:
+			document.write(num1+"이 "+num2+"보다 크지 않다<br/>");
+	
+	var result = num1 > num2 ?
+			num1+"이 "+num2+"보다 크다<br/>"
+			:
+			num1+"이 "+num2+"보다 크지않다<br/>";
+	document.write(result);
+	
+	/*
+	삼항연산자
+		:Java와는 다르게 판단식이 참이거나 거짓일때 결과값을 변수에 대입하지 않아도 된다.
+		
+		방법1: Java(x)
+			판단식 ? 참일때 : 거짓일때;
+		방법2: Java(0)
+			var 변수 = 판단식 ? 참일때 : 거짓일때;
+	*/
+	
+	//함수의 이름이 있는 "유명함수" 형태로 정의함.
+	function getGrade(){
+		
+		/*
+		DOM을 통해 가져온 모든 값은 String타입이므로 연산을 위해서는 숫자형으로 변경해야 한다.
+		*/
+		var kor = parseInt(document.getElementById("kor").value);
+		var eng = parseInt(document.getElementById("eng").value);
+		var math = parseInt(document.getElementById("math").value);
+		
+		var avg = (kor+eng+math)/3;
+		
+		var strGrade="";
+		if(avg>90) srtGrade="A학점";
+		else if(avg>80) strGrade ="B학점";
+		else if(avg>70) strGrade ="C학점";
+		else if(avg>60) strGrade ="D학점";
+		else strGrade = "<del>F학점</del>";
+		
+		/*
+		시작태그와 종료태그가 있는 모든 요소는 아래의 2가지 속성을 가진다.
+			innerHTML : text 혹은 HTML태그를 삽입할수 있는 속성
+			innerText : text만 삽입할수있는 속성. HTML태그를 입력할 경우 해석되지 않고 태그가 그대로 출력된다.
+		*/
+		//document.getElementById("gradePrint").innerHTML = strGrade;
+		document.getElementById("gradePrint").innerText = strGrade;
+	}
+</script>
+</head>
+<body>
+	<h2>if문을 이용한 학점 출력하기</h2>
+	<table border="1" style="background-color: skyblue;">
+		<tr>
+			<td>국어</td>
+			<td><input type="text" id="kor"/></td>
+		</tr>
+		<tr>
+			<td>영어</td>
+			<td><input type="text" id="eng"/></td>
+		</tr>
+		<tr>
+			<td>수학</td>
+			<td><input type="text" id="math"/></td>
+		</tr>
+		<tr>
+			<td>학점</td>
+			<td id="gradePrint">학점은 요기에~!!!!</td>
+		</tr>
+		<tr>
+			<td colspan="2" style = "text-align: center;">
+				<button type="button" onclick ="getGrade();">학점계산하기</button>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

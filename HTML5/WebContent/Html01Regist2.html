@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>회원가입폼 만들기</title>
+<style type="text/css">
+	body { font-size: 13px; }
+	input [type="text"]{ height:20px; width:200px; }
+	input [type="radio"]{ width:20px;}
+	input.button1 {
+		background-color:#ff0000; color:#ffffff; height:30px; border:1px solod #00afa0;
+	}
+	input.button2 {
+		background-color:#2E64FE; color:#ffffff; height:30px; border:1px solod #00afa0;
+	}
+	input.button3 {
+		background-color:#2E64FE; color:#ffffff; height:30px; border:1px solod #00afa0;
+		height:50px; width:150px; font-size:1.5em;
+	}
+	.s50{width:50px;}.s70{width:70px;}.s90{width:90px;}
+	.s200{width:200px;}.s300{width:300px;}.s400{width:400px;}
+</style>
+</head>
+<body>
+<form name="registFrm" action="MemberAction.jsp" method="post" onsubmit="return registFrmCheck();">
+<input type="hidden" name="overFlag" value="0" />
+	
+<table width="90%" align="center" border="0" cellspacing="5"
+	cellpadding="0">
+	<colgroup>
+		<col width="25%" />
+		<col width="75%" />
+		<!-- *로 대체해도됨 -->
+	</colgroup>
+	<tr>
+		<td colspan="2" style="font-size: 24px;"><b>회원정보<span
+				style="color: red;">(필수)</span></b></td>
+	</tr>
+	<tr>
+		<td>아이디</td>
+		<td>
+			<input type="text" name="user_id" value="" placeholder="8자리이상" class="input1" /> 
+			<input type="button" value="아이디중복확인" class="button2" onclick="id_overlapping(this.form);" />
+
+			<span style="color: red; font-size: 14px;">아이디형식에`
+				맞춰주세요.(영문,숫자 조합 8문자 이상)</span></td>
+	</tr>
+	<tr>
+		<td>비밀번호</td>
+		<td><input type="password" name="user_pw1" value="" placeholder="****" class="input1" /> <span style="color: #cecece; font-size: 14px;">8~20자리의 영문,숫자조합을
+				권장합니다.</span></td>
+	</tr>
+	<tr>
+		<td>비밀번호확인</td>
+		<td><input type="password" name="user_pw2" value="" placeholder="****" class="input1" /></td>
+	</tr>
+	<tr>
+		<td>이름</td>
+		<td><input type="text" name="user_name" value="" placeholder=""	class="input1" /></td>
+	</tr>
+	<tr>
+		<td style="height: 40px;">성별</td>
+		<td>
+			<input type="radio" class="radio1" name="gender" value="M" /><label	for="gender1">남성</label>
+			&nbsp;&nbsp; 
+			<input type="radio" class="radio1" name="gender" value="W" /><label for="gender2">여성</label>
+		</td>
+	</tr>
+	<tr>
+		<td>생년월일</td>
+		<td><input type="date" name="birthday" value="" placeholder="" class="input1" /> &nbsp;&nbsp;&nbsp;&nbsp; 
+			<input type="radio" class="radio1" name="birthLS" value="S" /><label for="solar">양력</label> 
+			&nbsp;&nbsp; 
+			<input type="radio" class="radio1" name="birthLS" value="L" /><label for="lunar">음력</label></td>
+	</tr>		
+	<tr>
+		<td>이메일</td>
+		<td>
+			<input type="text" name="email_id" value="" placeholder="" class="input1" />
+			@ 
+			<input type="text" name="email_domain" value="" placeholder="" class="input1" />
+			&nbsp;
+			<select name="email_choice" style="height:25px;" onchange="choiceInput(this.form, this)">
+				<option value="">-선택하세요-</option>
+				<option value="naver.com">네이버</option>
+				<option value="hanmail.net">다음</option>
+				<option value="gmail.com">구글G메일</option>
+				<option value="yahoo.com">야후</option>
+				<option value="direct_input">-직접입력-</option>
+			</select>
+			<br /> 이메일 수신동의시, 신상품 등의 정보를 받아보실수 있습니다. <br /> 수신동의 거부시에도 기본서비스는
+			발송됩니다. 
+			<input type="radio" name="email_yn" value="Y" id="email_yes" /><label for="email_yes">예</label> 
+			<input type="radio" name="email_yn" value="N" id="email_no" /><label for="email_no">아니오</label>
+		</td>
+	</tr>
+	<tr>
+		<td>휴대전화</td>
+		<td>
+			<input type="text" name="mobile1" value="" placeholder="" class="s50" maxlength="3" />
+			- 
+			<input type="text" name="mobile2" value="" placeholder="" class="s70" maxlength="4" /> 				
+			- 
+			<input type="text" name="mobile3" value="" placeholder="" class="s70" maxlength="4" />
+		 	<br /> 
+		 	할인혜택과
+			이벤트 등의 소식 안내를 SMS로 받으실수 있습니다. <br /> 
+			수신동의 거부시에도 기본서비스는 발송됩니다. 
+			<input type="radio" name="sms_yn" value="Y" /><label for="sms_yes">예</label> 
+			<input type="radio" name="sms_yn" value="N" /><label for="sms_no">아니오</label>
+		</td>
+	</tr>
+</table>
+
+
+<br />
+<br />
+<br />
+<br />
+
+
+<table width="90%" align="center" border="0" cellspacing="5"
+	cellpadding="0" style="background-color: #D5D5D5;">
+	<colgroup>
+		<col width="25%" />
+		<col width="75%" />
+		<!-- *로 대체해도됨 -->
+	</colgroup>
+	<tr>
+		<td colspan="2" style="font-size: 24px;"><strong>부가정보<span style="color: #ff0000;">(선택)</span></strong></td>
+	</tr>
+	<tr>
+		<td>일반전화</td>
+		<td>
+			<input type="text" name="phone1" value="" placeholder="" class="s50" maxlength="3" />
+			- 
+			<input type="text" name="phone2" value="" placeholder="" class="s70" maxlength="4" /> 				
+			- 
+			<input type="text" name="phone3" value="" placeholder="" class="s70" maxlength="4" />
+		</td>
+	</tr>
+	<tr>
+		<td>주소</td>
+		<td>
+			<input type="text" name="zipcode" value="" placeholder="" class="s50" maxlength="5" /> 
+			<input type="button" value="우편번호찾기" class="button1" onclick="postOpen();" />
+			<br />
+			<input type="text" name="address1" value="" placeholder="" class="input2 s300" /><br/>
+			<input type="text" name="address2" value="" placeholder="" class="input2 s400" />
+			
+			<input type="hidden" name="sido" />
+			<input type="hidden" name="gugun" />
+		</td>
+	</tr>
+	<tr>
+		<td>직업</td>
+		<td>
+			<select name="job" style="height:25px;">
+				<option value="직장인">직장인</option>
+				<option value="자영업">자영업</option>
+				<option value="군인">군인</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>관심브랜드</td>
+		<td>
+			<table border=0 style="width: 100%">
+				<tr>
+					<td width="33%"><label><input type="checkbox" name="user_brand" value="한빛미디어" />한빛미디어</label></td>
+					<td width="33%"><label><input type="checkbox" name="user_brand" value="한빛아카데미" /></label>한빛아카데미</td>
+					<td width="33%"><label><input type="checkbox" name="user_brand" value="한빛비즈" />한빛비즈</label></td>
+				</tr>
+				<tr>
+					<td><label><input type="checkbox" name="user_brand" value="한빛라이프" />한빛라이프</label></td>
+					<td><label><input type="checkbox" name="user_brand" value="리얼타임 eBook" />리얼타임 eBook</label></td>
+					<td><label><input type="checkbox" name="user_brand" value="MAKE" />MAKE</label></td>
+				</tr>
+				<tr>
+					<td><label><input type="checkbox" name="user_brand" value="한빛에듀" />한빛에듀</label></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>관심분야</td>
+		<td>
+			<table border=0 style="width:100%">
+				<tr>
+					<td width="33%"><label><input type="checkbox" name="user_part" value="프로그래밍 언어" />프로그래밍 언어</label></td>
+					<td width="33%"><label><input type="checkbox" name="user_part" value="웹" />웹</label></td>
+					<td width="33%"><label><input type="checkbox" name="user_part" value="모바일/게임" />모바일/게임</label></td>
+				</tr>
+				<tr>
+					<td><label><input type="checkbox" name="user_part" value="데이터베이스" />데이터베이스</label></td>
+					<td><label><input type="checkbox" name="user_part" value="네트워크/보안" />네트워크/보안</label></td>
+					<td><label><input type="checkbox" name="user_part" value="IT자격증/수험서" />IT자격증/수험서</label></td>
+				</tr>
+				<tr>
+					<td><label><input type="checkbox" name="user_part" value="OA/오피스" />OA/오피스</label></td>
+					<td><label><input type="checkbox" name="user_part" value="디자인" />디자인</label></td>
+					<td><label><input type="checkbox" name="user_part" value="사진/예술" />사진/예술</label></td>
+				</tr>
+				<tr>
+					<td><label><input type="checkbox" name="user_part" value="경제/경영" />경제/경영</label></td>
+					<td><label><input type="checkbox" name="user_part" value="자기계발" />자기계발</label></td>
+					<td><label><input type="checkbox" name="user_part" value="인문/사회/과학" />인문/사회/과학</label></td>
+				</tr>
+				<tr>
+					<td><label><input type="checkbox" name="user_part" value="여행/취미" />여행/취미</label></td>
+					<td><label><input type="checkbox" name="user_part" value="가정/건강/유아" />가정/건강/유아</label></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="3"><label><input type="checkbox" name="user_part" value="기타" />기타:</label>
+					<input type="text" class="member"  name="user_part_txt" style="padding: 2px" /></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<p style="text-align: center;">
+	<input type="submit" value="회원가입하기" class="button3" />
+</p>
+
+</form>
+</body>
+</html>

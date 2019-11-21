@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>C12KeyFrame.html</title>
+<style>
+	#rect{
+		width:100px; height:100px; background-color:red;
+		line-height:100px;
+		animation-duration:3s;
+		animation-timing-funtion:ease-in-out;
+		animation-name:my_ani;
+	}
+	@keyframes my_ani{
+		from{ width:100px; }
+		to{width:400px;}
+	}
+	
+	#circ1{
+		width:100px; height:100px;
+		line-height:100px; text-align:center;
+		background-color:green; border-radius:50px;
+		position:absolute; left:0; top:100px;
+		text-size:1.5em;
+		
+		animation-duration:3s;
+		animation-name:my_ani2;
+	}
+	
+	@keyFrames my_ani2{
+		from{
+			left:0; width:100px; height:100px;
+			line-height:100px; border-radius:50px;
+			transform:rotate(0deg);
+			font-size:1.5em;
+		}
+		to{
+			left:400px; width:200px; height:200px;
+			line-height:200px; border-radius:100px;
+			transform:rotate(180deg);
+			font-size:2.5em;
+		}
+	}
+	
+	#circ2{
+		width:50px; height:50px; background-color:blue;
+		position:absolute; left:0; top:220px;
+		color:yellow; line-height:50px;
+		border-radius:25px; text-align:center;
+		
+		animation-duration:3s;
+		animation-name:my_ani3;
+		animation-iteration-count:infinite;
+	}
+	@keyFrames my_ani3{
+		from{
+			left:0; top:220px;	
+		}
+		to{
+			left:200px; top:420px;
+		}
+	}
+	#circ2:hover{
+		animation-play-state:paused;
+	}
+	
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="rect"></div>
+		<div id="circ1">동그라미</div>
+		<div id="circ2">원2</div>
+	</div>
+</body>
+</html>

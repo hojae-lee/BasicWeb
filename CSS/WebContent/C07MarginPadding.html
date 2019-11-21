@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>C07MarginPadding.html</title>
+<style>
+	#div1{
+		border:1px solid gray;
+		padding-top:20px;
+		padding-right:20px;
+		padding-bottom:20px;
+		padding-left:20px;
+	}
+	
+	#div2{
+		border:1px solid red;
+		padding:20px;
+	}
+	
+	#div3{
+		border:1px solid red;
+		padding:30px 50px;
+	}
+	
+	#div4{
+		border:1px solid green;
+		padding:30px 100px 10px;
+	}
+	
+	#div5{
+		border:1px solid black;
+		padding:10px 30px 50px 70px;
+	}
+</style>
+</head>
+<body>
+	<h2>여백관련속성</h2>
+
+	<h3>padding(안쪽여백) 관련 속성</h3>
+	
+	<h4>블럭엘리먼트</h4>
+
+	<div id="div1">
+		"상우하좌" 여백 각각 지정하기
+	</div>
+	<div id="div2">
+		"상우하좌" 여백 동시 지정하기
+	</div>
+	<div id="div3">
+		"상하" 좌우" 여백  지정하기
+	</div>
+	<div id="div4">
+		"상" "좌우" "하" 여백 각각 지정하기
+	</div>
+	<div id="div5">
+		"상" "우" "하" "좌" 여백 각각 지정하기
+	</div>
+	
+	<!-- 
+		인라인 엘리먼트는 좌측 패딩만 컨텐츠를 우측으로 밀어주고 상,우,하 의경우네느 컨텐츠는 그대로 있고 영역만
+		해당방향으로 늘어나게 된다. 따라서 컨텐츠를 아래로 밀어주고 싶다면 부모엘리먼트를 이용하거나 다른 엘리먼트에서
+		margin값을 설정해야 한다.
+	 -->
+	<h4>인라인 엘리먼트</h4>
+	<span style="border:1px solid orange; padding:20px 20px 20px 20px;">
+		나는 span 태그입니다. 인라인엘리먼트이죠~~
+	</span>
+	<br /><br /><br /><br /><br />
+	span 태그 아래쪽 테스트
+	
+	<div style="border:1px solid green; margin-bottom:50px;">
+		블럭엘리먼트
+	</div>
+	
+	<span style="border:1px solid purple; margin-left: 50px; margin-top:0px">
+		인라인엘리먼트
+	</span>
+</body>
+</html>

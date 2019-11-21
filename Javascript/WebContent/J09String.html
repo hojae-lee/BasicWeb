@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>J09String.html</title>
+<script>
+/*
+ 	String 객체:
+ 		방법1] var 변수명 : new String("문자열");
+ 		방법2] var 변수명 : "문자열"; 
+ 		=> '' 이나 "" 뭐든 상관없다.
+ 		
+ 		문자열함수 사용시
+ 		변수명.함수();
+ 		"문자열".함수();
+ */
+    document.write("<h2>JS의 core객체 -String</h2>");
+    var str1 = "Hello Javascript";
+    var str2 = "안녕 자바스크립트";
+    var str3 = "Hi JS";
+    var str4 = new String("Hi 자바스크립트");
+
+    document.write("str1의 자료형:"+typeof(str1)+", str1에 저장된값:"+str1+"<br/>");
+    document.write("str2의 자료형:"+typeof(str1)+", str2에 저장된값:"+str1+"<br/>");
+
+    //1.문자열의 길이 얻기
+    document.write("<h2>문자열의 길이 : length속성</h2>");
+    document.write("str1의길이:"+str1.length+"</br>");
+    document.write("str2의길이:"+str2.length+"</br>");
+    //2.
+    document.write("<h2>함수로 텍스트 효과 주기</h2>");
+    document.write("볼드체(함수):"+str1.bold()+"<br/>");
+    document.write("볼드체(태그):<strong>"+str1+"</Strong><br/>");
+    //3.
+    document.write("<h2>대소문자 변경하기</h2>");
+    document.write("대문자로:"+str1.toUpperCase()+"<br/>");
+    document.write("소문자로:"+str1.toLowerCase()+"<br/>");
+    //4.
+    document.write("<h2>charAt(인덱스)</h2>");
+    document.write(str1.charAt(1));
+    //5.
+    document.write("<h2>substring(시작,끝)</h2>");
+    document.write("Academy".substring(3,7));
+    //6
+    document.write("<h2>substr(시작,길이)</h2>");
+    document.write('Academy'.substr(3,4));
+    //7            
+    document.write("<h2>charCodeAt(인덱스)</h2>");
+    document.write('Academy'.charCodeAt(1));
+    //8
+    document.write("<h2>문자열을 배열처럼 사용하기</h2>");
+    for(var i=0; i<str2.length; i++){
+        document.write("str2["+i+"]="+str2[i]+"<br/>");
+    }
+    document.write("<br/>");
+    //9.구분자로 문자열을 분리해서 배열로 반환하는 함수
+
+    document.write("<h2>split() 함수</h2>");
+    document.write("<h3>구분자가 있는경우</h3>");
+    var tel = "010-1234-5678";
+    var telArr = tel.split("-");
+    for (var i = 0; i < telArr.length; i++) {
+       document.write("telArr["+i+"]="+telArr[i]+"<br />");
+    }
+
+    document.write("<h3>구분자가 없는경우</h3>");
+    var telArrNo = tel.split("*");
+    for (var i = 0; i < telArr.length; i++) {
+       document.write("telArrNo["+i+"]="+telArrNo[i]+"<br />");
+    }
+
+    //10. 특정 문자열의 인덱스값 알아내기
+
+    document.write("<h2>indextOf()함수</h2>");
+    document.write(str2.indexOf("자바")!=-1 ? "자바 포함됨" :" 자바 포함안됨");
+
+    document.write("<h2>lastIndexOf()함수</h2>");
+    document.write(str1.indexOf("a")!=-1 ? "자바 포함됨" :" 자바 포함안됨");
+
+    document.write(str1+"에서 a의 마지막 위치는?"+str1.lastIndexOf("a")+"<br />");
+    /*
+    연습문제 나이를 매개변수로 받아 아래와같은 결과를 반환하는 함수를 정의하시오.
+    만약 나이가 숫자형식이 아니면 false 숫자형식이면 true를 반환함
+    반환받은 결과를 이용하여 숫자형식입니다 혹은 숫자형식이아닙니다 라는 문자열을 출력하는 프로그램을 작성하시오.
+    */
+    
+    function isNumber(param){
+        for(var i=0; i<param.length; i++){
+            if(!(param.charCodeAt(0)>='0'.charCodeAt(0) && param.charCodeAt(0)<='9'.charCodeAt(0))){
+                return false;
+            }
+        }
+        return true;
+    }
+    document.write("<h2>연습문제 > 숫자형식찾기</h2>");
+    var isNum1 = isNumber("100"); // 결과: 숫자형식입니다.
+    (isNum1==true) ? document.write("숫자형식<br/>") : document.write("숫자형식아님<br/>");
+    var isNum2 = isNumber("100A"); // 결과: 숫자형식이 아닙니다.
+    (isNum2==true) ? document.write("숫자형식<br/>") : document.write("숫자형식아님<br/>");
+    var isNum3 = isNumber("A100"); //결과 : 숫자형식이 아닙니다.
+    (isNum3==true) ? document.write("숫자형식<br/>") : document.write("숫자형식아님<br/>");
+    
+    /*
+    연습문제] 아래 이메일 주소에서 @와 .사이에 있는값만 추출하여 출력하는 프로그램을 작성하시오.
+    xxx@yyy.co.kr
+    */
+    
+    var emailArray =["kim@naver.com","sung@hanmail.net","park@ikosmo.co.kr"];
+    
+    var getDomainStr = function(emailArr){
+        for(var i=0; i<emailArray.length; i++){
+            
+            //split
+            var start = emailArray[i].split("@");
+            var last = start[1].split(".");
+                
+            document.write(last[0]+"<br/>");
+    
+            //indexOf
+//            var start = emailArray[i].indexOf("@");
+//            var last = emailArray[i].indexOf(".");
+//            
+//            document.write(emailArray[i].substring(start+1,last)+"<br/>");
+        }
+    }
+    document.write("<h2>연습문제>도메인추출하기</h2>");
+    getDomainStr(emailArray);
+</script>
+</head>
+<body>
+
+</body>
+</html>

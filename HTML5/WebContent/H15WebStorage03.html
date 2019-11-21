@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H15WebStorage03.html</title>
+    <script>
+       var key,val,result;
+       window.onload = function(){
+           key =document.getElementById("key");
+           val =document.getElementById("val");
+           result =document.getElementById("result");
+       }
+       
+       var save = function(){
+           localStorage.setItem(key.value, val.value);
+           alert("로컬 스토리지에 저장됨....");
+           key.value = "";
+           val.value = "";
+           key.focus();
+       }
+       
+       var selectOne = function(){
+           alert(key.value + "로 조회환 결과: "+ localStorage.getItem(key.value));
+       }
+       
+       var selectAll = function(){
+           result.value = "";
+           for(var i=0; i<localStorage.length; i++){
+               result.value += localStorage.key(i) + " : "+
+               localStorage.getItem(localStorage.key(i))+ "\r\n";
+           }
+       }
+       
+       var removeOne = function(){
+           localStorage.removeItem(key.value);
+       }
+       
+       var removeAll = function(){
+           localStorage.clear();
+       }
+    </script>
+</head>
+<body>
+   
+    <fieldset>
+        <legend>웹스토리지-저장/조회/삭제</legend>
+        <table style="background-color: red; border-spacing: 1px; width: 90%;">
+            <tr style="background-color: white;">
+                <td style="width: 10%">키</td>
+                <td><input type="text" style="width: 90%;" id="key"></td>
+            </tr>
+            <tr style="background-color: white;">
+                <td>값</td>
+                <td><input type="text" id= "val" style="width: 90%"></td>
+            </tr>
+            <tr style="background-color: white;">
+                <td colspan="2">
+                    <input type="button" onclick="save();" value="저장">
+                    <input type="button" onclick="removeOne();" value="하나삭제">
+                    <input type="button" onclick="removeAll();" value="모두삭제">
+                    <input type="button" onclick="selectOne();" value="키로 조회">
+                    <input type="button" onclick="selectAll();" value="모두조회">
+                </td>
+            </tr>
+            <tr style="background-color: white;">
+                <td colspan="2">
+                    <textarea name="" id="result" style ="width: 95%; height: 200px;"></textarea>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        document.write("<h2>JS의 Core객체 - Date</h2>");
+        
+        /*
+        Date 객체
+        vat date = new Date();
+        
+        날짜정보를 가져올때는 getXXX()계열의 함수를
+        날짜정보를 설정할때는 setXXX()계열의 함수를 사용한다.
+        */
+        //1.Date객체얻기방법1
+        var date = new Date();
+        document.write("자료형:"+ typeof(date)+"<br/>");
+        document.write("저장된값:"+ date+"<br/>");
+        //getYear()함수 : 1900~부터 현재년도까지 지난 년도수를 반환한다.
+        document.write("date에 저장된 연도:"+ date.getYear()+"<br/>");
+        
+        /*
+        년도 구하는 함수 구현하기
+            브라우저 IE9.0이상 및 기타브라우저 : getYear() +1900
+            IE8.0이하 : getYear() (1900울 더하지 않아도됨.)
+        */
+        var getYearByBrowser = function(){
+            var browser = navigator.userAgent.toUpperCase();
+            
+            //현재 접속한 웹브라우저 정보 출력 및 IE인지 확인하기.
+//            document.write("브루아저정보:"+browser + "<br/>");
+//            document.write(browser.indexOf("MSIE")+"<br/>");
+            
+            if(browser.indexOf("MSIE")==-1){
+                return date.getYear() + 1900;
+            }
+            else if(browser.indexOf("MSIE 6.0")!=-1 || browser.indexOf("MSIE 7.0")!=-1 || browser.indexOf("MSIE 8.0")!=-1){
+                return date.getYear();
+            }
+            else{
+                return date.getYear() + 1900;
+            }
+        }
+        document.write("년도 구하는 함수 호출:"+getYearByBrowser()+"년<br/>");
+        
+        document.write((date.getMonth()+1)+"월 "+ date.getDate()+"일 "+
+                      date.getHours()+"시 "+
+                      date.getMinutes()+"분 "+
+                      date.getSeconds()+"초<br/>")
+        
+        var another = new Date(2002,9,24,14,30,50);
+        document.write("<h2>2002년 10월 24일 14:30:50 설정</h2>");
+        document.write(
+            getYearByBrowser(another)+"년 "+
+        (another.getMonth()+1)+"월 "+
+        another.getDate()+"일 "+
+        another.getHours()+"시 "+
+        another.getMinutes()+"분 "+
+        another.getSeconds()+"초<br/>");
+        
+        another.setMonth(11);
+        another.setDate(25);
+        another.setHours(13);
+        document.write("<h2>월/일시간만 변경후 출력</h2>");
+        document.write(
+            getYearByBrowser(another)+"년 "+
+        (another.getMonth()+1)+"월 "+
+        another.getDate()+"일 "+
+        another.getHours()+"시 "+
+        another.getMinutes()+"분 "+
+        another.getSeconds()+"초<br/>");
+        
+        document.write("<h2>요일얻기</h2>");
+        switch(date.getDay()){
+            case 0: document.write("일요일");break;
+            case 1: document.write("월요일");break;
+            case 2: document.write("화요일");break;
+            case 3: document.write("수요일");break;
+            case 4: document.write("목요일");break;
+            case 5: document.write("금요일");break;
+            case 6: document.write("토요일");break;
+        }
+        
+        var startDate = new Date(2019,4,10);
+        var endDate = new Date();
+        var diff = endDate.getTime() - startDate.getTime();
+        
+        document.write("<h2>개강일부터 현재까지의 일수는?</h2>");
+        document.write(diff / (1000*60*60*24)+ "일");
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

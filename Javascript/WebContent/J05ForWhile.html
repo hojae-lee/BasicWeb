@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>J05ForWhile.html</title>
+<script>
+/*
+	Java : for문 안에서 선언된 변수는 for문을 벗어나면 소멸된다.
+	JS: 스크립트 태그 안에서 선언된 변수는 해당 페이지의 모든 영역에서 사용가능하다. for문안에서 
+	선언한 변수 역시 전역적으로 사용 가능하다.
+ */
+	for(var i=0; i<5; i++){
+		var varInFor =100;
+		document.write('i='+i+ "<br />");
+	}
+	document.write("for문이 끝난 후 i값: "+i+ "<br />");
+	document.write("for문안에서 선언한 변수 vaInFor:"+varInFor);
+	
+	/*
+	1 0 0 0 0
+	0 1 0 0 0
+	0 0 1 0 0
+	0 0 0 1 0
+	0 0 0 0 1
+	
+	시나리오] for문으로 위와 같은 모양을 출력하는 jS를 작성하시오.
+	*/
+	
+	document.write("<h2>이중 for문을 통한 출력</h2>");
+	for(var s=0; s<5; s++){
+		for(var k=0; k<5; k++){
+			if(s==k)
+				document.write("1 ");
+			else
+				document.write("0 ");
+		}
+		document.write("<br/>")
+	}
+	
+	/*
+	위 모양을 이중 while문으로 수정하시오.
+	*/
+	
+	document.write("<h2>이중 while문으로 수정하여 출력하기</h2>")
+	
+	var row=0;
+	var col=0;
+	
+	while(row<5){		
+		while(col<5){
+			if(row==col){
+				document.write("1&nbsp;");
+				col++;
+			}
+			else{
+				document.write("0&nbsp;");
+				col++;
+			}
+		}
+		document.write("<br/>")
+		col=0;
+		row++;
+	}
+
+</script>
+</head>
+<body>
+
+<script>
+	document.write("여기는 body영역");
+	
+	/*
+	head영역의 script태그내에서 선언한 변수는 HTML 문서 전체에서 사용할수 있는 전역변수가 된다.
+	따라서 아래는 정상적으로 출력된다.
+	*/
+	
+	document.write("for문이 끝난 후 i의 값 : "+ i + "<br/>");
+	document.write("for문 안에서 선언한 변수 varInFor:"+varInFor);
+	
+	function gugudanPrint(){
+		
+		/*
+		HTML문서 내 정의된 요소중 id값을 통해 DOM요소를 가져온다. 그리고 모든 폼 하위 태그에는 value속성이 있으므로
+		아래코드는 해당 폼에 입력된 값을 가져오게 된다.
+		*/
+		var dan = document.getElementById("dan").value;
+		var su = document.getElementById("su").value;
+		
+		var strGugu = "<table border='1'>";
+
+		for(var x=2; x<=dan; x++){
+			strGugu +="<tr>";
+			
+			for(var y=1; y<=su; y++){
+				strGugu += "<td>"+ x +"*" + y + "=" + (x*y) + "</td>";
+			}
+			strGugu += "</tr>";
+		}
+		strGugu +="</table>";
+		
+		/*
+		위에서 생성한 구구단 관련 테이블 태그를 아래 span태그에 innerHTML 속성을 통해 동적 입력한다.
+		*/
+		document.getElementById("here_gugudan").innerHTML = strGugu;
+	}
+	
+</script>
+
+	<table border=1>
+		<tr>
+			<td>단</td>
+			<td>
+				<input type="text" id = "dan"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>수</td>
+			<td>
+				<select name="" id="su">
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+				</select>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="2">
+				<input type="button" value = "구구단출력" onclick ="gugudanPrint();"/>
+			</td>
+		</tr>
+		
+	</table>
+	<div>
+		<span id = "here_gugudan">
+			구구단은 여기에 출력됩니다.
+		</span>
+	</div>
+</body>
+</html>

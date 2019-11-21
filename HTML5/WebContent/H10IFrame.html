@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>H10IFrame.html</title>
+</head>
+<body>
+
+	<!-- 
+	iframe태그: 인라인프레임으로 페이지내에서 또다른 페이지를 삽입해야할떄 사용하는 태그
+	
+	주요속성
+	src 프레임안의 내영을 구성할 문서경로 혹은 url
+	frmaeborder iframe의 테두리 두꼐
+	scrolling
+		auto 프레임안의 내용에 따라 스크롤바가 자동으로 생성됨
+		no 내용이 많더라도 스크롤바를 생성하지않음
+		yes 내용과 상관없이 무조건 스크롤바를 생성
+	marginheigth: 프레임과 내용사이의 세로 여백
+	marginwidth : 프레임과 내용사이의 가로 여백
+	
+	인라인 요소 
+	※ target에 대해서는 ./iframe/innerFrame02.html 에서 설명 계속.....
+	 -->
+	<h2>iframe Top 페이지</h2>
+		<h4>iframe의 이름 topWin</h4>
+		<iframe src="./iframe/innerFrame01.html" frameborder="1" scrolling = "auto" width = "500" height = "500" name = "topWin"></iframe>
+		<h2>iframe Bottom(하단)</h2>
+	<p>
+		<a href="http://daum.net" target="topWin">
+			topWin에서 이동함
+		</a>
+		&nbsp;&nbsp;
+		<a href="http://nate.com" target="innerWin01">
+			innerWin01에서 이동함
+		</a>
+	</p>
+	
+</body>
+</html>

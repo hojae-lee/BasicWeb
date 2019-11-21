@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>H16Canvas01</title>
+    <script>
+        window.onload = function(){
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            
+            ctx.beginPath();
+            ctx.moveTo(0,0);//포인트 이동
+            ctx.lineTo(50,50);//직선을 그리기 위한 포인트 이동
+            ctx.stroke();//직선을 캔버스에 표현
+            ctx.closePath();
+            
+            ctx.beginPath();
+            ctx.lineCap = "round";
+            ctx.lineWidth =10;
+            ctx.moveTo(50,50);
+            ctx.lineTo(100,50);
+            ctx.stroke();
+            ctx.closePath();
+            
+            ctx.lineWidth = 5;
+            ctx.moveTo(100,50);
+            ctx.lineTo(100,100);
+            ctx.stroke();
+            
+            /*
+            도형을 채워줄 색깔과 투명도(알파값)를 설정
+            RGB : 빨강 녹색 파랑
+            A : Alpha 값 즉 투명도 0에 가까울수록 투명해지고 1에 가까울수록 선명해짐.
+            */
+            ctx.fillStyle = "rgba(0,255,255,0.5)";
+            /*
+            사각형을 그림 : 좌성단 x좌표, 좌상단 y좌표, 가로폭, 세로폭
+            */
+            ctx.fillRect(100,100,150,50);
+        }
+    </script>
+</head>
+
+<body>
+    <h2>캔버스</h2>
+    <div>
+        <h2>canvas태그</h2>
+        <canvas id="canvas" style="border:1px red solid" width="200" height="200"></canvas>
+    </div>
+</body>
+
+</html>

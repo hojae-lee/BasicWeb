@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>J07BreakContinue.html</title>
+<script>
+/*
+ break 반복문이나 swicth문을 탈출한다.
+ 블럭이 여러개일 경우에는 가장 가까운 블럭을 탈출
+ continue: 형재 포함대잇는 처음으로 돌아간다.
+ */
+	var i=0; 
+	while(-1){
+		i++;
+		document.write("i="+ i + "<br/>");
+		if(i==3) break;
+		document.write("break문 이후 출력문</br>");
+		
+		if(i%2==0) continue;
+		document.write("continue문 이후 출력문</br>");
+	}
+	document.write("while문 종료");
+</script>
+</head>
+<body>
+</body>
+</html>

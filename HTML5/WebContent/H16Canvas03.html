@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas03.html</title>
+    <script>
+        window.onload = function(){
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            
+            ctx.beginPath();
+            
+            ctx.strokeStyle = '#FF0000';
+            
+            ctx.moveTo(60,313);
+            ctx.lineTo(120,166);
+            ctx.lineTo(180,76);
+            ctx.lineTo(240,250);
+            ctx.lineTo(300,70);
+            ctx.lineTo(360,200);
+            ctx.lineTo(420,120);
+            ctx.lineTo(480,70);
+            ctx.stroke();
+            
+            ctx.closePath();
+        }
+    </script>
+</head>
+<body>
+    <h2>canvas태그</h2>
+    <canvas id= "canvas" style="border: 1px red solid" width="550" height ="450"></canvas>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>C10FloatClearPosition.html</title>
+<style>
+
+	.div1{ background-color: red;}
+	.div2{ background-color: blue;}
+	.div3{ background-color: green;}
+	
+	.w100{ width:100px;}
+	.w150{ width:150px;}
+	
+	.h100{ height:100px;}
+	.h150{ height:150px;}
+	
+</style>
+</head>
+<body>
+	<h2>Div 배치(레이아웃) 관련 속성</h2>
+	<!-- 
+		float속성: 직역하면 띄우다라는 뜻을 ㄱ가지고 있다.
+		주로 CSS에서 레이어으이 배치를 위해 사용된다. 왼쪽 혹은 우측으로 띄워섲 ㅓㅇㄹ려하거나 문서를 배치할때 사용한다.
+	 -->
+	<fieldset>
+		<legend>float속성(div의 width속성 미지정)</legend>
+		
+		<div class="div1" style="float:left;">박스1</div>
+		<div class="div2" style="float:right;">박스2</div>
+		<div class="div3">박스3</div>
+	</fieldset>
+	
+	<fieldset>
+		<legend>float속성(div의 width속성 지정)</legend>
+		
+		<div class="div1 w100" style="float:left;">박스1R</div>
+		<div class="div2 w100" style="float:left;">박스2B</div>
+		<div class="div3 w100" style="float:right;">박스3G</div>
+	</fieldset>
+	
+	<fieldset>
+	<!-- 
+	clear : 앞서 div에서 설정한 float의 속성이 남아서 뒤에 남오는 엘리먼트에 영향을 미치는 경우
+		float의 속성을 제거하기 위해 사용된다.
+	 -->
+		<legend>float속성제거 > clear</legend>
+		
+		<div>
+			<div class="div1 w100 h100" style="float:left;">박스1R</div>
+			<div class="div2 w100 h100" style="float:left;">박스2B</div>
+		</div>
+		<!-- 
+		clear속성이 없으면 박스3은 박스1 박스2 아래로 파고 들어가서 정상적인 배치가 되지 않는다.
+		clear:both속성으로 float소성을 파괴하면 정상적인 배치가 된다.
+		 -->
+		<div style="clear:both;"></div>
+		
+		<div class="div3 w150 h150">박스3G</div>
+	</fieldset>
+	
+	<!-- 
+	position속성
+		static : 절대적위치
+		
+		absolute : 웹브라우저가 기준
+		
+		relative : 
+		
+		fixed :
+ 	-->
+ 	<fieldset>
+ 		<legend>position:relative</legend>
+ 		<!-- 부모 하위의 static 위치를 기준으로 좌측에서 70만큼 위에서 10만큼 떨어진 위치에 배치된다.-->
+ 		<div class="div1 w100 h100" style="position:relative; top:10px; left:70px;">
+ 			relative
+ 		</div>
+ 	</fieldset>
+ 	
+ 	<fieldset>
+ 		<legend>position:absolute</legend>
+ 		<!-- 부모의 좌측상단을 기준으로 left 70, top 10 만큼 간격이 떨어진다.-->
+ 		<div class="div3">박스3</div>
+ 		<div class="div2 w100 h100" 
+ 			style="position:absolute; top:0px; left:0px;">
+ 			relative
+ 		</div>
+ 	</fieldset>
+ 	
+ 	<fieldset>
+ 		<legend>position:static</legend>
+ 		<div style="position:static;">
+ 			<div class="div1 w100 h100" style="top:0; left:0">div1(0,0)</div>
+ 			<div class="div2 w100 h100" style="top:50px; left:50px;">div2(50,100)</div>
+ 			<div class="div3 w100 h100" style="top:100px; left:100px;">div3(100,100)</div>
+ 		</div>
+ 	</fieldset>
+	
+	
+ 	<fieldset>
+ 		<legend>부모div는 postion속성이 잇음 자식 div는 absolute인 경우 배치형태</legend>
+ 		<!-- 
+ 		relattive는 앞에 있는 엘리먼트에서의 상대위치를 결저앟게 되므로 엘리먼트가 겹치는 경우는 없다. 즉 앞에 있는
+ 		엘리먼트의 양향을 받게된다.
+ 		 -->
+ 		<div style="position:relative;">
+ 			<div class="div1 w100 h100" style="position:absolute; top:0; left:0">div1(0,0)</div>
+ 			<div class="div2 w100 h100" style="position:absolute; top:50px; left:50px;">div2(50,50)</div>
+ 			<div class="div3 w100 h100" style="position:absolute; top:100px; left:100px;">div3(100,100)</div>
+ 		</div>
+ 	</fieldset>
+ 	
+ 	<fieldset>
+ 		<legend>부모div는 postion속성이 없음 자식 div는 absolute인 경우 배치형태</legend>
+ 		<!-- 
+ 		부모 엘리먼트가 position속성이 없으면 자식의 기준위치는 웹ㅂ라우저가 되기 떄문에 아래 3개의
+ 		박스는 해당 HTML문서의 최상단에서 확인할 수 있따.
+ 		 -->
+ 		<div style="">
+ 			<div class="div1 w100 h100" style="position:absolute; top:0; left:0">div1(0,0)</div>
+ 			<div class="div2 w100 h100" style="position:absolute; top:50px; left:50px;">div2(50,50)</div>
+ 			<div class="div3 w100 h100" style="position:absolute; top:100px; left:100px;">div3(100,100)</div>
+ 		</div>
+ 	</fieldset>
+ 	<div style="heigth=250px">&nbsp;</div>
+ 	
+ 	<fieldset>
+ 		<legend>부모div는 postion속성이 잇음 자식 div는 absolute인 경우 배치형태</legend>
+ 		<!-- 
+ 		relattive는 앞에 있는 엘리먼트에서의 상대위치를 결저앟게 되므로 엘리먼트가 겹치는 경우는 없다. 즉 앞에 있는
+ 		엘리먼트의 양향을 받게된다.
+ 		 -->
+ 		<div style="position:relative;">
+ 			<div class="div1 w100 h100" style="position:absolute; top:0; left:0">div1(0,0)</div>
+ 			<div class="div2 w100 h100" style="position:absolute; top:50px; left:50px;">div2(50,50)</div>
+ 			<div class="div3 w100 h100" style="position:absolute; top:100px; left:100px;">div3(100,100)</div>
+ 		</div>
+ 	</fieldset>
+ 	
+ 	<fieldset>
+ 		<legend>z-index를 이용한 우선순위 결정하기</legend>
+ 		<!-- 
+ 		 -->
+ 		<div style="positon:relative;">
+ 			<div class="div1 w100 h100" style="position:absolute; top:0; left:0; z-index:9999;">div1(0,0)</div>
+ 			<div class="div2 w100 h100" style="position:absolute; top:50px; left:50px; z-index:10">div2(50,50)</div>
+ 			<div class="div3 w100 h100" style="position:absolute; top:100px; left:100px;">div3(100,100)</div>
+ 		</div>
+ 	</fieldset>
+	
+</body>
+</html>

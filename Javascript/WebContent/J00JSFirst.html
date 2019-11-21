@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>J00JSFirst.html</title>
+<script type="text/javascript">
+
+	/*
+	JavaScript란?
+		Client-side Script Language로써 웹브라우저에 의한 순차적으로 해석되어 실행되는 인터프리터 방식의 언어이다.
+		즉 Front-end 영역의 언어로써 주로 HTML, CSS등을 동적으로 제어하는 역할을 한다.
+	*/
+
+	//주석사용방법
+	//라인단위주석
+	/*
+		블럭행단위주석
+	*/
+	
+	/*
+	변수 선언방법
+		var 변수명;
+		-> 변수를 선언하는 유일한 방법으로 자카스크립트는 별도의 자료형이 존재한지 않는다.
+		int, double 등의 자료형은 사용되지 않는다.
+	*/
+	var number;
+		alert("number="+number);
+		
+	if(number==undefined){
+		alert('타입이 정의되지 않음');
+	}
+	else{
+		alert('타입이 정의됨');
+	}
+	
+	for(number=1; number<10; number++){
+		alert("number="+number);	
+	}
+	
+</script>
+</head>
+<body>
+	<h2>자바스크립트 첫번쨰 예제</h2>
+	
+	alert("자바스크립트의 alert함수입니다.");
+	
+	<script>
+		alert('script태그는 body에 쓸수도 있습니다.');
+	</script>
+	
+</body>
+</html>

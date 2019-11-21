@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   
+<div style="text-align:center; ">
+   <p style="font-size:30pt; font-weight:bold; margin-bottom:-5px;">2019년 06 월 20일</p> <br>
+   알람을 설정할 시간 입력  >>>
+      <input type="text" id="si" size="2" maxlength="2" value=""
+                     onkeyup="move(this,2,'bun');" style="width:40px;"/>
+      시 
+      <input type="text" id="bun" size="2" maxlength="2" value=""
+                     onkeyup="move(this,2,'cho');" style="width:40px;"/>
+      분 
+      <input type="text" id="cho" size="2" maxlength="2" value=""
+                     onkeyup="move(this,2,'btn1');" style="width:40px;"/>
+      초
+   <button type="button" id="btn1" onclick="gogo();">
+      gogo
+   </button>
+</div>
+
+<script>
+   function move(now, lng, next) {
+      var nowLng = now.value.length;
+      if(nowLng >= lng) {
+         document.getElementById(next).focus();
+      }
+   }
+   function gogo() {
+      var t2 = document.getElementById("t2");
+      
+      var tt1 = document.getElementById("si").value;
+      var tt2 = document.getElementById("bun").value;
+      var tt3 = document.getElementById("cho").value;
+      var str = tt1 +":"+ tt2 +":" + tt3;
+      t2.innerHTML = str;
+   }
+</script>
+
+<div style="text-align:center;">
+   <span id="t2">
+   </span>
+</div>
+</body>
+</html>

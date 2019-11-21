@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>H09Form02.html</title>
+</head>
+<body>
+	<h2>form태그의 하위요소가 되는 태그들</h2>
+ <!-- 
+	input form태그의 하위요소로 type속성에 따라 다양한 형태로 만들어져 사용자로부터 입력이나 선택을 받을수 있는 태그
+	
+	주요속성
+	tyle 모양을 나타내는 속성지정
+	
+	>>입력상자형태
+		*text 한줄 입력상자
+		*password 패스워드입력시 입력값이 노출되지 않게 표시하는 입력상자
+		*checkbox 여러개의 항목을 선택할수 있는 체크박스 형태의 입력상자
+		*radio 여러개의 항목중 하나만 선택가능한 동그라미 형태의 입력상자
+		*hidden 값과 형태가 웹브루아저에 표시되지 않고 숨겨진 상태로 값을 전송하고자 할떄 사용하는 입력상자
+		(게시물의 수정이나 삭제시 주로사용됨.)
+ -->
+	<h3>input계열의 type="text"</h3>
+	
+	<!-- 
+	한줄입력상자의 주요속성
+	size : 상자의 가로크기
+	maxlength : 최대 입력할수 있는 글자수 지정
+	value : 사용자가 입력한 값이 저장되는 속성
+	disabled : 입력상자를 비활성화 시킴 입력 수정을 할수없고 서버로 값도 전송조디 않음 단지 보여주는 용도로만 사용함.
+	enabled : 입력상자호라성화 기본값이므로 지정하지 안흥ㅁ
+	readonly : 읽기전용으로 설정함. 폼값은 전송익  가능함.
+		주소 게시물의 수정에 사용됨 즉 값의 변경은 하면 안되지만 서버로 값은 전송해야할떄 사용.
+	 -->
+	<form name="frm1">
+		기본텍스트상자 :
+			<input type="text" name="n1" value="기본" />
+		<br />
+		disable속성:
+			<input type="text" name = "n2" size = "50" maxlength="5" value = "속성추가" disabled = "disabled" />
+		<br />
+		maxlength속성:
+			<input type="text" name="jumin1" size = "6" maxlength = "6"/> -
+			<input type="password" size="7" maxlength="7" />
+		<br />
+		readon속성:
+			<input type="text" name = "homepage" value="http://" readonly/>
+		<br />
+		<br />
+		<input type="submit" value ="서버로 전송하기" />
+	
+	</form>
+	
+	<h3>type="checkbox"</h3>
+	<!-- 
+	체크박스는 여러개의 항목을 선택하는게 가능하다.
+	name속성을 동일하게 지정하여 그룹화 시켜준다.
+	value속성을 미리 지정해야 한다. 별도로 입력할수ㅡ 없기 떄문이다.
+	선택된 값만 서버로 전송된다.
+	자바스크립트나 JSP에서는 배열의 형태로 값을 관리한다.
+	 -->
+	<fieldset>
+		<legend>당신의 관심사항은 뭔가요?</legend>
+		<form action="form2">
+			<input type="checkbox" name = "inter" value="pol" checked="checked" />정치
+			&nbsp;&nbsp;
+			<input type="checkbox" name = "inter" value="eco" checked="checked" />경제
+			&nbsp;&nbsp;
+			<input type="checkbox" name = "inter" value="ent" checked="checked" />연예
+			&nbsp;&nbsp;
+			<input type="checkbox" name = "inter" value="spo" checked="checked" />스포츠
+			&nbsp;&nbsp;
+		</form>
+	</fieldset>
+	
+	
+	<h3>type="radio"</h3>
+	<!-- 
+	라디오는 여러개중 하나만 선택해야 할 떄 사용된다.
+	나머지 속성은 checkbox와 동일하다
+	만약 name속성을 다르게 주게되면 항목이 그룹화 되지 않기 떄문에 여러개를 선택하는것이 가능하다.
+	 -->
+	<fieldset>
+		<legend>당신의 성별은?</legend>
+		<form action="form3">
+			<input type="radio" name ="gender" value = "M" checked="checked"/>남자
+			&nbsp;&nbsp;
+			<input type="radio" name ="gender" value = "W" checked="checked"/>여자
+			&nbsp;&nbsp;
+			<input type="radio" name ="gender" value = "T" checked="checked"/>트젠
+			<br />
+		<input type="submit" value = "전송하기"/>
+		</form>
+	</fieldset>
+	
+	<!-- 
+	select태그: 여러개의 목록중 하나를 선택할떄 사용하는 태그이다. 하위태그로 option태그가 있다
+	미리 선택된 목록을 표시할떄는 selected="selected"속성을 추가하면 된다.
+	 -->
+	<h3>select태그-하나만 선택</h3>
+	
+	<fieldset>
+		<legend>당신의 최종학력은 무엇인가요??</legend>
+		
+		<form action="">
+			<select name="grade">
+				<option value="ele">초등학교</option>
+				<option value="mid">중학교</option>
+				<option value="high">고등학교</option>
+				<option value="uni">대학교</option>
+				<option value="uni2">대학원</option>
+			</select>
+		
+			<input type="image" src ="./images/button.jpg" />
+		</form>
+	</fieldset>
+	
+	<h3>select태그-다중선택</h3>
+	<fieldset>
+		<legend>당신의 최종학력은 무엇인가요??</legend>
+		
+		<form action="form5">
+			<select name="girl_group" multiple size = "5">
+				<option value="T">트와이스</option>
+				<option value="M">모모랜드</option>
+				<option value="W">원더걸스</option>
+				<option value="S">소녀시대</option>
+				<option value="A">앙개꾸르</option>
+			</select>
+			&nbsp;&nbsp;
+			<input type="image" src ="./images/button.jpg" />
+		</form>
+	</fieldset>
+	
+	<!-- 
+		서버로 전송할 파일선택창을 띄워준다.
+		전송할 파일의 포맷을 제한하고 싶을때는 accept속성을 이용한다.
+		value속성은 아무런 으미기ㅏ없다.
+	 -->
+	<h3>type="file"</h3>
+	기본 : <input type="file" name="userfile1" />
+	<br />
+	속성추가 : <input type="file" name="userfile2" accept=".jpg" value="첨부파일을추가"/>
+	
+	
+	<h3>textarea태그</h3>
+	<!-- 
+		-다른 태그와는 다르게 value 속성을 가지고 있지 않고 태그사이에 입력되는 값이 value가 된다.
+		-자바스크립트에서 폼값의 체크를 위해서는 value속성으로 접근한다.
+		-정렬을 위해 태그사이에 불필요한 줄바꿈이나 공백을 주게되면 그대로 적용되므로 주의해야한다.
+	 -->
+	<textarea name ="intro" cols="50" rows="5">내용은 여기에 입력됩니다. ^^....</textarea>
+	
+	
+	
+	<!-- 
+		-화면상에서는 보이지 않으나 서버로 전송은 피룡할떄 사용함.
+		-주로 회원정보수정이나 게시글수정에서 많이 사용됨.
+	 -->
+	<h3>type="hidden"</h3>
+	
+	<form action="">
+		<input type="hidden" name="member_id" value = "kosmo"/>
+		<input type="submit" value="hidden 값 전송하기" />
+	</form>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

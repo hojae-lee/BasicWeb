@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>H09Form01.html</title>
+</head>
+<body>
+<!-- 
+form 태그 사용자가 입력한 값을 서버로 전송할 때 사용하는 태그이다.
+
+주요속성
+	name : 폼의 이름
+	action : 사용자가 입력한 값을 전송할 페이지를 지정 만약 action을 생략하게 되면 디폴트로 자신의 페이지로 전송한다.
+	method : 데이터 전송방식을 설정하는 것으로 get방식과 post방식이 있다.
+	
+	get방식:
+		URL이 노출된다
+		최대 4kb를 전송할수있다.
+	post방식:
+		URL이 노출되ㅣ지 않는다.
+		무한대로 전송할수있따
+		파일을 전송할떄 사용
+		
+	-target : a태그와 동일하게 폼값을 전송할떄 프레임의 우치를 결정할수 있따.
+ -->
+	<h2>form태그로 데이터전송하기</h2>
+	<h3>GET방식</h3>
+	<form action="./form/request_form.jsp" method="get">
+		<input type="text" name="user_id"/>
+		<br />
+		<input type="password" name="user_pwd"/>
+		<br />
+		<input type="submit" value="전송"/>
+	</form>
+	
+	<h3>POST방식</h3>
+	<form action="./form/request_form.jsp" method="post">
+		<input type="text" name="user_id"/>
+		<br />
+		<input type="password" name="user_pwd"/>
+		<br />
+		<input type="submit" value="전송"/>
+	</form>
+
+</body>
+</html>

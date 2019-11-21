@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>J12DOM.html</title>
+    <script>
+        /*
+        DOM document object model 객체 얻어오기
+        1.태그명으로 얻어오기
+            document.getElementsById("태그명");
+        2.name속성으로 얻어오기
+            document.getElementsByName("name속성값");
+        3.클래스명으로 얻어오기
+            document.getElementsByClassName("class속성값");
+        4.id값으로 얻어오기
+            document.getElementById("id속성값");
+            
+        ※1,2,3번은 문서상에 1개이상 존재할수 있으므로 배열의 형태로 반환된다.
+        또한 getElements 즉 s가 붙음을 유의하자 오류가 많이 발생하는 부분임
+        4번은 하나의 값만 존재하므로 getElemnet로 s가 없다
+        */
+        var getString = function(param){
+            switch(param){
+                case "POL" : return "정치";
+                case "ECO" : return "경제";
+                case "ENT" : return "연예";
+            }
+        }
+        
+        function fnGetElementsByTag(){
+            
+            var inputs = document.getElementsByTagName("input");
+            var checkString ="", inputString;
+            for(var i=0; i<inputs.length; i++){
+                if(inputs[i].type == "checkbox"&& inputs[i].checked==true){
+                    checkString +=getString(inputs[i].value)+" ";
+                    //임시삽입
+//                    inputs[i].type="text";
+//                    inputs[i].style.backgroundColor="red";
+//                    inputs[i].size=5;
+                    
+                }
+                if(inputs[i].type=="text" && inputs[i].name=="txt"){
+                    inputString = inputs[i].value;
+//                    inputs[i].type="radiobox";
+//                    inputs[i].style.backgroundColor="red";
+//                    inputs[i].size=5;
+                }
+            }
+            alert("선택한값:"+checkString+", 입력한값:"+inputString);
+        }
+        
+        function fnGetDomain(){
+            var a_tags = document.getElementsByTagName("a");
+            for(var i=0; i<a_tags.length; i++){
+                if(a_tags[i].href.toUpperCase().indexOf("www")!=-1){
+                    alert(a_tags[i].href);
+                }
+            }
+        }
+        function fnGetElementsByName(){
+            var names = document.getElementsByName("inter");
+            
+            /*
+            checkbox를 js에서 
+            체크할떄는 true 혹은 checked값을 설정한다.
+            언체크할떄는 false혹은 null값을 설정한다.
+            단 체크 혹은 언체크를 판단해야 할때는 반드시 true / false를 사용해야한다
+            */
+            for(var i=0; i<names.length; i++){
+                if(names[i].checked==true){
+                    names[i].checked = null;
+                }
+                else if(names[i].checked = "checked");
+            }
+        }
+        
+        function fnGetElementsClass(){
+            var portals = document.getElementsByClassName("portal");
+            for(var i=0; i<portals.length; i++){
+                /*
+                innerHTML속성을 통해서 시작태그와 종료태그사이에 있는 컨텥ㄴ츠를 가져올수 있따.
+                */
+                alert(portals[i].innerHTML);
+            }
+        }
+        
+        function fnChangeImg(imgNum){
+            var img_tag = document.getElementById("trump");
+            img_tag.src = "./images/"+ imgNum + ".jpg";
+            img_tag.width = parseInt(imgNum*10);
+        }
+        
+        function fnCopy(){
+            var s1 = document.getElementById("src").value;
+            var s2 = document.getElementById("srcTxt1").value;
+            var s3 = document.getElementById("srcTxt2").value;
+            
+            document.getElementById("dest").value = s1;
+            document.getElementById("destTxt1").value = s2;
+            document.getElementById("destTxt2").value = s3;
+        }
+    </script>
+</head>
+<body>
+    <h2>DOM객체 사용하기</h2>
+    
+    <h3>태그명으로 얻어오기</h3>
+    <input type="checkbox" name="inter" value = "POL" checked="checked">정치
+    <input type="checkbox" name="inter" value = "ECO" checked="checked">경제
+    <input type="checkbox" name="inter" value = "ENT" checked="checked">연예
+    <input type="text" name="txt">
+    <input type="button" value = "태그명으로 DOM객체얻기" onclick="fnGetElementsByTag();">
+    
+    <h2>태그명으로 객체얻기2</h2>
+    <ul>
+        <li><a href="http://www.naver.com">네이버</a></li>
+        <li><a href="http://daum.net">다움</a></li>
+        <li><a href="http://www.nate.com"></a>너이트</li>
+    </ul>
+    <button onclick="fnGetDomain();">도메인얻어오기</button>
+    
+    <h2>이름으로 얻기</h2>
+    <h3>아래버튼을 누르시면 위 체크박스가 반전됩니다.</h3>
+    <input type="button" value = "name속성에 지정한 값으로 DOM객체 얻기" onclick="fnGetElementsByName();">
+    
+    <h2>클래스명으로 객체얻기</h2>
+    <ul>
+        <li><a href="#" class = "portal">네</a></li>
+        <li><a href="#" class = "portal">다음</a></li>
+        <li><a href="#" class = "portal">네이트</a></li>
+    </ul>
+    <button onclick="fnGetElementsClass();">
+        클래스명으로 DOM객체 얻어오기
+    </button>
+    
+    <h2>동적으로 이미지교체하기(ID로 DOM객체얻기)</h2>
+    <fieldset>
+        <legend>이미지 동적 교체</legend>
+        <a href="javascript:fnChangeImg(1);">1번이미지</a>
+        <a href="javascript:fnChangeImg(2);">2번이미지</a>
+        <a href="javascript:fnChangeImg(3);">3번이미지</a>
+        <a href="javascript:fnChangeImg(4);">4번이미지</a>
+        <a href="javascript:fnChangeImg(5);">5번이미지</a>
+        <a href="javascript:fnChangeImg(6);">6번이미지</a>
+        <a href="javascript:fnChangeImg(7);">7번이미지</a>
+        <a href="javascript:fnChangeImg(8);">8번이미지</a>
+        <a href="javascript:fnChangeImg(9);">9번이미지</a>
+        <a href="javascript:fnChangeImg(10);">10번이미지</a>
+        <hr/>
+        <img src="" alt="이미지교체하기" id="trump" width="100">
+    </fieldset>
+    
+    <fieldset>
+        <legend>전화번호 복사하기</legend>
+        <select id="src">
+            <option value="010">010</option>
+            <option value="016">016</option>
+            <option value="017">017</option>
+            <option value="018">018</option>
+            <option value="019">019</option>
+        </select>
+        
+        <input type="text" size="4" maxlength="4" id="srcTxt1">
+        <input type="text" size="4" maxlength="4" id="srcTxt2">
+        <br/>
+        <input type="button" value="전화번호복사하기" onclick="fnCopy();">
+        <br/>
+        
+        <select id="dest">
+            <option value="010">010</option>
+            <option value="016">016</option>
+            <option value="017">017</option>
+            <option value="018">018</option>
+            <option value="019">019</option>
+        </select>
+        <input type="text" id="destTxt1" size="4">
+        <input type="text" id="destTxt2" size="4">
+    </fieldset>
+</body>
+</html>

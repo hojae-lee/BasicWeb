@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>H09Form03.html</title>
+</head>
+<body>
+<!-- 
+input태그의 버튼형태 속성
+	submit 폼태그사이의 요소값을 서버로 전송할떄 사용
+	image 기능은 submit과 동일하나 버튼의 모양을 이미지로 대체할수있는 속성값
+	reset 값을 초기상태로 되될리는 기능에 사용
+	button 버튼 모양으로 표시할떄 사용함.
+	file 파일찾아보기버튼과 입력상자가 표시됨 첨부파일을 업로드할떄 사용됨
+ -->
+ 
+	<h2>input태그의 버튼속성</h2>
+	
+	<fieldset>
+		<legend>타이틀</legend>
+		<form action="">
+			이름: 
+			<input type="text" name ="n1" value = "" />
+			<br />
+			직업:
+			<input type="radio" name = "gender" value = "S" checked = "checked" />학생
+			&nbsp;&nbsp;
+			<input type="radio" name = "gender" value = "T"/>강사
+			<br />
+			자기소개:
+			<textarea name="intro" cols="50" rows="5"></textarea><br />
+			
+			<!-- 
+			submit속성과 동일하지만 버튼의 모양을 우리가 원하는 이미지로 변경할수 있따. 
+			src속성에서 결로를 지정한다.
+			 -->
+			<input type="image" src = "./images/button.jpg" /><br />
+			
+			<input type="submit" value="전송" /><br />
+			
+			<!-- 초기상태로 되돌려준다.  -->
+			<input type="reset" value = "전송" /><br />
+			<!-- button 소성 및 button태그는 눌럿을때 기본액션은 없다.
+			동작을 위해서는 이벤트핸들러와 바사크립트로 처리해야한다.
+			 -->
+			<button type="button" onclick="alert('경고창입니다.');">버튼타이틀</button><br />
+			<input type="button" value = "버튼속성" />
+		</form>
+	</fieldset>
+</body>
+</html>
